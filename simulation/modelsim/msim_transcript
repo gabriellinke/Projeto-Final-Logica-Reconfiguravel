@@ -1,0 +1,519 @@
+# Reading D:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do final_project_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying D:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Compiling package fir_package
+# -- Compiling package body fir_package
+# -- Loading package fir_package
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area
+# -- Compiling architecture FIR_low_area_arch of FIR_low_area
+# 
+LS
+# invalid command name "LS"
+ls
+# final_project_run_msim_rtl_vhdl.do  modelsim.ini  msim_transcript  rtl_work                                  
+cd ..
+# reading D:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini
+ls
+# modelsim                                                                                                                                                                
+cd ..
+ls
+# FIR                                        
+# db                                         
+# filter_coefficients.txt                    
+# final_project.qpf                          
+# final_project.qsf                          
+# final_project_nativelink_simulation.rpt    
+# fir.bsf                                    
+# fir.cmp                                    
+# fir.html                                   
+# fir.qip                                    
+# fir.vec                                    
+# fir.vhd                                    
+# fir.vho                                    
+# fir2.bsf                                   
+# fir2.cmp                                   
+# fir2.html                                  
+# fir2.qip                                   
+# fir2.vec                                   
+# fir2.vhd                                   
+# fir2.vho                                   
+# fir2_ast.vhd                               
+# fir2_coef_int.txt                          
+# fir2_constraints.tcl                       
+# fir2_input.txt                             
+# fir2_mlab.m                                
+# fir2_model.m                               
+# fir2_msim.tcl                              
+# fir2_nativelink.tcl                        
+# fir2_param.txt                             
+# fir2_silent_param.txt                      
+# fir2_st.v                                  
+# fir3.bsf                                   
+# fir3.cmp                                   
+# fir3.html                                  
+# fir3.qip                                   
+# fir3.vec                                   
+# fir3.vhd                                   
+# fir3.vho                                   
+# fir3_ast.vhd                               
+# fir3_coef_int.txt                          
+# fir3_constraints.tcl                       
+# fir3_input.txt                             
+# fir3_mlab.m                                
+# fir3_model.m                               
+# fir3_model_output.txt                      
+# fir3_msim.tcl                              
+# fir3_nativelink.tcl                        
+# fir3_param.txt                             
+# fir3_silent_param.txt                      
+# fir3_st.v                                  
+# fir_ast.vhd                                
+# fir_coef_int.txt                           
+# fir_compiler-library                       
+# fir_constraints.tcl                        
+# fir_input.txt                              
+# fir_mlab.m                                 
+# fir_model.m                                
+# fir_model_output.txt                       
+# fir_msim.tcl                               
+# fir_nativelink.tcl                         
+# fir_param.txt                              
+# fir_silent_param.txt                       
+# fir_st.v                                   
+# incremental_db                             
+# iptb_fir_compiler_temp1396484607281327695  
+# iptb_fir_compiler_temp6792868263770600712  
+# output-test.wav                            
+# output_files                               
+# pad1.mp3                                   
+# simulation                                 
+# tb_fir.vhd                                 
+# tb_fir2.vhd                                
+# tb_fir3.vhd                                
+# velocity.log                               
+cd FIR
+ls
+# FIR_low_area.vhd  FIR_low_area.vhd.bak  testbench                                                
+cd testbench
+ls
+# FIR_low_area_tb.vhd  FIR_low_area_tb.vhd.bak  filtro_fir.m  simulation.do                                  
+do simulation.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# ** Error: (vcom-1902) Option "-debug" is either unknown, requires an argument, or was given with a bad argument.
+# 
+# Use the -help option for complete vcom usage.
+# ** Error: D:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./simulation.do line 3
+# D:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -work work -2002 -explicit -check_synthesis -novitalcheck -novital -source -O0 -debug -stats=none F:/Filtro_FIR/src/FIR_low_area.vhd"
+do simulation.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# ** Error: (vcom-1902) Option "-debug" is either unknown, requires an argument, or was given with a bad argument.
+# 
+# Use the -help option for complete vcom usage.
+# ** Error: D:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./simulation.do line 3
+# D:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -work work -2002 -explicit -check_synthesis -novitalcheck -novital -source -O0 -debug -stats=none ../FIR_low_area.vhd"
+do simulation.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# ** Error: (vcom-1902) Option "-stats=none" is either unknown, requires an argument, or was given with a bad argument.
+# 
+# Use the -help option for complete vcom usage.
+# ** Error: D:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./simulation.do line 3
+# D:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -work work -2002 -explicit -check_synthesis -novitalcheck -novital -source -O0 -stats=none ../FIR_low_area.vhd"
+do simulation.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# ** Error: (vcom-19) Failed to access library 'work' at "work".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: D:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./simulation.do line 3
+# D:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -work work ../FIR_low_area.vhd"
+do simulation.do
+# Copying D:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# ** Error: (vcom-7) Failed to open design unit file "fir_low_area.vhd" in read mode.
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: D:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./simulation.do line 14
+# D:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom fir_low_area.vhd	"
+do simulation.do
+# Modifying modelsim.ini
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# ** Error: (vcom-7) Failed to open design unit file "fir_low_area.vhd" in read mode.
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: D:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./simulation.do line 14
+# D:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom fir_low_area.vhd					"
+pwp
+# invalid command name "pwp"
+pwd
+# D:/altera/13.0sp1/projects/final_project/FIR/testbench
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Compiling package fir_package
+# -- Compiling package body fir_package
+# -- Loading package fir_package
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area
+# -- Compiling architecture FIR_low_area_arch of FIR_low_area
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area_tb
+# -- Compiling architecture FIR_low_area_tb_arch of FIR_low_area_tb
+# -- Loading entity FIR_low_area
+vsim work.fir_low_area_tb
+# vsim work.fir_low_area_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading ieee.math_real(body)
+# Loading work.fir_package(body)
+# Loading work.fir_low_area_tb(fir_low_area_tb_arch)
+# Loading work.fir_low_area(fir_low_area_arch)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 362811792 ps  Iteration: 0  Process: /fir_low_area_tb/sim_time File: D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Break in Process sim_time at D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd line 219
+add wave -position insertpoint  \
+sim:/fir_low_area_tb/areset \
+sim:/fir_low_area_tb/clock_fs \
+sim:/fir_low_area_tb/xn_signed \
+sim:/fir_low_area_tb/xn_unsigned \
+sim:/fir_low_area_tb/yn_signed \
+sim:/fir_low_area_tb/yn_unsigned \
+sim:/fir_low_area_tb/radians \
+sim:/fir_low_area_tb/radian_step \
+sim:/fir_low_area_tb/freq_xn \
+sim:/fir_low_area_tb/data_length \
+sim:/fir_low_area_tb/fs_Hz \
+sim:/fir_low_area_tb/taps \
+sim:/fir_low_area_tb/hn \
+sim:/fir_low_area_tb/bits_resol \
+sim:/fir_low_area_tb/PI \
+sim:/fir_low_area_tb/num_cycles \
+sim:/fir_low_area_tb/fs_period \
+sim:/fir_low_area_tb/num_samples \
+sim:/fir_low_area_tb/amplitude
+run -all
+# ** Failure: SIMULATION END
+#    Time: 725623584 ps  Iteration: 0  Process: /fir_low_area_tb/sim_time File: D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Break in Process sim_time at D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd line 219
+run 1 us
+restart -f
+run 10 us
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+run 1 ms
+# ** Failure: SIMULATION END
+#    Time: 362811792 ps  Iteration: 0  Process: /fir_low_area_tb/sim_time File: D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Break in Process sim_time at D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd line 219
+run -all
+# ** Failure: SIMULATION END
+#    Time: 725623584 ps  Iteration: 0  Process: /fir_low_area_tb/sim_time File: D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Break in Process sim_time at D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd line 219
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area_tb
+# -- Compiling architecture FIR_low_area_tb_arch of FIR_low_area_tb
+# -- Loading entity FIR_low_area
+restart -f
+# Loading work.fir_low_area_tb(fir_low_area_tb_arch)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 362811792 ns  Iteration: 0  Process: /fir_low_area_tb/sim_time File: D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Break in Process sim_time at D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd line 219
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area_tb
+# -- Compiling architecture FIR_low_area_tb_arch of FIR_low_area_tb
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd(35): Integer literal 2000 is not of type std.STANDARD.REAL.
+# -- Loading entity FIR_low_area
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd(223): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area_tb
+# -- Compiling architecture FIR_low_area_tb_arch of FIR_low_area_tb
+# -- Loading entity FIR_low_area
+restart -f
+# Loading work.fir_low_area_tb(fir_low_area_tb_arch)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 7981859424 ps  Iteration: 0  Process: /fir_low_area_tb/sim_time File: D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Break in Process sim_time at D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd line 219
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Compiling package fir_package
+# -- Compiling package body fir_package
+# -- Loading package fir_package
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area
+# -- Compiling architecture FIR_low_area_arch of FIR_low_area
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area_tb
+# -- Compiling architecture FIR_low_area_tb_arch of FIR_low_area_tb
+# -- Loading entity FIR_low_area
+restart -f
+# Loading work.fir_package(body)
+# Loading work.fir_low_area_tb(fir_low_area_tb_arch)
+# Loading work.fir_low_area(fir_low_area_arch)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 18 us  Iteration: 0  Process: /fir_low_area_tb/sim_time File: D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Break in Process sim_time at D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd line 164
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/testbench/work/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# ** Error: (vcom-7) Failed to open design unit file "D:/altera/13.0sp1/projects/final_project/FIR/testbench/work/FIR_low_area_tb.vhd" in read mode.
+# 
+# No such file or directory. (errno = ENOENT)
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Compiling package fir_package
+# -- Compiling package body fir_package
+# -- Loading package fir_package
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area
+# -- Compiling architecture FIR_low_area_arch of FIR_low_area
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area_tb
+# -- Compiling architecture FIR_low_area_tb_arch of FIR_low_area_tb
+# -- Loading entity FIR_low_area
+restart -f
+# Loading work.fir_package(body)
+# Loading work.fir_low_area_tb(fir_low_area_tb_arch)
+# Loading work.fir_low_area(fir_low_area_arch)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 7981859424 ps  Iteration: 0  Process: /fir_low_area_tb/sim_time File: D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Break in Process sim_time at D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd line 219
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Compiling package fir_package
+# -- Compiling package body fir_package
+# -- Loading package fir_package
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area
+# -- Compiling architecture FIR_low_area_arch of FIR_low_area
+vcom -reportprogress 30 -work work D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area_tb
+# -- Compiling architecture FIR_low_area_tb_arch of FIR_low_area_tb
+# -- Loading entity FIR_low_area
+restart -f
+# Loading work.fir_package(body)
+# Loading work.fir_low_area_tb(fir_low_area_tb_arch)
+# Loading work.fir_low_area(fir_low_area_arch)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 18 us  Iteration: 0  Process: /fir_low_area_tb/sim_time File: D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Break in Process sim_time at D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd line 219
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area_tb
+# -- Compiling architecture FIR_low_area_tb_arch of FIR_low_area_tb
+# -- Loading entity FIR_low_area
+run -all
+# ** Failure: SIMULATION END
+#    Time: 36 us  Iteration: 0  Process: /fir_low_area_tb/sim_time File: D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Break in Process sim_time at D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd line 219

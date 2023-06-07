@@ -1,0 +1,31 @@
+Projeto final
+
+PC ligado via ethernet com a FPGA
+
+FPGA com:
+	NIOS
+		Listener - fica rodando esperando por pacotes 
+			manda pro UsHw quando receber
+			UsHw manda de volta pro NIOS
+			NIOS manda pro servidor e o servidor mostra o que recebeu
+	User Hardware
+	
+PC com:
+	Servidor
+	HTML
+	Página gera pacotes TCP/IP ou UDP/IP 
+	
+Entre PC e FPGA passar pelo roteador (DHCP)
+	Vai fornecer os IPs
+	
+Comunicação usando Sockets
+	Send (UDP/TCP, IP, PORT, content)
+	Rcv (UDP/TCP, IP, PORT)
+	
+	
+	
+	
+	
+	
+www.opencores.org
+Exemplos na página

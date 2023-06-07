@@ -1,0 +1,135 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\altera\13.0sp1\projects\final_project\FIR\testbench
+Efir_low_area
+Z1 w1686139414
+Z2 DPx4 ieee 9 math_real 0 22 :iME`dTX54_U49lJNF5JI3
+Z3 DPx4 ieee 16 std_logic_signed 0 22 E>OLoMaBGQ?hbGgOoNXM^1
+Z4 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 DPx4 work 11 fir_package 0 22 fB:cCLMXXB[>m:jQil[j:2
+Z8 dD:\altera\13.0sp1\projects\final_project\FIR\testbench
+Z9 8D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+Z10 FD:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+l0
+L69
+V69WN:R4<>?[@Xz@HCSGdf2
+Z11 OV;C;10.1d;51
+32
+Z12 !s108 1686142062.166000
+Z13 !s90 -reportprogress|300|-work|work|D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd|
+Z14 !s107 D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd|
+Z15 o-work work -O0
+Z16 tExplicit 1
+!s100 CXc`6IORH4HXI1]8V:FWk2
+!i10b 1
+Afir_low_area_arch
+R2
+R3
+R4
+R5
+R6
+R7
+Z17 DEx4 work 12 fir_low_area 0 22 69WN:R4<>?[@Xz@HCSGdf2
+l175
+L156
+VDF<d?8df^Mm@Sz;=B[HXf0
+R11
+32
+R12
+R13
+R14
+R15
+R16
+!s100 zTmU1Y7Q=mWkic=<cE8Kh0
+!i10b 1
+Efir_low_area_tb
+Z18 w1686142131
+R7
+R2
+R3
+R4
+R5
+R6
+R8
+Z19 8D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+Z20 FD:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+l0
+L26
+V[AW]?_RVND2];o]nUfLh[0
+!s100 eFB4;d12=l56NnY43ii_z2
+R11
+32
+!i10b 1
+Z21 !s108 1686142141.919000
+Z22 !s90 -reportprogress|300|-work|work|D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd|
+Z23 !s107 D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd|
+R15
+R16
+Afir_low_area_tb_arch
+R17
+R7
+R2
+R3
+R4
+R5
+R6
+Z24 DEx4 work 15 fir_low_area_tb 0 22 [AW]?_RVND2];o]nUfLh[0
+l130
+L30
+V^o;]==NjLcloONj;BdEa]2
+!s100 ?JZc[?>F=i]idcZhz@UT73
+R11
+32
+!i10b 1
+R21
+R22
+R23
+R15
+R16
+Pfir_package
+R2
+R3
+R4
+R5
+R6
+R1
+R8
+R9
+R10
+l0
+L26
+VfB:cCLMXXB[>m:jQil[j:2
+R11
+32
+b1
+R12
+R13
+R14
+R15
+R16
+!s100 <LfNKY0RKjh1j_ON?`W1V1
+!i10b 1
+Bbody
+R7
+R2
+R3
+R4
+R5
+R6
+l0
+L35
+V]QQJ6o;^PYGkR@UQN@^BY2
+R11
+32
+R12
+R13
+R14
+R15
+R16
+nbody
+!s100 enc@?o8M0;:?b^`0C:dYi1
+!i10b 1

@@ -71,7 +71,7 @@ ENTITY FIR_low_area IS
         data_length  : NATURAL     := 16;                   -- input/output length (number of bits)
         data_signed  : BOOLEAN     := false;               -- input/output type (signed or unsigned)
         improv_t     : BOOLEAN     := false;               -- minimal timing improvement by adding one extra output cycle delay (use only if needed)        
-        bits_resol   : NATURAL     := 72;                  -- number of bits for the internal operations with decimals in fixed point. Recommended: bits_resol > taps. THIS SETTING IS CRITICAL FOR P&R RESULTS (MAX FREQ)
+        bits_resol   : NATURAL     := 128;                  -- number of bits for the internal operations with decimals in fixed point. Recommended: bits_resol > taps. THIS SETTING IS CRITICAL FOR P&R RESULTS (MAX FREQ)
         taps         : NATURAL     := 65;                   -- =order+1, 2 coefficients as minimum (order=1)
         coefficients : COEFF_ARRAY :=(                     -- normalized coefficients bi: (bo,b1, ..., bN). They must be symmetric (but sign)
 													-0.0001595245,

@@ -1,9 +1,18 @@
-quit -sim
+# Apaga o diretório work se ele existe
+if {[file isdirectory work]} { vdel -all -lib work }	
+	
+# Definição da biblioteca work
+vlib work 	
 
-vcom -work work -2002 -explicit -check_synthesis -novitalcheck -novital -source -O0 -debug -stats=none F:/Filtro_FIR/src/FIR_low_area.vhd
-vcom -work work -2002 -explicit -check_synthesis -novitalcheck -novital -source -O0 -stats=none F:/Filtro_FIR/testbench/FIR_low_area_tb.vhd
+# "conecta" o work do VHDL ao diretório work						
+vmap work work						
 
-vsim -gui work.fir_low_area_tb
+# Cancela as simulações que estiverem rodando	
+quit -sim       				
+
+# Compila os arquivos VHDL	
+vcom fir_low_area.vhd	
+vcom fir_low_area_tb.vhd				
 
 add wave -position insertpoint  \
 /fir_low_area_tb/data_length \
