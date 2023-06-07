@@ -1,0 +1,1626 @@
+Analysis & Synthesis report for final_project
+Wed Jun 07 09:04:30 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |FIR_low_area
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Jun 07 09:04:30 2023           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; final_project                                   ;
+; Top-level Entity Name              ; FIR_low_area                                    ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 0                                               ;
+;     Total combinational functions  ; 0                                               ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 36                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; FIR_low_area       ; final_project      ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-12        ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                  ;
++-----------------------------------------------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                            ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                ; Library ;
++-----------------------------------------------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
+; C:/Users/ghlin/Downloads/fir_filter_latest/fir_filter/tags/FIR_low_area.vhd ; yes             ; User VHDL File  ; C:/Users/ghlin/Downloads/fir_filter_latest/fir_filter/tags/FIR_low_area.vhd ;         ;
++-----------------------------------------------------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 36    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |FIR_low_area              ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 36   ; 0            ; |FIR_low_area       ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                ;
++------------------------------------------+----------------------------------------+
+; Register name                            ; Reason for Removal                     ;
++------------------------------------------+----------------------------------------+
+; yn_1[90..153]                            ; Lost fanout                            ;
+; yn_2[90..153]                            ; Lost fanout                            ;
+; yn_1[72,75,83,87]                        ; Merged with yn_1[89]                   ;
+; yn_1[66,68,80]                           ; Merged with yn_1[88]                   ;
+; yn_1[70,73]                              ; Merged with yn_1[86]                   ;
+; yn_1[65,69,81]                           ; Merged with yn_1[85]                   ;
+; yn_1[64,78]                              ; Merged with yn_1[84]                   ;
+; yn_1[74]                                 ; Merged with yn_1[82]                   ;
+; yn_1[67,71]                              ; Merged with yn_1[79]                   ;
+; yn_1[24,26,28]                           ; Merged with yn_1[30]                   ;
+; yn_1[17,21,25]                           ; Merged with yn_1[29]                   ;
+; yn_2[28,30]                              ; Merged with yn_1[27]                   ;
+; yn_1[14]                                 ; Merged with yn_1[27]                   ;
+; yn_2[24,26]                              ; Merged with yn_1[27]                   ;
+; yn_1[12]                                 ; Merged with yn_1[27]                   ;
+; yn_1[15]                                 ; Merged with yn_1[23]                   ;
+; yn_2[19,25]                              ; Merged with yn_1[23]                   ;
+; yn_1[9]                                  ; Merged with yn_1[23]                   ;
+; yn_2[11,15]                              ; Merged with yn_1[23]                   ;
+; yn_1[5]                                  ; Merged with yn_1[23]                   ;
+; yn_2[3,7]                                ; Merged with yn_1[23]                   ;
+; yn_1[1]                                  ; Merged with yn_1[23]                   ;
+; REGISTRO_xn[63][16]                      ; Merged with yn_1[23]                   ;
+; yn_1[16,18,20]                           ; Merged with yn_1[22]                   ;
+; yn_2[17,29]                              ; Merged with yn_1[19]                   ;
+; yn_1[7]                                  ; Merged with yn_1[19]                   ;
+; yn_2[1,9]                                ; Merged with yn_1[19]                   ;
+; yn_2[20,22,23,27]                        ; Merged with yn_1[13]                   ;
+; yn_1[10]                                 ; Merged with yn_1[13]                   ;
+; yn_2[16,18]                              ; Merged with yn_1[13]                   ;
+; yn_1[8]                                  ; Merged with yn_1[13]                   ;
+; yn_2[12,14]                              ; Merged with yn_1[13]                   ;
+; yn_1[6]                                  ; Merged with yn_1[13]                   ;
+; yn_2[8,10]                               ; Merged with yn_1[13]                   ;
+; yn_1[4]                                  ; Merged with yn_1[13]                   ;
+; yn_2[4,6]                                ; Merged with yn_1[13]                   ;
+; yn_1[2]                                  ; Merged with yn_1[13]                   ;
+; yn_2[2]                                  ; Merged with yn_1[13]                   ;
+; yn_2[5,13,21]                            ; Merged with yn_1[11]                   ;
+; yn_1[3]                                  ; Merged with yn_1[11]                   ;
+; yn_2[0]                                  ; Merged with yn_1[0]                    ;
+; yn_2[65,73,81]                           ; Merged with yn_2[89]                   ;
+; yn_2[76,78,80,82,84,86]                  ; Merged with yn_2[88]                   ;
+; yn_2[63,67,71,75,79,83]                  ; Merged with yn_2[87]                   ;
+; yn_2[69,77]                              ; Merged with yn_2[85]                   ;
+; yn_2[64,66,68,70,72]                     ; Merged with yn_2[74]                   ;
+; yn_1[77,79,86]                           ; Merged with yn_1[89]                   ;
+; yn_1[76]                                 ; Merged with yn_1[84]                   ;
+; yn_1[0]                                  ; Merged with yn_1[30]                   ;
+; yn_1[11,19,23]                           ; Merged with yn_1[29]                   ;
+; yn_1[13]                                 ; Merged with yn_1[27]                   ;
+; yn_2[74,87]                              ; Merged with yn_2[89]                   ;
+; yn_1[85]                                 ; Merged with yn_1[89]                   ;
+; yn_1[22]                                 ; Merged with yn_1[29]                   ;
+; yn_1[84]                                 ; Merged with yn_1[89]                   ;
+; yn_1[27]                                 ; Merged with yn_1[30]                   ;
+; yn_1[82]                                 ; Merged with yn_1[89]                   ;
+; yn_2[85]                                 ; Merged with yn_2[89]                   ;
+; yn_1[89]                                 ; Merged with yn_1[88]                   ;
+; yn_1[30]                                 ; Merged with yn_1[29]                   ;
+; yn_2[89]                                 ; Merged with yn_2[88]                   ;
+; yn_1[29]                                 ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[62][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[61][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[60][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[59][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[58][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[57][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[56][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[55][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[54][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[53][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[52][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[51][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[50][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[49][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[48][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[47][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[46][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[45][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[44][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[43][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[42][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[41][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[40][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[39][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[38][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[37][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[36][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[35][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[34][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[33][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[32][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[31][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[30][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[29][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[28][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[27][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[26][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[25][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[24][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[23][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[22][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[21][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[20][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[19][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[18][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[17][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[16][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[15][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[14][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[13][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[12][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[11][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[10][16]                      ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[9][16]                       ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[8][16]                       ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[7][16]                       ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[6][16]                       ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[5][16]                       ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[4][16]                       ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[3][16]                       ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[2][16]                       ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[1][16]                       ; Stuck at GND due to stuck port data_in ;
+; REGISTRO_xn[0][16]                       ; Stuck at GND due to stuck port data_in ;
+; yn_1[31..63,88]                          ; Lost fanout                            ;
+; yn_2[31..62,88]                          ; Lost fanout                            ;
+; REGISTRO_xn[63][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[63][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[63][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[63][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[63][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[63][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[63][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[63][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[63][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[63][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[63][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[63][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[63][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[63][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[63][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[63][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[62][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[62][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[62][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[62][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[62][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[62][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[62][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[62][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[62][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[62][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[62][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[62][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[62][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[62][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[62][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[62][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[61][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[61][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[61][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[61][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[61][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[61][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[61][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[61][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[61][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[61][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[61][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[61][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[61][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[61][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[61][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[61][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[60][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[60][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[60][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[60][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[60][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[60][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[60][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[60][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[60][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[60][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[60][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[60][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[60][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[60][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[60][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[60][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[59][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[59][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[59][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[59][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[59][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[59][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[59][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[59][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[59][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[59][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[59][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[59][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[59][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[59][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[59][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[59][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[58][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[58][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[58][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[58][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[58][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[58][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[58][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[58][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[58][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[58][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[58][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[58][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[58][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[58][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[58][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[58][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[57][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[57][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[57][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[57][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[57][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[57][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[57][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[57][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[57][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[57][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[57][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[57][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[57][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[57][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[57][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[57][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[56][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[56][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[56][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[56][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[56][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[56][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[56][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[56][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[56][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[56][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[56][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[56][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[56][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[56][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[56][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[56][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[55][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[55][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[55][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[55][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[55][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[55][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[55][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[55][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[55][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[55][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[55][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[55][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[55][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[55][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[55][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[55][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[54][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[54][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[54][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[54][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[54][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[54][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[54][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[54][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[54][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[54][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[54][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[54][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[54][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[54][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[54][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[54][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[53][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[53][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[53][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[53][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[53][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[53][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[53][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[53][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[53][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[53][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[53][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[53][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[53][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[53][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[53][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[53][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[52][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[52][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[52][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[52][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[52][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[52][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[52][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[52][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[52][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[52][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[52][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[52][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[52][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[52][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[52][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[52][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[51][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[51][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[51][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[51][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[51][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[51][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[51][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[51][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[51][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[51][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[51][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[51][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[51][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[51][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[51][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[51][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[50][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[50][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[50][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[50][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[50][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[50][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[50][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[50][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[50][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[50][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[50][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[50][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[50][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[50][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[50][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[50][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[49][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[49][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[49][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[49][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[49][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[49][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[49][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[49][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[49][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[49][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[49][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[49][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[49][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[49][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[49][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[49][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[48][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[48][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[48][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[48][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[48][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[48][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[48][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[48][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[48][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[48][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[48][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[48][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[48][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[48][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[48][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[48][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[47][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[47][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[47][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[47][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[47][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[47][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[47][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[47][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[47][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[47][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[47][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[47][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[47][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[47][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[47][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[47][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[46][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[46][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[46][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[46][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[46][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[46][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[46][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[46][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[46][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[46][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[46][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[46][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[46][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[46][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[46][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[46][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[45][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[45][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[45][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[45][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[45][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[45][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[45][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[45][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[45][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[45][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[45][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[45][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[45][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[45][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[45][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[45][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[44][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[44][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[44][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[44][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[44][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[44][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[44][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[44][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[44][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[44][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[44][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[44][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[44][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[44][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[44][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[44][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[43][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[43][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[43][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[43][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[43][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[43][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[43][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[43][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[43][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[43][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[43][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[43][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[43][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[43][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[43][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[43][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[42][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[42][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[42][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[42][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[42][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[42][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[42][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[42][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[42][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[42][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[42][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[42][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[42][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[42][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[42][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[42][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[41][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[41][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[41][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[41][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[41][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[41][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[41][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[41][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[41][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[41][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[41][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[41][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[41][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[41][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[41][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[41][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[40][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[40][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[40][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[40][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[40][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[40][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[40][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[40][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[40][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[40][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[40][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[40][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[40][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[40][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[40][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[40][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[39][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[39][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[39][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[39][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[39][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[39][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[39][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[39][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[39][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[39][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[39][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[39][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[39][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[39][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[39][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[39][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[38][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[38][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[38][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[38][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[38][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[38][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[38][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[38][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[38][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[38][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[38][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[38][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[38][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[38][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[38][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[38][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[37][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[37][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[37][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[37][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[37][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[37][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[37][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[37][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[37][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[37][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[37][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[37][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[37][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[37][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[37][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[37][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[36][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[36][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[36][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[36][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[36][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[36][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[36][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[36][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[36][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[36][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[36][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[36][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[36][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[36][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[36][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[36][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[35][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[35][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[35][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[35][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[35][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[35][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[35][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[35][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[35][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[35][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[35][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[35][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[35][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[35][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[35][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[35][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[34][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[34][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[34][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[34][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[34][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[34][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[34][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[34][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[34][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[34][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[34][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[34][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[34][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[34][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[34][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[34][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[33][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[33][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[33][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[33][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[33][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[33][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[33][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[33][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[33][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[33][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[33][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[33][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[33][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[33][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[33][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[33][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[32][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[32][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[32][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[32][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[32][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[32][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[32][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[32][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[32][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[32][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[32][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[32][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[32][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[32][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[32][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[32][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[31][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[31][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[31][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[31][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[31][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[31][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[31][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[31][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[31][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[31][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[31][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[31][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[31][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[31][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[31][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[31][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[30][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[30][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[30][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[30][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[30][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[30][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[30][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[30][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[30][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[30][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[30][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[30][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[30][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[30][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[30][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[30][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[29][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[29][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[29][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[29][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[29][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[29][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[29][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[29][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[29][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[29][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[29][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[29][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[29][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[29][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[29][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[29][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[28][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[28][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[28][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[28][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[28][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[28][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[28][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[28][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[28][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[28][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[28][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[28][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[28][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[28][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[28][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[28][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[27][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[27][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[27][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[27][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[27][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[27][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[27][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[27][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[27][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[27][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[27][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[27][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[27][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[27][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[27][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[27][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[26][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[26][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[26][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[26][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[26][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[26][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[26][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[26][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[26][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[26][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[26][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[26][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[26][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[26][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[26][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[26][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[25][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[25][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[25][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[25][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[25][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[25][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[25][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[25][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[25][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[25][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[25][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[25][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[25][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[25][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[25][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[25][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[24][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[24][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[24][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[24][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[24][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[24][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[24][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[24][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[24][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[24][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[24][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[24][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[24][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[24][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[24][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[24][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[23][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[23][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[23][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[23][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[23][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[23][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[23][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[23][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[23][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[23][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[23][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[23][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[23][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[23][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[23][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[23][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[22][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[22][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[22][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[22][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[22][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[22][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[22][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[22][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[22][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[22][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[22][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[22][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[22][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[22][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[22][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[22][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[21][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[21][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[21][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[21][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[21][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[21][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[21][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[21][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[21][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[21][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[21][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[21][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[21][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[21][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[21][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[21][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[20][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[20][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[20][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[20][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[20][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[20][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[20][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[20][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[20][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[20][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[20][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[20][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[20][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[20][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[20][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[20][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[19][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[19][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[19][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[19][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[19][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[19][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[19][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[19][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[19][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[19][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[19][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[19][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[19][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[19][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[19][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[19][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[18][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[18][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[18][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[18][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[18][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[18][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[18][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[18][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[18][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[18][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[18][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[18][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[18][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[18][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[18][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[18][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[17][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[17][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[17][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[17][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[17][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[17][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[17][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[17][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[17][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[17][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[17][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[17][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[17][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[17][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[17][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[17][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[16][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[16][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[16][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[16][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[16][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[16][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[16][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[16][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[16][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[16][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[16][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[16][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[16][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[16][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[16][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[16][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[15][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[15][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[15][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[15][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[15][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[15][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[15][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[15][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[15][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[15][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[15][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[15][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[15][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[15][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[15][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[15][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[14][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[14][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[14][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[14][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[14][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[14][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[14][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[14][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[14][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[14][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[14][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[14][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[14][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[14][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[14][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[14][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[13][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[13][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[13][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[13][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[13][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[13][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[13][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[13][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[13][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[13][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[13][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[13][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[13][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[13][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[13][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[13][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[12][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[12][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[12][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[12][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[12][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[12][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[12][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[12][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[12][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[12][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[12][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[12][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[12][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[12][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[12][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[12][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[11][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[11][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[11][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[11][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[11][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[11][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[11][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[11][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[11][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[11][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[11][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[11][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[11][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[11][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[11][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[11][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[10][15]                      ; Lost fanout                            ;
+; REGISTRO_xn[10][14]                      ; Lost fanout                            ;
+; REGISTRO_xn[10][13]                      ; Lost fanout                            ;
+; REGISTRO_xn[10][12]                      ; Lost fanout                            ;
+; REGISTRO_xn[10][11]                      ; Lost fanout                            ;
+; REGISTRO_xn[10][10]                      ; Lost fanout                            ;
+; REGISTRO_xn[10][9]                       ; Lost fanout                            ;
+; REGISTRO_xn[10][8]                       ; Lost fanout                            ;
+; REGISTRO_xn[10][7]                       ; Lost fanout                            ;
+; REGISTRO_xn[10][6]                       ; Lost fanout                            ;
+; REGISTRO_xn[10][5]                       ; Lost fanout                            ;
+; REGISTRO_xn[10][4]                       ; Lost fanout                            ;
+; REGISTRO_xn[10][3]                       ; Lost fanout                            ;
+; REGISTRO_xn[10][2]                       ; Lost fanout                            ;
+; REGISTRO_xn[10][1]                       ; Lost fanout                            ;
+; REGISTRO_xn[10][0]                       ; Lost fanout                            ;
+; REGISTRO_xn[9][15]                       ; Lost fanout                            ;
+; REGISTRO_xn[9][14]                       ; Lost fanout                            ;
+; REGISTRO_xn[9][13]                       ; Lost fanout                            ;
+; REGISTRO_xn[9][12]                       ; Lost fanout                            ;
+; REGISTRO_xn[9][11]                       ; Lost fanout                            ;
+; REGISTRO_xn[9][10]                       ; Lost fanout                            ;
+; REGISTRO_xn[9][9]                        ; Lost fanout                            ;
+; REGISTRO_xn[9][8]                        ; Lost fanout                            ;
+; REGISTRO_xn[9][7]                        ; Lost fanout                            ;
+; REGISTRO_xn[9][6]                        ; Lost fanout                            ;
+; REGISTRO_xn[9][5]                        ; Lost fanout                            ;
+; REGISTRO_xn[9][4]                        ; Lost fanout                            ;
+; REGISTRO_xn[9][3]                        ; Lost fanout                            ;
+; REGISTRO_xn[9][2]                        ; Lost fanout                            ;
+; REGISTRO_xn[9][1]                        ; Lost fanout                            ;
+; REGISTRO_xn[9][0]                        ; Lost fanout                            ;
+; REGISTRO_xn[8][15]                       ; Lost fanout                            ;
+; REGISTRO_xn[8][14]                       ; Lost fanout                            ;
+; REGISTRO_xn[8][13]                       ; Lost fanout                            ;
+; REGISTRO_xn[8][12]                       ; Lost fanout                            ;
+; REGISTRO_xn[8][11]                       ; Lost fanout                            ;
+; REGISTRO_xn[8][10]                       ; Lost fanout                            ;
+; REGISTRO_xn[8][9]                        ; Lost fanout                            ;
+; REGISTRO_xn[8][8]                        ; Lost fanout                            ;
+; REGISTRO_xn[8][7]                        ; Lost fanout                            ;
+; REGISTRO_xn[8][6]                        ; Lost fanout                            ;
+; REGISTRO_xn[8][5]                        ; Lost fanout                            ;
+; REGISTRO_xn[8][4]                        ; Lost fanout                            ;
+; REGISTRO_xn[8][3]                        ; Lost fanout                            ;
+; REGISTRO_xn[8][2]                        ; Lost fanout                            ;
+; REGISTRO_xn[8][1]                        ; Lost fanout                            ;
+; REGISTRO_xn[8][0]                        ; Lost fanout                            ;
+; REGISTRO_xn[7][15]                       ; Lost fanout                            ;
+; REGISTRO_xn[7][14]                       ; Lost fanout                            ;
+; REGISTRO_xn[7][13]                       ; Lost fanout                            ;
+; REGISTRO_xn[7][12]                       ; Lost fanout                            ;
+; REGISTRO_xn[7][11]                       ; Lost fanout                            ;
+; REGISTRO_xn[7][10]                       ; Lost fanout                            ;
+; REGISTRO_xn[7][9]                        ; Lost fanout                            ;
+; REGISTRO_xn[7][8]                        ; Lost fanout                            ;
+; REGISTRO_xn[7][7]                        ; Lost fanout                            ;
+; REGISTRO_xn[7][6]                        ; Lost fanout                            ;
+; REGISTRO_xn[7][5]                        ; Lost fanout                            ;
+; REGISTRO_xn[7][4]                        ; Lost fanout                            ;
+; REGISTRO_xn[7][3]                        ; Lost fanout                            ;
+; REGISTRO_xn[7][2]                        ; Lost fanout                            ;
+; REGISTRO_xn[7][1]                        ; Lost fanout                            ;
+; REGISTRO_xn[7][0]                        ; Lost fanout                            ;
+; REGISTRO_xn[6][15]                       ; Lost fanout                            ;
+; REGISTRO_xn[6][14]                       ; Lost fanout                            ;
+; REGISTRO_xn[6][13]                       ; Lost fanout                            ;
+; REGISTRO_xn[6][12]                       ; Lost fanout                            ;
+; REGISTRO_xn[6][11]                       ; Lost fanout                            ;
+; REGISTRO_xn[6][10]                       ; Lost fanout                            ;
+; REGISTRO_xn[6][9]                        ; Lost fanout                            ;
+; REGISTRO_xn[6][8]                        ; Lost fanout                            ;
+; REGISTRO_xn[6][7]                        ; Lost fanout                            ;
+; REGISTRO_xn[6][6]                        ; Lost fanout                            ;
+; REGISTRO_xn[6][5]                        ; Lost fanout                            ;
+; REGISTRO_xn[6][4]                        ; Lost fanout                            ;
+; REGISTRO_xn[6][3]                        ; Lost fanout                            ;
+; REGISTRO_xn[6][2]                        ; Lost fanout                            ;
+; REGISTRO_xn[6][1]                        ; Lost fanout                            ;
+; REGISTRO_xn[6][0]                        ; Lost fanout                            ;
+; REGISTRO_xn[5][15]                       ; Lost fanout                            ;
+; REGISTRO_xn[5][14]                       ; Lost fanout                            ;
+; REGISTRO_xn[5][13]                       ; Lost fanout                            ;
+; REGISTRO_xn[5][12]                       ; Lost fanout                            ;
+; REGISTRO_xn[5][11]                       ; Lost fanout                            ;
+; REGISTRO_xn[5][10]                       ; Lost fanout                            ;
+; REGISTRO_xn[5][9]                        ; Lost fanout                            ;
+; REGISTRO_xn[5][8]                        ; Lost fanout                            ;
+; REGISTRO_xn[5][7]                        ; Lost fanout                            ;
+; REGISTRO_xn[5][6]                        ; Lost fanout                            ;
+; REGISTRO_xn[5][5]                        ; Lost fanout                            ;
+; REGISTRO_xn[5][4]                        ; Lost fanout                            ;
+; REGISTRO_xn[5][3]                        ; Lost fanout                            ;
+; REGISTRO_xn[5][2]                        ; Lost fanout                            ;
+; REGISTRO_xn[5][1]                        ; Lost fanout                            ;
+; REGISTRO_xn[5][0]                        ; Lost fanout                            ;
+; REGISTRO_xn[4][15]                       ; Lost fanout                            ;
+; REGISTRO_xn[4][14]                       ; Lost fanout                            ;
+; REGISTRO_xn[4][13]                       ; Lost fanout                            ;
+; REGISTRO_xn[4][12]                       ; Lost fanout                            ;
+; REGISTRO_xn[4][11]                       ; Lost fanout                            ;
+; REGISTRO_xn[4][10]                       ; Lost fanout                            ;
+; REGISTRO_xn[4][9]                        ; Lost fanout                            ;
+; REGISTRO_xn[4][8]                        ; Lost fanout                            ;
+; REGISTRO_xn[4][7]                        ; Lost fanout                            ;
+; REGISTRO_xn[4][6]                        ; Lost fanout                            ;
+; REGISTRO_xn[4][5]                        ; Lost fanout                            ;
+; REGISTRO_xn[4][4]                        ; Lost fanout                            ;
+; REGISTRO_xn[4][3]                        ; Lost fanout                            ;
+; REGISTRO_xn[4][2]                        ; Lost fanout                            ;
+; REGISTRO_xn[4][1]                        ; Lost fanout                            ;
+; REGISTRO_xn[4][0]                        ; Lost fanout                            ;
+; REGISTRO_xn[3][15]                       ; Lost fanout                            ;
+; REGISTRO_xn[3][14]                       ; Lost fanout                            ;
+; REGISTRO_xn[3][13]                       ; Lost fanout                            ;
+; REGISTRO_xn[3][12]                       ; Lost fanout                            ;
+; REGISTRO_xn[3][11]                       ; Lost fanout                            ;
+; REGISTRO_xn[3][10]                       ; Lost fanout                            ;
+; REGISTRO_xn[3][9]                        ; Lost fanout                            ;
+; REGISTRO_xn[3][8]                        ; Lost fanout                            ;
+; REGISTRO_xn[3][7]                        ; Lost fanout                            ;
+; REGISTRO_xn[3][6]                        ; Lost fanout                            ;
+; REGISTRO_xn[3][5]                        ; Lost fanout                            ;
+; REGISTRO_xn[3][4]                        ; Lost fanout                            ;
+; REGISTRO_xn[3][3]                        ; Lost fanout                            ;
+; REGISTRO_xn[3][2]                        ; Lost fanout                            ;
+; REGISTRO_xn[3][1]                        ; Lost fanout                            ;
+; REGISTRO_xn[3][0]                        ; Lost fanout                            ;
+; REGISTRO_xn[2][15]                       ; Lost fanout                            ;
+; REGISTRO_xn[2][14]                       ; Lost fanout                            ;
+; REGISTRO_xn[2][13]                       ; Lost fanout                            ;
+; REGISTRO_xn[2][12]                       ; Lost fanout                            ;
+; REGISTRO_xn[2][11]                       ; Lost fanout                            ;
+; REGISTRO_xn[2][10]                       ; Lost fanout                            ;
+; REGISTRO_xn[2][9]                        ; Lost fanout                            ;
+; REGISTRO_xn[2][8]                        ; Lost fanout                            ;
+; REGISTRO_xn[2][7]                        ; Lost fanout                            ;
+; REGISTRO_xn[2][6]                        ; Lost fanout                            ;
+; REGISTRO_xn[2][5]                        ; Lost fanout                            ;
+; REGISTRO_xn[2][4]                        ; Lost fanout                            ;
+; REGISTRO_xn[2][3]                        ; Lost fanout                            ;
+; REGISTRO_xn[2][2]                        ; Lost fanout                            ;
+; REGISTRO_xn[2][1]                        ; Lost fanout                            ;
+; REGISTRO_xn[2][0]                        ; Lost fanout                            ;
+; REGISTRO_xn[1][15]                       ; Lost fanout                            ;
+; REGISTRO_xn[1][14]                       ; Lost fanout                            ;
+; REGISTRO_xn[1][13]                       ; Lost fanout                            ;
+; REGISTRO_xn[1][12]                       ; Lost fanout                            ;
+; REGISTRO_xn[1][11]                       ; Lost fanout                            ;
+; REGISTRO_xn[1][10]                       ; Lost fanout                            ;
+; REGISTRO_xn[1][9]                        ; Lost fanout                            ;
+; REGISTRO_xn[1][8]                        ; Lost fanout                            ;
+; REGISTRO_xn[1][7]                        ; Lost fanout                            ;
+; REGISTRO_xn[1][6]                        ; Lost fanout                            ;
+; REGISTRO_xn[1][5]                        ; Lost fanout                            ;
+; REGISTRO_xn[1][4]                        ; Lost fanout                            ;
+; REGISTRO_xn[1][3]                        ; Lost fanout                            ;
+; REGISTRO_xn[1][2]                        ; Lost fanout                            ;
+; REGISTRO_xn[1][1]                        ; Lost fanout                            ;
+; REGISTRO_xn[1][0]                        ; Lost fanout                            ;
+; REGISTRO_xn[0][15]                       ; Lost fanout                            ;
+; REGISTRO_xn[0][14]                       ; Lost fanout                            ;
+; REGISTRO_xn[0][13]                       ; Lost fanout                            ;
+; REGISTRO_xn[0][12]                       ; Lost fanout                            ;
+; REGISTRO_xn[0][11]                       ; Lost fanout                            ;
+; REGISTRO_xn[0][10]                       ; Lost fanout                            ;
+; REGISTRO_xn[0][9]                        ; Lost fanout                            ;
+; REGISTRO_xn[0][8]                        ; Lost fanout                            ;
+; REGISTRO_xn[0][7]                        ; Lost fanout                            ;
+; REGISTRO_xn[0][6]                        ; Lost fanout                            ;
+; REGISTRO_xn[0][5]                        ; Lost fanout                            ;
+; REGISTRO_xn[0][4]                        ; Lost fanout                            ;
+; REGISTRO_xn[0][3]                        ; Lost fanout                            ;
+; REGISTRO_xn[0][2]                        ; Lost fanout                            ;
+; REGISTRO_xn[0][1]                        ; Lost fanout                            ;
+; REGISTRO_xn[0][0]                        ; Lost fanout                            ;
+; Total Number of Removed Registers = 1396 ;                                        ;
++------------------------------------------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                           ;
++---------------+---------------------------+-------------------------------------------------------------------------------------------+
+; Register name ; Reason for Removal        ; Registers Removed due to This Register                                                    ;
++---------------+---------------------------+-------------------------------------------------------------------------------------------+
+; yn_1[29]      ; Stuck at GND              ; REGISTRO_xn[62][16], REGISTRO_xn[61][16], REGISTRO_xn[60][16], REGISTRO_xn[59][16],       ;
+;               ; due to stuck port data_in ; REGISTRO_xn[58][16], REGISTRO_xn[57][16], REGISTRO_xn[56][16], REGISTRO_xn[55][16],       ;
+;               ;                           ; REGISTRO_xn[54][16], REGISTRO_xn[53][16], REGISTRO_xn[52][16], REGISTRO_xn[51][16],       ;
+;               ;                           ; REGISTRO_xn[50][16], REGISTRO_xn[49][16], REGISTRO_xn[48][16], REGISTRO_xn[47][16],       ;
+;               ;                           ; REGISTRO_xn[46][16], REGISTRO_xn[45][16], REGISTRO_xn[44][16], REGISTRO_xn[43][16],       ;
+;               ;                           ; REGISTRO_xn[42][16], REGISTRO_xn[41][16], REGISTRO_xn[40][16], REGISTRO_xn[39][16],       ;
+;               ;                           ; REGISTRO_xn[38][16], REGISTRO_xn[37][16], REGISTRO_xn[36][16], REGISTRO_xn[35][16],       ;
+;               ;                           ; REGISTRO_xn[34][16], REGISTRO_xn[33][16], REGISTRO_xn[32][16], REGISTRO_xn[31][16],       ;
+;               ;                           ; REGISTRO_xn[30][16], REGISTRO_xn[29][16], REGISTRO_xn[28][16], REGISTRO_xn[27][16],       ;
+;               ;                           ; REGISTRO_xn[26][16], REGISTRO_xn[25][16], REGISTRO_xn[24][16], REGISTRO_xn[23][16],       ;
+;               ;                           ; REGISTRO_xn[22][16], REGISTRO_xn[21][16], REGISTRO_xn[20][16], REGISTRO_xn[19][16],       ;
+;               ;                           ; REGISTRO_xn[18][16], REGISTRO_xn[17][16], REGISTRO_xn[16][16], REGISTRO_xn[15][16],       ;
+;               ;                           ; REGISTRO_xn[14][16], REGISTRO_xn[13][16], REGISTRO_xn[12][16], REGISTRO_xn[11][16],       ;
+;               ;                           ; REGISTRO_xn[10][16], REGISTRO_xn[9][16], REGISTRO_xn[8][16], REGISTRO_xn[7][16],          ;
+;               ;                           ; REGISTRO_xn[6][16], REGISTRO_xn[5][16], REGISTRO_xn[4][16], REGISTRO_xn[3][16],           ;
+;               ;                           ; REGISTRO_xn[2][16], REGISTRO_xn[1][16], REGISTRO_xn[0][16], yn_1[37], yn_1[35], yn_1[33], ;
+;               ;                           ; yn_1[31], yn_2[37], yn_2[36], yn_2[34], yn_2[32], REGISTRO_xn[63][3], REGISTRO_xn[63][2], ;
+;               ;                           ; REGISTRO_xn[63][1], REGISTRO_xn[63][0], REGISTRO_xn[62][3], REGISTRO_xn[62][2],           ;
+;               ;                           ; REGISTRO_xn[62][1], REGISTRO_xn[62][0], REGISTRO_xn[61][3], REGISTRO_xn[61][2],           ;
+;               ;                           ; REGISTRO_xn[61][1], REGISTRO_xn[61][0], REGISTRO_xn[60][3], REGISTRO_xn[60][2],           ;
+;               ;                           ; REGISTRO_xn[60][1], REGISTRO_xn[60][0], REGISTRO_xn[59][3], REGISTRO_xn[59][2],           ;
+;               ;                           ; REGISTRO_xn[59][1], REGISTRO_xn[59][0], REGISTRO_xn[58][3], REGISTRO_xn[58][2],           ;
+;               ;                           ; REGISTRO_xn[58][1], REGISTRO_xn[58][0], REGISTRO_xn[57][3], REGISTRO_xn[57][2],           ;
+;               ;                           ; REGISTRO_xn[57][1], REGISTRO_xn[57][0], REGISTRO_xn[56][3], REGISTRO_xn[56][2],           ;
+;               ;                           ; REGISTRO_xn[56][1], REGISTRO_xn[56][0], REGISTRO_xn[55][3], REGISTRO_xn[55][2],           ;
+;               ;                           ; REGISTRO_xn[55][1], REGISTRO_xn[55][0], REGISTRO_xn[54][3], REGISTRO_xn[54][2],           ;
+;               ;                           ; REGISTRO_xn[54][1], REGISTRO_xn[54][0], REGISTRO_xn[53][3], REGISTRO_xn[53][2],           ;
+;               ;                           ; REGISTRO_xn[53][1], REGISTRO_xn[53][0], REGISTRO_xn[52][3], REGISTRO_xn[52][2],           ;
+;               ;                           ; REGISTRO_xn[52][1], REGISTRO_xn[52][0], REGISTRO_xn[51][3], REGISTRO_xn[51][2],           ;
+;               ;                           ; REGISTRO_xn[51][1], REGISTRO_xn[51][0], REGISTRO_xn[50][3], REGISTRO_xn[50][2],           ;
+;               ;                           ; REGISTRO_xn[50][1], REGISTRO_xn[50][0], REGISTRO_xn[49][3], REGISTRO_xn[49][2],           ;
+;               ;                           ; REGISTRO_xn[49][1], REGISTRO_xn[49][0], REGISTRO_xn[48][3], REGISTRO_xn[48][2],           ;
+;               ;                           ; REGISTRO_xn[48][1], REGISTRO_xn[48][0], REGISTRO_xn[47][3], REGISTRO_xn[47][2],           ;
+;               ;                           ; REGISTRO_xn[47][1], REGISTRO_xn[47][0], REGISTRO_xn[46][3], REGISTRO_xn[46][2],           ;
+;               ;                           ; REGISTRO_xn[46][1], REGISTRO_xn[46][0], REGISTRO_xn[45][3], REGISTRO_xn[45][2],           ;
+;               ;                           ; REGISTRO_xn[45][1], REGISTRO_xn[45][0], REGISTRO_xn[44][3], REGISTRO_xn[44][2],           ;
+;               ;                           ; REGISTRO_xn[44][1], REGISTRO_xn[44][0], REGISTRO_xn[43][3], REGISTRO_xn[43][2],           ;
+;               ;                           ; REGISTRO_xn[43][1], REGISTRO_xn[43][0], REGISTRO_xn[42][3], REGISTRO_xn[42][2],           ;
+;               ;                           ; REGISTRO_xn[42][1], REGISTRO_xn[42][0], REGISTRO_xn[41][3], REGISTRO_xn[41][2],           ;
+;               ;                           ; REGISTRO_xn[41][1], REGISTRO_xn[41][0], REGISTRO_xn[40][3], REGISTRO_xn[40][2],           ;
+;               ;                           ; REGISTRO_xn[40][1], REGISTRO_xn[40][0], REGISTRO_xn[39][3], REGISTRO_xn[39][2],           ;
+;               ;                           ; REGISTRO_xn[39][1], REGISTRO_xn[39][0], REGISTRO_xn[38][3], REGISTRO_xn[38][2],           ;
+;               ;                           ; REGISTRO_xn[38][1], REGISTRO_xn[38][0], REGISTRO_xn[37][3], REGISTRO_xn[37][2],           ;
+;               ;                           ; REGISTRO_xn[37][1], REGISTRO_xn[37][0], REGISTRO_xn[36][3], REGISTRO_xn[36][2],           ;
+;               ;                           ; REGISTRO_xn[36][1], REGISTRO_xn[36][0], REGISTRO_xn[35][3], REGISTRO_xn[35][2],           ;
+;               ;                           ; REGISTRO_xn[35][1], REGISTRO_xn[35][0], REGISTRO_xn[34][3], REGISTRO_xn[34][2],           ;
+;               ;                           ; REGISTRO_xn[34][1], REGISTRO_xn[34][0], REGISTRO_xn[33][3], REGISTRO_xn[33][2],           ;
+;               ;                           ; REGISTRO_xn[33][1], REGISTRO_xn[33][0], REGISTRO_xn[32][4], REGISTRO_xn[32][3],           ;
+;               ;                           ; REGISTRO_xn[32][2], REGISTRO_xn[32][1], REGISTRO_xn[32][0], REGISTRO_xn[31][4],           ;
+;               ;                           ; REGISTRO_xn[31][3], REGISTRO_xn[31][2], REGISTRO_xn[31][1], REGISTRO_xn[31][0],           ;
+;               ;                           ; REGISTRO_xn[30][4], REGISTRO_xn[30][3], REGISTRO_xn[30][2], REGISTRO_xn[30][1],           ;
+;               ;                           ; REGISTRO_xn[30][0], REGISTRO_xn[29][4], REGISTRO_xn[29][3], REGISTRO_xn[29][2],           ;
+;               ;                           ; REGISTRO_xn[29][1], REGISTRO_xn[29][0], REGISTRO_xn[28][4], REGISTRO_xn[28][3],           ;
+;               ;                           ; REGISTRO_xn[28][2], REGISTRO_xn[28][1], REGISTRO_xn[28][0], REGISTRO_xn[27][4],           ;
+;               ;                           ; REGISTRO_xn[27][3], REGISTRO_xn[27][2], REGISTRO_xn[27][1], REGISTRO_xn[27][0],           ;
+;               ;                           ; REGISTRO_xn[26][4], REGISTRO_xn[26][3], REGISTRO_xn[26][2], REGISTRO_xn[26][1],           ;
+;               ;                           ; REGISTRO_xn[26][0], REGISTRO_xn[25][4], REGISTRO_xn[25][3], REGISTRO_xn[25][2],           ;
+;               ;                           ; REGISTRO_xn[25][1], REGISTRO_xn[25][0], REGISTRO_xn[24][4], REGISTRO_xn[24][3],           ;
+;               ;                           ; REGISTRO_xn[24][2], REGISTRO_xn[24][1], REGISTRO_xn[24][0], REGISTRO_xn[23][4],           ;
+;               ;                           ; REGISTRO_xn[23][3], REGISTRO_xn[23][2], REGISTRO_xn[23][1], REGISTRO_xn[23][0],           ;
+;               ;                           ; REGISTRO_xn[22][4], REGISTRO_xn[22][3], REGISTRO_xn[22][2], REGISTRO_xn[22][1],           ;
+;               ;                           ; REGISTRO_xn[22][0], REGISTRO_xn[21][4], REGISTRO_xn[21][3], REGISTRO_xn[21][2],           ;
+;               ;                           ; REGISTRO_xn[21][1], REGISTRO_xn[21][0], REGISTRO_xn[20][4], REGISTRO_xn[20][3],           ;
+;               ;                           ; REGISTRO_xn[20][2], REGISTRO_xn[20][1], REGISTRO_xn[20][0], REGISTRO_xn[19][4],           ;
+;               ;                           ; REGISTRO_xn[19][3], REGISTRO_xn[19][2], REGISTRO_xn[19][1], REGISTRO_xn[19][0],           ;
+;               ;                           ; REGISTRO_xn[18][4], REGISTRO_xn[18][3], REGISTRO_xn[18][2], REGISTRO_xn[18][1],           ;
+;               ;                           ; REGISTRO_xn[18][0], REGISTRO_xn[17][4], REGISTRO_xn[17][3], REGISTRO_xn[17][2],           ;
+;               ;                           ; REGISTRO_xn[17][1], REGISTRO_xn[17][0], REGISTRO_xn[16][4], REGISTRO_xn[16][3],           ;
+;               ;                           ; REGISTRO_xn[16][2], REGISTRO_xn[16][1], REGISTRO_xn[16][0], REGISTRO_xn[15][4],           ;
+;               ;                           ; REGISTRO_xn[15][3], REGISTRO_xn[15][2], REGISTRO_xn[15][1], REGISTRO_xn[15][0],           ;
+;               ;                           ; REGISTRO_xn[14][4], REGISTRO_xn[14][3], REGISTRO_xn[14][2], REGISTRO_xn[14][1],           ;
+;               ;                           ; REGISTRO_xn[14][0], REGISTRO_xn[13][4], REGISTRO_xn[13][3], REGISTRO_xn[13][2],           ;
+;               ;                           ; REGISTRO_xn[13][1], REGISTRO_xn[13][0], REGISTRO_xn[12][4], REGISTRO_xn[12][3],           ;
+;               ;                           ; REGISTRO_xn[12][2], REGISTRO_xn[12][1], REGISTRO_xn[12][0], REGISTRO_xn[11][4],           ;
+;               ;                           ; REGISTRO_xn[11][3], REGISTRO_xn[11][2], REGISTRO_xn[11][1], REGISTRO_xn[11][0],           ;
+;               ;                           ; REGISTRO_xn[10][4], REGISTRO_xn[10][3], REGISTRO_xn[10][2], REGISTRO_xn[10][1],           ;
+;               ;                           ; REGISTRO_xn[10][0], REGISTRO_xn[9][4], REGISTRO_xn[9][3], REGISTRO_xn[9][2],              ;
+;               ;                           ; REGISTRO_xn[9][1], REGISTRO_xn[9][0], REGISTRO_xn[8][4], REGISTRO_xn[8][3],               ;
+;               ;                           ; REGISTRO_xn[8][2], REGISTRO_xn[8][1], REGISTRO_xn[8][0], REGISTRO_xn[7][4],               ;
+;               ;                           ; REGISTRO_xn[7][3], REGISTRO_xn[7][2], REGISTRO_xn[7][1], REGISTRO_xn[7][0],               ;
+;               ;                           ; REGISTRO_xn[6][4], REGISTRO_xn[6][3], REGISTRO_xn[6][2], REGISTRO_xn[6][1],               ;
+;               ;                           ; REGISTRO_xn[6][0], REGISTRO_xn[5][4], REGISTRO_xn[5][3], REGISTRO_xn[5][2],               ;
+;               ;                           ; REGISTRO_xn[5][1], REGISTRO_xn[5][0], REGISTRO_xn[4][4], REGISTRO_xn[4][3],               ;
+;               ;                           ; REGISTRO_xn[4][2], REGISTRO_xn[4][1], REGISTRO_xn[4][0], REGISTRO_xn[3][4],               ;
+;               ;                           ; REGISTRO_xn[3][3], REGISTRO_xn[3][2], REGISTRO_xn[3][1], REGISTRO_xn[3][0],               ;
+;               ;                           ; REGISTRO_xn[2][4], REGISTRO_xn[2][3], REGISTRO_xn[2][2], REGISTRO_xn[2][1],               ;
+;               ;                           ; REGISTRO_xn[2][0], REGISTRO_xn[1][4], REGISTRO_xn[1][3], REGISTRO_xn[1][2],               ;
+;               ;                           ; REGISTRO_xn[1][1], REGISTRO_xn[1][0], REGISTRO_xn[0][3], REGISTRO_xn[0][2],               ;
+;               ;                           ; REGISTRO_xn[0][1], REGISTRO_xn[0][0]                                                      ;
++---------------+---------------------------+-------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |FIR_low_area                                       ;
++----------------+----------------------------------------------------------------------------------+----------------+
+; Parameter Name ; Value                                                                            ; Type           ;
++----------------+----------------------------------------------------------------------------------+----------------+
+; data_length    ; 16                                                                               ; Signed Integer ;
+; data_signed    ; false                                                                            ; Enumerated     ;
+; improv_t       ; false                                                                            ; Enumerated     ;
+; bits_resol     ; 72                                                                               ; Signed Integer ;
+; taps           ; 65                                                                               ; Signed Integer ;
+; coefficients   ; A(F"-0.0001595245",F"-0.0003084001",F"-0.0004301811",F"-0.0004347041",F"-0.00020 ; Array/Record   ;
+; coefficients   ; 55598",F"0.0003800131",F"0.0014207502",F"0.0029545219",F"0.0049219064",F"0.00713 ;                ;
+; coefficients   ; 89552",F"0.0092882381",F"0.0109355139",F"0.011575574",F"0.0107053911",F"0.007916 ;                ;
+; coefficients   ; 5629",F"0.0029933899",F"-0.0040009533",F"-0.0126686824",F"-0.0222680859",F"-0.03 ;                ;
+; coefficients   ; 17605256",F"-0.0399147787",F"-0.0454594627",F"-0.0472644494",F"-0.0445247222",F" ;                ;
+; coefficients   ; -0.0369167302",F"-0.0246989636",F"-0.0087353363",F"0.0095688399",F"0.0284147387" ;                ;
+; coefficients   ; ,F"0.0458241845",F"0.0598907824",F"0.0690314079",F"0.0722001024",F"0.0690314079" ;                ;
+; coefficients   ; ,F"0.0598907824",F"0.0458241845",F"0.0284147387",F"0.0095688399",F"-0.0087353363 ;                ;
+; coefficients   ; ",F"-0.0246989636",F"-0.0369167302",F"-0.0445247222",F"-0.0472644494",F"-0.04545 ;                ;
+; coefficients   ; 94627",F"-0.0399147787",F"-0.0317605256",F"-0.0222680859",F"-0.0126686824",F"-0. ;                ;
+; coefficients   ; 0040009533",F"0.0029933899",F"0.0079165629",F"0.0107053911",F"0.011575574",F"0.0 ;                ;
+; coefficients   ; 109355139",F"0.0092882381",F"0.0071389552",F"0.0049219064",F"0.0029545219",F"0.0 ;                ;
+; coefficients   ; 014207502",F"0.0003800131",F"-0.0002055598",F"-0.0004347041",F"-0.0004301811",F" ;                ;
+; coefficients   ; -0.0003084001",F"-0.0001595245",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0" ;                ;
+; coefficients   ; ,F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F" ;                ;
+; coefficients   ; 0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0 ;                ;
+; coefficients   ; ",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F ;                ;
+; coefficients   ; "0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0. ;                ;
+;                ; 0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0",F"0.0")        ;                ;
++----------------+----------------------------------------------------------------------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Jun 07 09:04:23 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off final_project -c final_project
+Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
+Info (12021): Found 2 design units, including 1 entities, in source file c:/users/ghlin/downloads/fir_filter_latest/fir_filter/tags/testbench/fir_low_area_tb.vhd
+    Info (12022): Found design unit 1: FIR_low_area_tb-FIR_low_area_tb_arch
+    Info (12023): Found entity 1: FIR_low_area_tb
+Info (12021): Found 4 design units, including 1 entities, in source file c:/users/ghlin/downloads/fir_filter_latest/fir_filter/tags/fir_low_area.vhd
+    Info (12022): Found design unit 1: fir_package
+    Info (12022): Found design unit 2: fir_package-body
+    Info (12022): Found design unit 3: FIR_low_area-FIR_low_area_arch
+    Info (12023): Found entity 1: FIR_low_area
+Info (12021): Found 1 design units, including 0 entities, in source file fir_compiler-library/auk_dspip_lib_pkg_fir_130.vhd
+    Info (12022): Found design unit 1: auk_dspip_lib_pkg_fir_130
+Info (12021): Found 2 design units, including 0 entities, in source file fir_compiler-library/auk_dspip_math_pkg_fir_130.vhd
+    Info (12022): Found design unit 1: auk_dspip_math_pkg_fir_130
+    Info (12022): Found design unit 2: auk_dspip_math_pkg_fir_130-body
+Info (12021): Found 1 design units, including 1 entities, in source file fir_st.v
+    Info (12023): Found entity 1: fir_st
+Info (12021): Found 2 design units, including 1 entities, in source file fir_ast.vhd
+    Info (12022): Found design unit 1: fir_ast-struct
+    Info (12023): Found entity 1: fir_ast
+Info (12021): Found 2 design units, including 1 entities, in source file fir.vhd
+    Info (12022): Found design unit 1: fir-SYN
+    Info (12023): Found entity 1: fir
+Info (12021): Found 1 design units, including 1 entities, in source file fir2_st.v
+    Info (12023): Found entity 1: fir2_st
+Info (12021): Found 2 design units, including 1 entities, in source file fir2_ast.vhd
+    Info (12022): Found design unit 1: fir2_ast-struct
+    Info (12023): Found entity 1: fir2_ast
+Info (12021): Found 2 design units, including 1 entities, in source file fir2.vhd
+    Info (12022): Found design unit 1: fir2-SYN
+    Info (12023): Found entity 1: fir2
+Info (12021): Found 1 design units, including 1 entities, in source file fir3_st.v
+    Info (12023): Found entity 1: fir3_st
+Info (12021): Found 2 design units, including 1 entities, in source file fir3_ast.vhd
+    Info (12022): Found design unit 1: fir3_ast-struct
+    Info (12023): Found entity 1: fir3_ast
+Info (12021): Found 2 design units, including 1 entities, in source file fir3.vhd
+    Info (12022): Found design unit 1: fir3-SYN
+    Info (12023): Found entity 1: fir3
+Warning (10236): Verilog HDL Implicit Net warning at fir_st.v(2053): created implicit net for "coef_ld"
+Info (12127): Elaborating entity "FIR_low_area" for the top level hierarchy
+Warning (10542): VHDL Variable Declaration warning at math_real.vhd(2373): used initial value expression for variable "RECIPROCAL" because variable was never assigned a value
+Warning (12189): OpenCore Simulation-Only Evaluation feature is turned on for all cores in the design
+    Warning (12191): Some cores in this design do not support the OpenCore Plus Hardware Evaluation feature
+        Warning (12192): "FIR_Compiler (6AF7_0012)" does not support the OpenCore Plus Hardware Evaluation feature
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "yn[0]" is stuck at GND
+    Warning (13410): Pin "yn[1]" is stuck at GND
+    Warning (13410): Pin "yn[2]" is stuck at GND
+    Warning (13410): Pin "yn[3]" is stuck at GND
+    Warning (13410): Pin "yn[4]" is stuck at GND
+    Warning (13410): Pin "yn[5]" is stuck at GND
+    Warning (13410): Pin "yn[6]" is stuck at GND
+    Warning (13410): Pin "yn[7]" is stuck at GND
+    Warning (13410): Pin "yn[8]" is stuck at GND
+    Warning (13410): Pin "yn[9]" is stuck at GND
+    Warning (13410): Pin "yn[10]" is stuck at GND
+    Warning (13410): Pin "yn[11]" is stuck at GND
+    Warning (13410): Pin "yn[12]" is stuck at GND
+    Warning (13410): Pin "yn[13]" is stuck at GND
+    Warning (13410): Pin "yn[14]" is stuck at GND
+    Warning (13410): Pin "yn[15]" is stuck at GND
+Info (17049): 1219 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 20 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "areset"
+    Warning (15610): No output dependent on input pin "sreset"
+    Warning (15610): No output dependent on input pin "clock_fs"
+    Warning (15610): No output dependent on input pin "enable"
+    Warning (15610): No output dependent on input pin "xn[0]"
+    Warning (15610): No output dependent on input pin "xn[1]"
+    Warning (15610): No output dependent on input pin "xn[2]"
+    Warning (15610): No output dependent on input pin "xn[3]"
+    Warning (15610): No output dependent on input pin "xn[4]"
+    Warning (15610): No output dependent on input pin "xn[5]"
+    Warning (15610): No output dependent on input pin "xn[6]"
+    Warning (15610): No output dependent on input pin "xn[7]"
+    Warning (15610): No output dependent on input pin "xn[8]"
+    Warning (15610): No output dependent on input pin "xn[9]"
+    Warning (15610): No output dependent on input pin "xn[10]"
+    Warning (15610): No output dependent on input pin "xn[11]"
+    Warning (15610): No output dependent on input pin "xn[12]"
+    Warning (15610): No output dependent on input pin "xn[13]"
+    Warning (15610): No output dependent on input pin "xn[14]"
+    Warning (15610): No output dependent on input pin "xn[15]"
+Info (21057): Implemented 36 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 20 input pins
+    Info (21059): Implemented 16 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 43 warnings
+    Info: Peak virtual memory: 4689 megabytes
+    Info: Processing ended: Wed Jun 07 09:04:30 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:04
+
+
