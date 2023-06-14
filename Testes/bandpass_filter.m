@@ -8,7 +8,7 @@ Wpass1 = Fpass1 / (Fs/2);
 Wpass2 = Fpass2 / (Fs/2);
 
 % Filter order
-N = 64;
+N = 14;
 
 % FIR filter design using Hamming window
 %h = fir1(N, [Wpass1 Wpass2], 'bandpass', hamming(N+1));

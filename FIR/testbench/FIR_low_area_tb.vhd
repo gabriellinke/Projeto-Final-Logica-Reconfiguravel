@@ -32,51 +32,29 @@ ARCHITECTURE FIR_low_area_tb_arch OF FIR_low_area_tb IS
  
 -- TESTCASE SETTINGS
 --.............................................................................
-  CONSTANT freq_xn     : REAL        := 2.0e6;   -- input frequency
-  --CONSTANT freq_xn     : REAL        := 900.0e3;   -- input frequency
-  
-  CONSTANT data_length : NATURAL     := 8;        -- input bit size
+  CONSTANT freq_xn     : REAL        := 1.0e0;   -- input frequency
+  CONSTANT data_length : NATURAL     := 12;        -- input bit size
                                     
-  CONSTANT fs_Hz       : REAL        := 8.0e6;     -- sampling frequency
-  --CONSTANT fs_Hz       : REAL        := 44.1e3;     -- sampling frequency
-  CONSTANT taps        : NATURAL     := 49;        -- order+1
+  CONSTANT fs_Hz       : REAL        := 44.1e3;     -- sampling frequency
+  CONSTANT taps        : NATURAL     := 15;        -- order+1
   -- transition band: 800e3 to 1.6e6
-  CONSTANT hn 			  : COEFF_ARRAY :=(                     -- normalized coefficients bi: (bo,b1, ..., bN). They must be symmetric (but sign)
-													0.0001941042,
-                                       0.0006868266,
-                                       0.0015712643,
-                                       0.0031632958,
-                                       0.0057532538,
-                                       0.0095608923,
-                                       0.0146958011,
-                                       0.0211287766,
-                                       0.0286784589,
-                                       0.0370157426,
-                                       0.0456862828,
-                                       0.0541491260,
-                                       0.0618274047,
-                                       0.0681654164,
-                                       0.0726854808,
-                                       0.0750378728,
-                                       0.0750378728,
-                                       0.0726854808,
-                                       0.0681654164,
-                                       0.0618274047,
-                                       0.0541491260,
-                                       0.0456862828,
-                                       0.0370157426,
-                                       0.0286784589,
-                                       0.0211287766,
-                                       0.0146958011,
-                                       0.0095608923,
-                                       0.0057532538,
-                                       0.0031632958,
-                                       0.0015712643,
-                                       0.0006868266,
-                                       0.0001941042,
-													OTHERS=>0.0);         -- (always end with "others=>0.0")
-													
-  CONSTANT bits_resol  : NATURAL := 32;
+  CONSTANT hn          : COEFF_ARRAY := (-0.0033059793
+														-0.0065769611,
+														-0.0158995798,
+														-0.0315468706,
+														-0.0512685511,
+														-0.0707871247,
+														-0.0851486854,
+														0.9065763216,
+														-0.0851486854,
+														-0.0707871247,
+														-0.0512685511,
+														-0.0315468706,
+														-0.0158995798,
+														-0.0065769611,
+														-0.0033059793,
+                                          others=>0.0);
+  CONSTANT bits_resol  : NATURAL := 12;
 --..............................................................................
 
   SIGNAL areset        : STD_LOGIC;
@@ -95,8 +73,10 @@ ARCHITECTURE FIR_low_area_tb_arch OF FIR_low_area_tb IS
   CONSTANT num_samples : NATURAL := num_cycles*integer(round(fs_Hz/freq_xn));
   CONSTANT amplitude   : REAL    := 2.0**real(data_length-1)-1.0;
  
-  file fptr: text;
-  CONSTANT FILE_NAME :string := "output.dat";
+  file fptr_input: text;
+  CONSTANT FILE_NAME_INPUT :string := "input.dat";
+  file fptr_output: text;
+  CONSTANT FILE_NAME_OUTPUT :string := "output.dat";
  
 BEGIN
 
@@ -152,13 +132,16 @@ BEGIN
     variable rand        : real;
     variable noise_n     : real;
     variable sinus_n     : real;
-    variable fstatus  :file_open_status;
-    variable file_line :line;
+    variable fstatus_input  :file_open_status;
+    variable file_line_input :line;
+    variable fstatus_output  :file_open_status;
+    variable file_line_output :line;
   begin 
     UNIFORM(seed1, seed2, rand);     -- uniform  0.0 to 1.0
     noise_n := 2.0*(rand-0.5) * (amplitude/20.0);     
     sinus_n := amplitude * sin(2.0*PI*radians) + noise_n;
-    file_open(fstatus, fptr, FILE_NAME, write_mode);
+    file_open(fstatus_input, fptr_input, FILE_NAME_INPUT, write_mode);
+    file_open(fstatus_output, fptr_output, FILE_NAME_OUTPUT, write_mode);
 
     -- saturation control
     if sinus_n > amplitude then
@@ -169,8 +152,10 @@ BEGIN
     
     xn_signed   <= std_logic_vector(conv_signed(integer(round(sinus_n)),data_length));
     xn_unsigned <= std_logic_vector(conv_unsigned(integer(round(amplitude + sinus_n)),data_length));
-    write(file_line, sinus_n, left, 2);
-    writeline(fptr, file_line);
+	 write(file_line_input, sinus_n, left, 8);
+    writeline(fptr_input, file_line_input);
+    write(file_line_output, conv_integer(yn_signed), left, 8);
+    writeline(fptr_output, file_line_output);
     if radians >= 1.0 then
       radians <= 0.0;
     else
@@ -194,7 +179,6 @@ BEGIN
     wait for num_samples*fs_period;
     assert false report "SIMULATION END" severity failure;
   end process;
- 
  
 END FIR_low_area_tb_arch;
 
