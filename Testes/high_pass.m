@@ -3,8 +3,8 @@ clear;
 clf;
 
 % Parâmetros do filtro
-ordem = 14;
-frequenciaCorte = 2e3;
+ordem = 32;
+frequenciaCorte = 500;
 frequenciaAmostragem = 44.1e3; % Freq. de amostragem (altere conforme necessário)
 
 % Projeta o filtro FIR passa-alta
@@ -23,9 +23,9 @@ filename = 'filter_coefficients.txt';
 dlmwrite(filename, filtro, 'precision', '%.10f', 'delimiter', '\n');
 
 % Cria a senoide de 500Hz
-duracao = 5; % Duração em segundos
+duracao = 0.005; % Duração em segundos
 t = 0:1/frequenciaAmostragem:duracao-1/frequenciaAmostragem; % Vetor de tempo
-frequenciaSenoide = 1; % Frequência da senoide em Hz
+frequenciaSenoide = 2000; % Frequência da senoide em Hz
 senoide = sin(2*pi*frequenciaSenoide*t);
 
 % Aplica o filtro à senoide

@@ -3,8 +3,8 @@ clear;
 clf;
 
 % Nome dos arquivos .dat
-arquivoInput = 'input.dat';
-arquivoOutput = 'output.dat';
+arquivoInput = '../simulation/modelsim/input.dat';
+arquivoOutput = '../simulation/modelsim/output.dat';
 
 % Lê os pontos do arquivo input.dat
 dadosInput = load(arquivoInput);

@@ -68,78 +68,14 @@ USE ieee.math_real.all;
 
 ENTITY FIR_low_area IS
     GENERIC(        
-        data_length  : NATURAL     := 16;                   -- input/output length (number of bits)
+        data_length  : NATURAL     := 12;                   -- input/output length (number of bits)
         data_signed  : BOOLEAN     := false;               -- input/output type (signed or unsigned)
         improv_t     : BOOLEAN     := false;               -- minimal timing improvement by adding one extra output cycle delay (use only if needed)        
-        bits_resol   : NATURAL     := 128;                  -- number of bits for the internal operations with decimals in fixed point. Recommended: bits_resol > taps. THIS SETTING IS CRITICAL FOR P&R RESULTS (MAX FREQ)
-        taps         : NATURAL     := 65;                   -- =order+1, 2 coefficients as minimum (order=1)
-        coefficients : COEFF_ARRAY :=(                     -- normalized coefficients bi: (bo,b1, ..., bN). They must be symmetric (but sign)
-													-0.0001595245,
-													-0.0003084001,
-													-0.0004301811,
-													-0.0004347041,
-													-0.0002055598,
-													0.0003800131,
-													0.0014207502,
-													0.0029545219,
-													0.0049219064,
-													0.0071389552,
-													0.0092882381,
-													0.0109355139,
-													0.0115755740,
-													0.0107053911,
-													0.0079165629,
-													0.0029933899,
-													-0.0040009533,
-													-0.0126686824,
-													-0.0222680859,
-													-0.0317605256,
-													-0.0399147787,
-													-0.0454594627,
-													-0.0472644494,
-													-0.0445247222,
-													-0.0369167302,
-													-0.0246989636,
-													-0.0087353363,
-													0.0095688399,
-													0.0284147387,
-													0.0458241845,
-													0.0598907824,
-													0.0690314079,
-													0.0722001024,
-													0.0690314079,
-													0.0598907824,
-													0.0458241845,
-													0.0284147387,
-													0.0095688399,
-													-0.0087353363,
-													-0.0246989636,
-													-0.0369167302,
-													-0.0445247222,
-													-0.0472644494,
-													-0.0454594627,
-													-0.0399147787,
-													-0.0317605256,
-													-0.0222680859,
-													-0.0126686824,
-													-0.0040009533,
-													0.0029933899,
-													0.0079165629,
-													0.0107053911,
-													0.0115755740,
-													0.0109355139,
-													0.0092882381,
-													0.0071389552,
-													0.0049219064,
-													0.0029545219,
-													0.0014207502,
-													0.0003800131,
-													-0.0002055598,
-													-0.0004347041,
-													-0.0004301811,
-													-0.0003084001,
-													-0.0001595245,
-													OTHERS=>0.0)         -- (always end with "others=>0.0")
+        bits_resol   : NATURAL     := 36;                  -- number of bits for the internal operations with decimals in fixed point. Recommended: bits_resol > taps. THIS SETTING IS CRITICAL FOR P&R RESULTS (MAX FREQ)
+        taps         : NATURAL     := 2;                   -- =order+1, 2 coefficients as minimum (order=1)
+        coefficients : COEFF_ARRAY := (0.0,
+													0.0,
+													others=>0.0)
     );
     PORT(
         areset       : IN    STD_LOGIC;                    -- active high                            
