@@ -24,15 +24,27 @@ LIBRARY work;
 USE work.fir_package.all;
 
 
-ENTITY FIR_low_area_tb IS
-END FIR_low_area_tb;
+ENTITY top_level_tb IS
+END top_level_tb;
 
 
-ARCHITECTURE FIR_low_area_tb_arch OF FIR_low_area_tb IS
+ARCHITECTURE top_level_tb_arch OF top_level_tb IS
+
+	COMPONENT top_level IS
+		port(	clock, resetn : IN  STD_LOGIC;
+				chipselect    : IN  STD_LOGIC;
+				writedata     : IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
+				write_en      : IN  STD_LOGIC;
+				readdata      : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+				add        	  : IN  STD_LOGIC;
+				read_en       : IN  STD_LOGIC);
+	END COMPONENT;
+ 
+ 
  
 -- TESTCASE SETTINGS
 --.............................................................................
-  CONSTANT freq_xn     : REAL        := 2000.0;   -- input frequency
+  CONSTANT freq_xn     : REAL        := 200.0;   -- input frequency
   CONSTANT data_length : NATURAL     := 31;        -- input bit size       
   CONSTANT fs_Hz       : REAL        := 44.1e3;     -- sampling frequency
 
@@ -41,9 +53,10 @@ ARCHITECTURE FIR_low_area_tb_arch OF FIR_low_area_tb IS
   SIGNAL areset        : STD_LOGIC;
   SIGNAL clock_fs      : STD_LOGIC := '1';
   SIGNAL xn_signed     : STD_LOGIC_VECTOR(data_length-1 DOWNTO 0);
-  SIGNAL xn_unsigned   : STD_LOGIC_VECTOR(data_length-1 DOWNTO 0);
   SIGNAL yn_signed     : STD_LOGIC_VECTOR(data_length-1 DOWNTO 0);
-  SIGNAL yn_unsigned   : STD_LOGIC_VECTOR(data_length-1 DOWNTO 0);
+  SIGNAL writedata_s   : STD_LOGIC_VECTOR(31 DOWNTO 0);
+  SIGNAL readdata_s    : STD_LOGIC_VECTOR(31 DOWNTO 0);
+
                        
   SIGNAL radians       : REAL := 0.0;
   SIGNAL radian_step   : REAL := 1.0/(fs_Hz/freq_xn);
@@ -59,18 +72,18 @@ ARCHITECTURE FIR_low_area_tb_arch OF FIR_low_area_tb IS
   file fptr_output: text;
   CONSTANT FILE_NAME_OUTPUT :string := "output.dat";
  
-BEGIN
-
-  duv_fir_signed: ENTITY work.FIR_low_area 
-  --.............................................
-  port map(
-    areset   => areset,
-    sreset   => '0',
-    clock_fs => clock_fs,
-    enable   => '1',
-    xn       => xn_signed,
-    yn       => yn_signed
-    );
+BEGIN 
+  fir: top_level
+	port map(
+		clock      => clock_fs,
+		resetn     => areset,
+		chipselect => '1',
+		writedata  => writedata_s,
+		write_en   => '1',
+		readdata   => readdata_s,
+		add        => '1',
+		read_en    => '1'
+	);
 
   sampling_clock: process 
   --.............................................
@@ -104,9 +117,12 @@ BEGIN
     elsif sinus_n < -amplitude then
       sinus_n := -amplitude;
     end if;
+	 
+	 yn_signed <= readdata_s(31 DOWNTO 1);
     
     xn_signed   <= std_logic_vector(conv_signed(integer(round(sinus_n)),data_length));
-    xn_unsigned <= std_logic_vector(conv_unsigned(integer(round(amplitude + sinus_n)),data_length));
+	 writedata_s <= xn_signed & '0';
+	 
 	 write(file_line_input, sinus_n, left, 8);
     writeline(fptr_input, file_line_input);
     write(file_line_output, conv_integer(yn_signed), left, 8);
@@ -122,9 +138,9 @@ BEGIN
   reset: process 
   --.............................................
   begin
-    areset <= '1';
-    wait for 10 ns;
     areset <= '0';
+    wait for 10 ns;
+    areset <= '1';
     wait;
   end process;  
  
@@ -135,6 +151,6 @@ BEGIN
     assert false report "SIMULATION END" severity failure;
   end process;
  
-END FIR_low_area_tb_arch;
+END top_level_tb_arch;
 
 

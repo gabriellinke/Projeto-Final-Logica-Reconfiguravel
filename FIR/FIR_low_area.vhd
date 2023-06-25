@@ -68,13 +68,44 @@ USE ieee.math_real.all;
 
 ENTITY FIR_low_area IS
     GENERIC(        
-        data_length  : NATURAL     := 12;                   -- input/output length (number of bits)
-        data_signed  : BOOLEAN     := false;               -- input/output type (signed or unsigned)
+        data_length  : NATURAL     := 31;                   -- input/output length (number of bits)
+        data_signed  : BOOLEAN     := true;               -- input/output type (signed or unsigned)
         improv_t     : BOOLEAN     := false;               -- minimal timing improvement by adding one extra output cycle delay (use only if needed)        
-        bits_resol   : NATURAL     := 36;                  -- number of bits for the internal operations with decimals in fixed point. Recommended: bits_resol > taps. THIS SETTING IS CRITICAL FOR P&R RESULTS (MAX FREQ)
-        taps         : NATURAL     := 2;                   -- =order+1, 2 coefficients as minimum (order=1)
-        coefficients : COEFF_ARRAY := (0.0,
-													0.0,
+        bits_resol   : NATURAL     := 31;                  -- number of bits for the internal operations with decimals in fixed point. Recommended: bits_resol > taps. THIS SETTING IS CRITICAL FOR P&R RESULTS (MAX FREQ)
+        taps         : NATURAL     := 33;                   -- =order+1, 2 coefficients as minimum (order=1)
+        coefficients : COEFF_ARRAY := (-0.0014480712,
+													-0.0016547757,
+													-0.0021998367,
+													-0.0030872443,
+													-0.0043035648,
+													-0.0058180088,
+													-0.0075834401,
+													-0.0095382907,
+													-0.0116092940,
+													-0.0137148999,
+													-0.0157691965,
+													-0.0176861310,
+													-0.0193838022,
+													-0.0207885931,
+													-0.0218389165,
+													-0.0224883680,
+													0.9787196211,
+													-0.0224883680,
+													-0.0218389165,
+													-0.0207885931,
+													-0.0193838022,
+													-0.0176861310,
+													-0.0157691965,
+													-0.0137148999,
+													-0.0116092940,
+													-0.0095382907,
+													-0.0075834401,
+													-0.0058180088,
+													-0.0043035648,
+													-0.0030872443,
+													-0.0021998367,
+													-0.0016547757,
+													-0.0014480712,
 													others=>0.0)
     );
     PORT(
