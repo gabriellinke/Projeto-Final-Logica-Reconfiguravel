@@ -1,0 +1,166 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=E:/PWM_Giovanni_Rafael/DE2_NET/ --output-directory=E:/PWM_Giovanni_Rafael/DE2_NET/system_0/ --report-file=bsf:E:/PWM_Giovanni_Rafael/DE2_NET/system_0.bsf --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C35F672C6 --system-info=DEVICE_SPEEDGRADE=6 --component-file=E:/PWM_Giovanni_Rafael/DE2_NET/system_0.qsys
+Progress: Loading DE2_NET/system_0.qsys
+Progress: Reading input file
+Progress: Adding clk_50 [clock_source 13.0]
+Progress: Parameterizing module clk_50
+Progress: Adding sdram_0 [altera_avalon_new_sdram_controller 13.0.1.99.2]
+Progress: Parameterizing module sdram_0
+Progress: Adding epcs_controller [altera_avalon_epcs_flash_controller 13.0.1.99.2]
+Progress: Parameterizing module epcs_controller
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 13.0.1.99.2]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding uart_0 [altera_avalon_uart 13.0.1.99.2]
+Progress: Parameterizing module uart_0
+Progress: Adding timer_0 [altera_avalon_timer 13.0.1.99.2]
+Progress: Parameterizing module timer_0
+Progress: Adding timer_1 [altera_avalon_timer 13.0.1.99.2]
+Progress: Parameterizing module timer_1
+Progress: Adding lcd_16207_0 [altera_avalon_lcd_16207 13.0.1.99.2]
+Progress: Parameterizing module lcd_16207_0
+Progress: Adding led_red [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module led_red
+Progress: Adding led_green [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module led_green
+Progress: Adding button_pio [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module button_pio
+Progress: Adding switch_pio [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module switch_pio
+Progress: Adding SD_DAT [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module SD_DAT
+Progress: Adding SD_CMD [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module SD_CMD
+Progress: Adding SD_CLK [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module SD_CLK
+Progress: Adding ISP1362 [ISP1362_IF 1.0]
+Progress: Parameterizing module ISP1362
+Progress: Adding cpu_0 [altera_nios2_qsys 13.0]
+Progress: Parameterizing module cpu_0
+Progress: Adding tri_state_bridge_0_bridge_0 [altera_tristate_conduit_bridge 13.0]
+Progress: Parameterizing module tri_state_bridge_0_bridge_0
+Progress: Adding tri_state_bridge_0_pinSharer_0 [altera_tristate_conduit_pin_sharer 13.0]
+Progress: Parameterizing module tri_state_bridge_0_pinSharer_0
+Progress: Adding cfi_flash_0 [altera_generic_tristate_controller 13.0]
+Progress: Parameterizing module cfi_flash_0
+Progress: Adding merged_resets [altera_reset_bridge 13.0]
+Progress: Parameterizing module merged_resets
+Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 13.0]
+Progress: Parameterizing module sysid_qsys_0
+Progress: Adding Audio_0 [audio_dac_fifo 1.0.1]
+Progress: Parameterizing module Audio_0
+Progress: Adding VGA_0 [binary_vga_controller 1.0.1]
+Progress: Parameterizing module VGA_0
+Progress: Adding DM9000A [dm9000a 1.0.1]
+Progress: Parameterizing module DM9000A
+Progress: Adding SEG7_Display [seg7_lut_8 1.0.1]
+Progress: Parameterizing module SEG7_Display
+Progress: Adding PWM_0 [PWM 1.0]
+Progress: Parameterizing module PWM_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: system_0.button_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: system_0.switch_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: system_0.SD_DAT: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: system_0.SD_CMD: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: system_0.cpu_0: CPUID control register value is 0. Please manually assign CPUID if creating multiple Nios II system
+Warning: system_0.cfi_flash_0: Properties (isFlash,isMemoryDevice,isNonVolatileStorage) have been set on interface uas - in composed mode these are ignored
+Info: system_0.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: system_0.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=E:/PWM_Giovanni_Rafael/DE2_NET/ --output-directory=E:/PWM_Giovanni_Rafael/DE2_NET/system_0/synthesis/ --file-set=QUARTUS_SYNTH --report-file=sopcinfo:E:/PWM_Giovanni_Rafael/DE2_NET/system_0.sopcinfo --report-file=html:E:/PWM_Giovanni_Rafael/DE2_NET/system_0.html --report-file=qip:E:/PWM_Giovanni_Rafael/DE2_NET/system_0/synthesis/system_0.qip --report-file=cmp:E:/PWM_Giovanni_Rafael/DE2_NET/system_0.cmp --report-file=svd --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C35F672C6 --system-info=DEVICE_SPEEDGRADE=6 --component-file=E:/PWM_Giovanni_Rafael/DE2_NET/system_0.qsys --language=VERILOG
+Progress: Loading DE2_NET/system_0.qsys
+Progress: Reading input file
+Progress: Adding clk_50 [clock_source 13.0]
+Progress: Parameterizing module clk_50
+Progress: Adding sdram_0 [altera_avalon_new_sdram_controller 13.0.1.99.2]
+Progress: Parameterizing module sdram_0
+Progress: Adding epcs_controller [altera_avalon_epcs_flash_controller 13.0.1.99.2]
+Progress: Parameterizing module epcs_controller
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 13.0.1.99.2]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding uart_0 [altera_avalon_uart 13.0.1.99.2]
+Progress: Parameterizing module uart_0
+Progress: Adding timer_0 [altera_avalon_timer 13.0.1.99.2]
+Progress: Parameterizing module timer_0
+Progress: Adding timer_1 [altera_avalon_timer 13.0.1.99.2]
+Progress: Parameterizing module timer_1
+Progress: Adding lcd_16207_0 [altera_avalon_lcd_16207 13.0.1.99.2]
+Progress: Parameterizing module lcd_16207_0
+Progress: Adding led_red [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module led_red
+Progress: Adding led_green [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module led_green
+Progress: Adding button_pio [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module button_pio
+Progress: Adding switch_pio [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module switch_pio
+Progress: Adding SD_DAT [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module SD_DAT
+Progress: Adding SD_CMD [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module SD_CMD
+Progress: Adding SD_CLK [altera_avalon_pio 13.0.1.99.2]
+Progress: Parameterizing module SD_CLK
+Progress: Adding ISP1362 [ISP1362_IF 1.0]
+Progress: Parameterizing module ISP1362
+Progress: Adding cpu_0 [altera_nios2_qsys 13.0]
+Progress: Parameterizing module cpu_0
+Progress: Adding tri_state_bridge_0_bridge_0 [altera_tristate_conduit_bridge 13.0]
+Progress: Parameterizing module tri_state_bridge_0_bridge_0
+Progress: Adding tri_state_bridge_0_pinSharer_0 [altera_tristate_conduit_pin_sharer 13.0]
+Progress: Parameterizing module tri_state_bridge_0_pinSharer_0
+Progress: Adding cfi_flash_0 [altera_generic_tristate_controller 13.0]
+Progress: Parameterizing module cfi_flash_0
+Progress: Adding merged_resets [altera_reset_bridge 13.0]
+Progress: Parameterizing module merged_resets
+Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 13.0]
+Progress: Parameterizing module sysid_qsys_0
+Progress: Adding Audio_0 [audio_dac_fifo 1.0.1]
+Progress: Parameterizing module Audio_0
+Progress: Adding VGA_0 [binary_vga_controller 1.0.1]
+Progress: Parameterizing module VGA_0
+Progress: Adding DM9000A [dm9000a 1.0.1]
+Progress: Parameterizing module DM9000A
+Progress: Adding SEG7_Display [seg7_lut_8 1.0.1]
+Progress: Parameterizing module SEG7_Display
+Progress: Adding PWM_0 [PWM 1.0]
+Progress: Parameterizing module PWM_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: system_0.button_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: system_0.switch_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: system_0.SD_DAT: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: system_0.SD_CMD: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: system_0.cpu_0: CPUID control register value is 0. Please manually assign CPUID if creating multiple Nios II system
+Warning: system_0.cfi_flash_0: Properties (isFlash,isMemoryDevice,isNonVolatileStorage) have been set on interface uas - in composed mode these are ignored
+Info: system_0.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: system_0.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Info: system_0: Generating system_0 "system_0" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 27 modules, 115 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_translator_transform: After transform: 53 modules, 214 connections
+Info: merlin_domain_transform: After transform: 106 modules, 556 connections
+Info: merlin_router_transform: After transform: 132 modules, 655 connections
+Info: merlin_traffic_limiter_transform: After transform: 133 modules, 660 connections
+Info: merlin_burst_transform: After transform: 135 modules, 668 connections
+Info: reset_adaptation_transform: After transform: 138 modules, 545 connections
+Info: merlin_network_to_switch_transform: After transform: 189 modules, 655 connections
+Info: merlin_width_transform: After transform: 193 modules, 667 connections
+Info: limiter_update_transform: After transform: 193 modules, 668 connections
+Info: merlin_mm_transform: After transform: 193 modules, 668 connections
+Info: merlin_interrupt_mapper_transform: After transform: 194 modules, 671 connections
+Warning: system_0: "No matching role found for epcs_controller:epcs_control_port:endofpacket (endofpacket)"
+Warning: system_0: "No matching role found for epcs_controller:epcs_control_port:dataavailable (dataavailable)"
+Warning: system_0: "No matching role found for epcs_controller:epcs_control_port:readyfordata (readyfordata)"
+Warning: system_0: "No matching role found for uart_0:s1:dataavailable (dataavailable)"
+Warning: system_0: "No matching role found for uart_0:s1:readyfordata (readyfordata)"
+Error: Generation stopped, 173 or more modules remaining
+Info: system_0: Done system_0" with 47 modules, 1 files, 979854 bytes
+Error: ip-generate failed with exit code 1: 1 Error, 6 Warnings
+Info: Stopping: Create HDL design files for synthesis
