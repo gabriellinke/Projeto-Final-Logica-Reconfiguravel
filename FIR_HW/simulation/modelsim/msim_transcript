@@ -1,0 +1,991 @@
+# Reading D:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do final_project_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying D:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Compiling package fir_package
+# -- Compiling package body fir_package
+# -- Loading package fir_package
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area
+# -- Compiling architecture FIR_low_area_arch of FIR_low_area
+# 
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Compiling package fir_package
+# -- Compiling package body fir_package
+# -- Loading package fir_package
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area
+# -- Compiling architecture FIR_low_area_arch of FIR_low_area
+vcom -reportprogress 30 -work work D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area_tb
+# -- Compiling architecture FIR_low_area_tb_arch of FIR_low_area_tb
+# -- Loading entity FIR_low_area
+vsim rtl_work.fir_low_area_tb
+# vsim rtl_work.fir_low_area_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading ieee.math_real(body)
+# Loading rtl_work.fir_package(body)
+# Loading rtl_work.fir_low_area_tb(fir_low_area_tb_arch)
+# Loading rtl_work.fir_low_area(fir_low_area_arch)
+# ** Warning: (vsim-3930) Integer exponentiation has overflowed; result is -2147483648.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed File: D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# ** Warning: (vsim-3930) Integer exponentiation has overflowed; result is -2147483648.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed File: D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# ** Warning: (vsim-3930) Integer exponentiation has overflowed; result is -2147483648.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned File: D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# ** Warning: (vsim-3930) Integer exponentiation has overflowed; result is -2147483648.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned File: D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+add wave -position insertpoint  \
+sim:/fir_low_area_tb/clock_fs \
+sim:/fir_low_area_tb/xn_signed \
+sim:/fir_low_area_tb/yn_signed
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Failure: ARG is too large in CONV_INTEGER
+#    Time: 22675736 ps  Iteration: 1  Process: /fir_low_area_tb/duv_fir_signed/process1 File: D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# Break in ForLoop loop at D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd line 182
+vsim rtl_work.fir_low_area_tb
+# vsim rtl_work.fir_low_area_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading ieee.math_real(body)
+# Loading rtl_work.fir_package(body)
+# Loading rtl_work.fir_low_area_tb(fir_low_area_tb_arch)
+# Loading rtl_work.fir_low_area(fir_low_area_arch)
+# ** Warning: (vsim-3930) Integer exponentiation has overflowed; result is -2147483648.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed File: D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# ** Warning: (vsim-3930) Integer exponentiation has overflowed; result is -2147483648.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed File: D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# ** Warning: (vsim-3930) Integer exponentiation has overflowed; result is -2147483648.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned File: D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# ** Warning: (vsim-3930) Integer exponentiation has overflowed; result is -2147483648.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned File: D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+vcom -reportprogress 30 -work work D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area_tb
+# -- Compiling architecture FIR_low_area_tb_arch of FIR_low_area_tb
+# -- Loading entity FIR_low_area
+add wave -position insertpoint  \
+sim:/fir_low_area_tb/clock_fs \
+sim:/fir_low_area_tb/xn_signed \
+sim:/fir_low_area_tb/yn_signed
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Failure: ARG is too large in CONV_INTEGER
+#    Time: 22675736 ps  Iteration: 1  Process: /fir_low_area_tb/duv_fir_signed/process1 File: D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# Break in ForLoop loop at D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd line 182
+vcom -reportprogress 30 -work work D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area_tb
+# -- Compiling architecture FIR_low_area_tb_arch of FIR_low_area_tb
+# -- Loading entity FIR_low_area
+restart
+# Loading rtl_work.fir_low_area_tb(fir_low_area_tb_arch)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 7981859424 ps  Iteration: 0  Process: /fir_low_area_tb/sim_time File: D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Break in Process sim_time at D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd line 198
+vcom -reportprogress 30 -work work D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area_tb
+# -- Compiling architecture FIR_low_area_tb_arch of FIR_low_area_tb
+# -- Loading entity FIR_low_area
+restart
+# Loading rtl_work.fir_low_area_tb(fir_low_area_tb_arch)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 7981859424 ps  Iteration: 0  Process: /fir_low_area_tb/sim_time File: D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Break in Process sim_time at D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd line 198
+vcom -reportprogress 30 -work work D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area_tb
+# -- Compiling architecture FIR_low_area_tb_arch of FIR_low_area_tb
+# -- Loading entity FIR_low_area
+restart
+# Loading rtl_work.fir_low_area_tb(fir_low_area_tb_arch)
+# ** Warning: (vsim-3930) Integer exponentiation has overflowed; result is -2147483648.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed File: D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# ** Warning: (vsim-3930) Integer exponentiation has overflowed; result is -2147483648.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed File: D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# ** Warning: (vsim-3930) Integer exponentiation has overflowed; result is -2147483648.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned File: D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# ** Warning: (vsim-3930) Integer exponentiation has overflowed; result is -2147483648.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned File: D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Failure: ARG is too large in CONV_INTEGER
+#    Time: 22675736 ps  Iteration: 1  Process: /fir_low_area_tb/duv_fir_signed/process1 File: D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# Break in ForLoop loop at D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd line 182
+run -all
+# ** Failure: ARG is too large in CONV_INTEGER
+#    Time: 22675736 ps  Iteration: 1  Process: /fir_low_area_tb/duv_fir_signed/process1 File: D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# Break in ForLoop loop at D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd line 182
+vcom -reportprogress 30 -work work D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area_tb
+# -- Compiling architecture FIR_low_area_tb_arch of FIR_low_area_tb
+# -- Loading entity FIR_low_area
+restart
+# Loading rtl_work.fir_low_area_tb(fir_low_area_tb_arch)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 7981859424 ps  Iteration: 0  Process: /fir_low_area_tb/sim_time File: D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Break in Process sim_time at D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd line 198
+vcom -reportprogress 30 -work work D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area_tb
+# -- Compiling architecture FIR_low_area_tb_arch of FIR_low_area_tb
+# -- Loading entity FIR_low_area
+restart
+# Loading rtl_work.fir_low_area_tb(fir_low_area_tb_arch)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 7981859424 ps  Iteration: 0  Process: /fir_low_area_tb/sim_time File: D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Break in Process sim_time at D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd line 198
+vcom -reportprogress 30 -work work D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area_tb
+# -- Compiling architecture FIR_low_area_tb_arch of FIR_low_area_tb
+# -- Loading entity FIR_low_area
+restart
+# Loading rtl_work.fir_low_area_tb(fir_low_area_tb_arch)
+# ** Warning: (vsim-3930) Integer exponentiation has overflowed; result is -2147483648.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed File: D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# ** Warning: (vsim-3930) Integer exponentiation has overflowed; result is -2147483648.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed File: D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# ** Warning: (vsim-3930) Integer exponentiation has overflowed; result is -2147483648.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned File: D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# ** Warning: (vsim-3930) Integer exponentiation has overflowed; result is -2147483648.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned File: D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Failure: ARG is too large in CONV_INTEGER
+#    Time: 22675736 ps  Iteration: 1  Process: /fir_low_area_tb/duv_fir_signed/process1 File: D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# Break in ForLoop loop at D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd line 182
+vcom -reportprogress 30 -work work D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area_tb
+# -- Compiling architecture FIR_low_area_tb_arch of FIR_low_area_tb
+# -- Loading entity FIR_low_area
+restart
+# Loading rtl_work.fir_low_area_tb(fir_low_area_tb_arch)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 7981859424 ps  Iteration: 0  Process: /fir_low_area_tb/sim_time File: D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Break in Process sim_time at D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd line 198
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Compiling package fir_package
+# -- Compiling package body fir_package
+# -- Loading package fir_package
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area
+# -- Compiling architecture FIR_low_area_arch of FIR_low_area
+vcom -reportprogress 30 -work work D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area_tb
+# -- Compiling architecture FIR_low_area_tb_arch of FIR_low_area_tb
+# -- Loading entity FIR_low_area
+restart
+# Loading rtl_work.fir_package(body)
+# Loading rtl_work.fir_low_area_tb(fir_low_area_tb_arch)
+# Loading rtl_work.fir_low_area(fir_low_area_arch)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 7981859424 ps  Iteration: 0  Process: /fir_low_area_tb/sim_time File: D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Break in Process sim_time at D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd line 190
+vcom -reportprogress 30 -work work D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area_tb
+# -- Compiling architecture FIR_low_area_tb_arch of FIR_low_area_tb
+# -- Loading entity FIR_low_area
+restart
+# Loading rtl_work.fir_low_area_tb(fir_low_area_tb_arch)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 7981859424 ps  Iteration: 0  Process: /fir_low_area_tb/sim_time File: D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Break in Process sim_time at D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd line 198
+vcom -reportprogress 30 -work work D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area_tb
+# -- Compiling architecture FIR_low_area_tb_arch of FIR_low_area_tb
+# -- Loading entity FIR_low_area
+restart
+# Loading rtl_work.fir_low_area_tb(fir_low_area_tb_arch)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 7981859424 ps  Iteration: 0  Process: /fir_low_area_tb/sim_time File: D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Break in Process sim_time at D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd line 191
+vcom -reportprogress 30 -work work D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area_tb
+# -- Compiling architecture FIR_low_area_tb_arch of FIR_low_area_tb
+# -- Loading entity FIR_low_area
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Compiling package fir_package
+# -- Compiling package body fir_package
+# -- Loading package fir_package
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area
+# -- Compiling architecture FIR_low_area_arch of FIR_low_area
+vcom -reportprogress 30 -work work D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area_tb
+# -- Compiling architecture FIR_low_area_tb_arch of FIR_low_area_tb
+# -- Loading entity FIR_low_area
+restart
+# Loading rtl_work.fir_package(body)
+# Loading rtl_work.fir_low_area_tb(fir_low_area_tb_arch)
+# Loading rtl_work.fir_low_area(fir_low_area_arch)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_unsigned
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 7981859424 ps  Iteration: 0  Process: /fir_low_area_tb/sim_time File: D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Break in Process sim_time at D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd line 191
+vcom -reportprogress 30 -work work D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area_tb
+# -- Compiling architecture FIR_low_area_tb_arch of FIR_low_area_tb
+# -- Loading entity FIR_low_area
+restart
+# Loading rtl_work.fir_low_area_tb(fir_low_area_tb_arch)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 7981859424 ps  Iteration: 0  Process: /fir_low_area_tb/sim_time File: D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
+# Break in Process sim_time at D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd line 135
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level
+# -- Compiling architecture arq_top_level of top_level
+# -- Loading entity FIR_low_area
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd(26): (vcom-1272) Length of expected is 31; length of actual is 32.
+# 
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd(27): (vcom-1272) Length of expected is 31; length of actual is 32.
+# 
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd(49): (vcom-1272) Length of expected is 32; length of actual is 31.
+# 
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd(60): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Compiling package fir_package
+# -- Compiling package body fir_package
+# -- Loading package fir_package
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area
+# -- Compiling architecture FIR_low_area_arch of FIR_low_area
+vcom -reportprogress 30 -work work D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level
+# -- Compiling architecture arq_top_level of top_level
+# -- Loading entity FIR_low_area
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd(26): (vcom-1272) Length of expected is 31; length of actual is 32.
+# 
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd(27): (vcom-1272) Length of expected is 31; length of actual is 32.
+# 
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd(49): (vcom-1272) Length of expected is 32; length of actual is 31.
+# 
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd(60): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Compiling package fir_package
+# -- Compiling package body fir_package
+# -- Loading package fir_package
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area
+# -- Compiling architecture FIR_low_area_arch of FIR_low_area
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level
+# -- Compiling architecture arq_top_level of top_level
+# -- Loading entity FIR_low_area
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd(49): (vcom-1272) Length of expected is 32; length of actual is 31.
+# 
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd(60): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level
+# -- Compiling architecture arq_top_level of top_level
+# -- Loading entity FIR_low_area
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd(49): (vcom-1272) Length of expected is 32; length of actual is 31.
+# 
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd(60): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level
+# -- Compiling architecture arq_top_level of top_level
+# -- Loading entity FIR_low_area
+# ** Warning: D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd(49): (vcom-1275) Arguments of overloaded "or" operator are not the same length (32 vs. 31).
+# 
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level
+# -- Compiling architecture arq_top_level of top_level
+# -- Loading entity FIR_low_area
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd(49): near "shl": expecting ')'
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd(60): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level
+# -- Compiling architecture arq_top_level of top_level
+# -- Loading entity FIR_low_area
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd(79): (vcom-1436) Actual expression (prefix expression) of formal "resetn" is not globally static.
+# 
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd(124): (vcom-1272) Length of expected is 32; length of actual is 31.
+# 
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd(154): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd(79): (vcom-1436) Actual expression (prefix expression) of formal "resetn" is not globally static.
+# 
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd(124): (vcom-1272) Length of expected is 32; length of actual is 31.
+# 
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd(154): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level
+# -- Compiling architecture arq_top_level of top_level
+# -- Loading entity FIR_low_area
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd(79): (vcom-1436) Actual expression (prefix expression) of formal "resetn" is not globally static.
+# 
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd(154): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd(79): (vcom-1436) Actual expression (prefix expression) of formal "resetn" is not globally static.
+# 
+# ** Error: D:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd(154): VHDL Compiler exiting
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+vcom -reportprogress 300 -work work D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Compiling package fir_package
+# -- Compiling package body fir_package
+# -- Loading package fir_package
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area
+# -- Compiling architecture FIR_low_area_arch of FIR_low_area
+vcom -reportprogress 30 -work work D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level
+# -- Compiling architecture arq_top_level of top_level
+# -- Loading entity FIR_low_area
+vcom -reportprogress 30 -work work D:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+vsim rtl_work.top_level_tb
+# vsim rtl_work.top_level_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading ieee.math_real(body)
+# Loading rtl_work.fir_package(body)
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+# Loading rtl_work.top_level(arq_top_level)
+# Loading rtl_work.fir_low_area(fir_low_area_arch)
+add wave -position insertpoint  \
+sim:/top_level_tb/areset \
+sim:/top_level_tb/clock_fs \
+sim:/top_level_tb/xn_signed \
+sim:/top_level_tb/yn_signed \
+sim:/top_level_tb/writedata_s \
+sim:/top_level_tb/readdata_s
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 7981859424 ps  Iteration: 0  Process: /top_level_tb/sim_time File: D:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd
+# Break in Process sim_time at D:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd line 151
+vcom -reportprogress 30 -work work D:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+restart
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+# Warning in wave window restart: The min value must be less than the max value. 
+# Warning in wave window restart: The min value must be less than the max value. 
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 80181406032 ps  Iteration: 0  Process: /top_level_tb/sim_time File: D:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd
+# Break in Process sim_time at D:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd line 151
+add wave -position insertpoint  \
+sim:/top_level_tb/writedata_s \
+sim:/top_level_tb/readdata_s
+add wave -position insertpoint  \
+sim:/top_level_tb/writedata_s
