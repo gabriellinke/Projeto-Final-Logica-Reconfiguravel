@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for final_project
-Wed Jun 21 10:51:59 2023
+Wed Jun 28 08:52:45 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -112,7 +112,7 @@ applicable agreement for further details.
 +-----------+-----------------+------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
 +-----------+-----------------+------------+------+
-; 61.18 MHz ; 61.18 MHz       ; clock_fs   ;      ;
+; 49.16 MHz ; 49.16 MHz       ; clock_fs   ;      ;
 +-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -122,7 +122,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+---------+---------------+
 ; Clock    ; Slack   ; End Point TNS ;
 +----------+---------+---------------+
-; clock_fs ; -15.346 ; -1505.729     ;
+; clock_fs ; -19.343 ; -1479.614     ;
 +----------+---------+---------------+
 
 
@@ -152,116 +152,116 @@ No paths to report.
 +----------+--------+--------------------+
 ; Clock    ; Slack  ; End Point TNS      ;
 +----------+--------+--------------------+
-; clock_fs ; -1.380 ; -483.380           ;
+; clock_fs ; -1.380 ; -579.380           ;
 +----------+--------+--------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Slow Model Setup: 'clock_fs'                                                                                   ;
-+---------+---------------------+----------+--------------+-------------+--------------+------------+------------+
-; Slack   ; From Node           ; To Node  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+---------+---------------------+----------+--------------+-------------+--------------+------------+------------+
-; -15.346 ; REGISTRO_xn[26][0]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 16.387     ;
-; -15.249 ; REGISTRO_xn[7][1]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 16.296     ;
-; -15.243 ; REGISTRO_xn[26][1]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 16.283     ;
-; -15.214 ; REGISTRO_xn[25][1]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.010      ; 16.260     ;
-; -15.208 ; REGISTRO_xn[26][2]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 16.248     ;
-; -15.145 ; REGISTRO_xn[25][2]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.010      ; 16.191     ;
-; -15.132 ; REGISTRO_xn[7][0]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 16.179     ;
-; -15.127 ; REGISTRO_xn[6][0]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 16.168     ;
-; -15.095 ; REGISTRO_xn[25][0]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 16.142     ;
-; -15.091 ; REGISTRO_xn[6][1]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 16.132     ;
-; -15.087 ; REGISTRO_xn[26][3]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 16.127     ;
-; -15.062 ; REGISTRO_xn[26][0]  ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 16.103     ;
-; -15.057 ; REGISTRO_xn[25][3]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 16.104     ;
-; -15.021 ; REGISTRO_xn[26][10] ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 16.061     ;
-; -14.997 ; REGISTRO_xn[26][5]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 16.037     ;
-; -14.996 ; REGISTRO_xn[25][4]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.010      ; 16.042     ;
-; -14.994 ; REGISTRO_xn[26][4]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 16.034     ;
-; -14.991 ; REGISTRO_xn[26][0]  ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 16.032     ;
-; -14.991 ; REGISTRO_xn[7][4]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 16.038     ;
-; -14.991 ; REGISTRO_xn[7][2]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 16.038     ;
-; -14.985 ; REGISTRO_xn[6][2]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 16.026     ;
-; -14.959 ; REGISTRO_xn[26][1]  ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 15.999     ;
-; -14.952 ; REGISTRO_xn[7][1]   ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 15.999     ;
-; -14.950 ; REGISTRO_xn[6][3]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 15.991     ;
-; -14.924 ; REGISTRO_xn[26][2]  ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 15.964     ;
-; -14.920 ; REGISTRO_xn[26][0]  ; yn_2[46] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 15.961     ;
-; -14.920 ; REGISTRO_xn[7][3]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 15.967     ;
-; -14.917 ; REGISTRO_xn[25][1]  ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.010      ; 15.963     ;
-; -14.888 ; REGISTRO_xn[26][1]  ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 15.928     ;
-; -14.881 ; REGISTRO_xn[7][1]   ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 15.928     ;
-; -14.879 ; REGISTRO_xn[26][8]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 15.920     ;
-; -14.879 ; REGISTRO_xn[6][4]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 15.920     ;
-; -14.853 ; REGISTRO_xn[26][2]  ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 15.893     ;
-; -14.849 ; REGISTRO_xn[26][0]  ; yn_2[45] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 15.890     ;
-; -14.848 ; REGISTRO_xn[25][2]  ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.010      ; 15.894     ;
-; -14.846 ; REGISTRO_xn[25][1]  ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.010      ; 15.892     ;
-; -14.843 ; REGISTRO_xn[6][0]   ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 15.884     ;
-; -14.835 ; REGISTRO_xn[7][0]   ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 15.882     ;
-; -14.817 ; REGISTRO_xn[26][1]  ; yn_2[46] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 15.857     ;
-; -14.811 ; REGISTRO_xn[7][9]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.010      ; 15.857     ;
-; -14.810 ; REGISTRO_xn[7][1]   ; yn_2[46] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 15.857     ;
-; -14.808 ; REGISTRO_xn[25][6]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.010      ; 15.854     ;
-; -14.807 ; REGISTRO_xn[6][1]   ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 15.848     ;
-; -14.803 ; REGISTRO_xn[26][3]  ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 15.843     ;
-; -14.802 ; REGISTRO_xn[25][5]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.010      ; 15.848     ;
-; -14.798 ; REGISTRO_xn[25][0]  ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 15.845     ;
-; -14.794 ; REGISTRO_xn[26][6]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 15.834     ;
-; -14.782 ; REGISTRO_xn[26][2]  ; yn_2[46] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 15.822     ;
-; -14.778 ; REGISTRO_xn[26][0]  ; yn_2[44] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 15.819     ;
-; -14.777 ; REGISTRO_xn[25][2]  ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.010      ; 15.823     ;
-; -14.776 ; REGISTRO_xn[6][5]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 15.817     ;
-; -14.775 ; REGISTRO_xn[5][0]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.019      ; 15.830     ;
-; -14.775 ; REGISTRO_xn[25][1]  ; yn_2[46] ; clock_fs     ; clock_fs    ; 1.000        ; 0.010      ; 15.821     ;
-; -14.772 ; REGISTRO_xn[6][0]   ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 15.813     ;
-; -14.764 ; REGISTRO_xn[26][7]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 15.805     ;
-; -14.764 ; REGISTRO_xn[7][0]   ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 15.811     ;
-; -14.760 ; REGISTRO_xn[25][3]  ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 15.807     ;
-; -14.746 ; REGISTRO_xn[26][1]  ; yn_2[45] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 15.786     ;
-; -14.739 ; REGISTRO_xn[7][1]   ; yn_2[45] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 15.786     ;
-; -14.737 ; REGISTRO_xn[26][10] ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 15.777     ;
-; -14.737 ; REGISTRO_xn[27][1]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 15.791     ;
-; -14.736 ; REGISTRO_xn[6][1]   ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 15.777     ;
-; -14.732 ; REGISTRO_xn[26][3]  ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 15.772     ;
-; -14.727 ; REGISTRO_xn[25][0]  ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 15.774     ;
-; -14.716 ; REGISTRO_xn[26][11] ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 15.756     ;
-; -14.713 ; REGISTRO_xn[26][5]  ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 15.753     ;
-; -14.711 ; REGISTRO_xn[26][2]  ; yn_2[45] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 15.751     ;
-; -14.710 ; REGISTRO_xn[26][4]  ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 15.750     ;
-; -14.707 ; REGISTRO_xn[26][0]  ; yn_2[43] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 15.748     ;
-; -14.706 ; REGISTRO_xn[25][2]  ; yn_2[46] ; clock_fs     ; clock_fs    ; 1.000        ; 0.010      ; 15.752     ;
-; -14.704 ; REGISTRO_xn[25][1]  ; yn_2[45] ; clock_fs     ; clock_fs    ; 1.000        ; 0.010      ; 15.750     ;
-; -14.701 ; REGISTRO_xn[6][2]   ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 15.742     ;
-; -14.701 ; REGISTRO_xn[6][0]   ; yn_2[46] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 15.742     ;
-; -14.699 ; REGISTRO_xn[25][4]  ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.010      ; 15.745     ;
-; -14.694 ; REGISTRO_xn[7][4]   ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 15.741     ;
-; -14.694 ; REGISTRO_xn[7][2]   ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 15.741     ;
-; -14.693 ; REGISTRO_xn[7][0]   ; yn_2[46] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 15.740     ;
-; -14.689 ; REGISTRO_xn[25][3]  ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 15.736     ;
-; -14.686 ; REGISTRO_xn[7][5]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 15.733     ;
-; -14.680 ; REGISTRO_xn[2][2]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; -0.008     ; 15.708     ;
-; -14.676 ; REGISTRO_xn[1][1]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; -0.006     ; 15.706     ;
-; -14.675 ; REGISTRO_xn[26][1]  ; yn_2[44] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 15.715     ;
-; -14.672 ; REGISTRO_xn[25][8]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.010      ; 15.718     ;
-; -14.668 ; REGISTRO_xn[7][1]   ; yn_2[44] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 15.715     ;
-; -14.667 ; REGISTRO_xn[25][7]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.010      ; 15.713     ;
-; -14.666 ; REGISTRO_xn[6][3]   ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 15.707     ;
-; -14.666 ; REGISTRO_xn[26][10] ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 15.706     ;
-; -14.665 ; REGISTRO_xn[6][1]   ; yn_2[46] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 15.706     ;
-; -14.661 ; REGISTRO_xn[26][3]  ; yn_2[46] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 15.701     ;
-; -14.656 ; REGISTRO_xn[25][0]  ; yn_2[46] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 15.703     ;
-; -14.648 ; REGISTRO_xn[5][8]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.019      ; 15.703     ;
-; -14.645 ; REGISTRO_xn[6][6]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 15.686     ;
-; -14.642 ; REGISTRO_xn[26][5]  ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 15.682     ;
-; -14.640 ; REGISTRO_xn[26][2]  ; yn_2[44] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 15.680     ;
-; -14.639 ; REGISTRO_xn[26][4]  ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.004      ; 15.679     ;
-; -14.635 ; REGISTRO_xn[25][2]  ; yn_2[45] ; clock_fs     ; clock_fs    ; 1.000        ; 0.010      ; 15.681     ;
-; -14.635 ; REGISTRO_xn[2][3]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; -0.008     ; 15.663     ;
-; -14.633 ; REGISTRO_xn[25][1]  ; yn_2[44] ; clock_fs     ; clock_fs    ; 1.000        ; 0.010      ; 15.679     ;
-; -14.630 ; REGISTRO_xn[6][2]   ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 15.671     ;
-; -14.630 ; REGISTRO_xn[6][0]   ; yn_2[45] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 15.671     ;
-+---------+---------------------+----------+--------------+-------------+--------------+------------+------------+
++---------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clock_fs'                                                                                  ;
++---------+--------------------+----------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node          ; To Node  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+--------------------+----------+--------------+-------------+--------------+------------+------------+
+; -19.343 ; REGISTRO_xn[25][4] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 20.403     ;
+; -19.333 ; REGISTRO_xn[25][0] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 20.393     ;
+; -19.305 ; REGISTRO_xn[6][1]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 20.359     ;
+; -19.300 ; REGISTRO_xn[7][0]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 20.360     ;
+; -19.290 ; REGISTRO_xn[7][2]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 20.350     ;
+; -19.285 ; REGISTRO_xn[26][0] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 20.339     ;
+; -19.243 ; REGISTRO_xn[6][0]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 20.297     ;
+; -19.184 ; REGISTRO_xn[25][4] ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 20.244     ;
+; -19.175 ; REGISTRO_xn[25][1] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 20.235     ;
+; -19.174 ; REGISTRO_xn[25][0] ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 20.234     ;
+; -19.146 ; REGISTRO_xn[6][1]  ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 20.200     ;
+; -19.141 ; REGISTRO_xn[7][0]  ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 20.201     ;
+; -19.139 ; REGISTRO_xn[7][1]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 20.199     ;
+; -19.131 ; REGISTRO_xn[7][2]  ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 20.191     ;
+; -19.126 ; REGISTRO_xn[26][0] ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 20.180     ;
+; -19.110 ; REGISTRO_xn[25][4] ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 20.170     ;
+; -19.100 ; REGISTRO_xn[25][0] ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 20.160     ;
+; -19.093 ; REGISTRO_xn[26][1] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 20.147     ;
+; -19.084 ; REGISTRO_xn[6][0]  ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 20.138     ;
+; -19.072 ; REGISTRO_xn[6][1]  ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 20.126     ;
+; -19.069 ; REGISTRO_xn[25][2] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 20.129     ;
+; -19.067 ; REGISTRO_xn[7][0]  ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 20.127     ;
+; -19.057 ; REGISTRO_xn[7][2]  ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 20.117     ;
+; -19.056 ; REGISTRO_xn[26][2] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 20.110     ;
+; -19.052 ; REGISTRO_xn[26][0] ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 20.106     ;
+; -19.042 ; REGISTRO_xn[6][2]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 20.096     ;
+; -19.016 ; REGISTRO_xn[25][1] ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 20.076     ;
+; -19.010 ; REGISTRO_xn[6][0]  ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 20.064     ;
+; -19.000 ; REGISTRO_xn[7][3]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 20.060     ;
+; -18.984 ; REGISTRO_xn[6][3]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 20.038     ;
+; -18.980 ; REGISTRO_xn[7][1]  ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 20.040     ;
+; -18.965 ; REGISTRO_xn[25][3] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 20.025     ;
+; -18.946 ; REGISTRO_xn[26][3] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 20.000     ;
+; -18.942 ; REGISTRO_xn[25][1] ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 20.002     ;
+; -18.937 ; REGISTRO_xn[25][4] ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.997     ;
+; -18.934 ; REGISTRO_xn[26][1] ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.988     ;
+; -18.927 ; REGISTRO_xn[25][0] ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.987     ;
+; -18.910 ; REGISTRO_xn[25][2] ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.970     ;
+; -18.906 ; REGISTRO_xn[7][1]  ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.966     ;
+; -18.899 ; REGISTRO_xn[6][1]  ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.953     ;
+; -18.897 ; REGISTRO_xn[26][2] ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.951     ;
+; -18.894 ; REGISTRO_xn[7][0]  ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.954     ;
+; -18.887 ; REGISTRO_xn[7][4]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.947     ;
+; -18.884 ; REGISTRO_xn[7][2]  ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.944     ;
+; -18.883 ; REGISTRO_xn[6][2]  ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.937     ;
+; -18.879 ; REGISTRO_xn[26][0] ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.933     ;
+; -18.860 ; REGISTRO_xn[26][1] ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.914     ;
+; -18.859 ; REGISTRO_xn[6][4]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.913     ;
+; -18.841 ; REGISTRO_xn[7][3]  ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.901     ;
+; -18.837 ; REGISTRO_xn[6][0]  ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.891     ;
+; -18.836 ; REGISTRO_xn[25][2] ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.896     ;
+; -18.830 ; REGISTRO_xn[6][6]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.884     ;
+; -18.825 ; REGISTRO_xn[25][4] ; yn_2[28] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.885     ;
+; -18.825 ; REGISTRO_xn[6][3]  ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.879     ;
+; -18.823 ; REGISTRO_xn[26][2] ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.877     ;
+; -18.815 ; REGISTRO_xn[25][0] ; yn_2[28] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.875     ;
+; -18.814 ; REGISTRO_xn[7][5]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.874     ;
+; -18.809 ; REGISTRO_xn[6][2]  ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.863     ;
+; -18.806 ; REGISTRO_xn[25][3] ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.866     ;
+; -18.787 ; REGISTRO_xn[26][3] ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.841     ;
+; -18.787 ; REGISTRO_xn[6][1]  ; yn_2[28] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.841     ;
+; -18.782 ; REGISTRO_xn[7][0]  ; yn_2[28] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.842     ;
+; -18.772 ; REGISTRO_xn[7][2]  ; yn_2[28] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.832     ;
+; -18.769 ; REGISTRO_xn[25][1] ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.829     ;
+; -18.767 ; REGISTRO_xn[7][3]  ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.827     ;
+; -18.767 ; REGISTRO_xn[26][0] ; yn_2[28] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.821     ;
+; -18.754 ; REGISTRO_xn[25][4] ; yn_2[27] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.814     ;
+; -18.751 ; REGISTRO_xn[6][3]  ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.805     ;
+; -18.744 ; REGISTRO_xn[25][0] ; yn_2[27] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.804     ;
+; -18.733 ; REGISTRO_xn[7][1]  ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.793     ;
+; -18.732 ; REGISTRO_xn[25][3] ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.792     ;
+; -18.728 ; REGISTRO_xn[7][4]  ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.788     ;
+; -18.725 ; REGISTRO_xn[6][0]  ; yn_2[28] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.779     ;
+; -18.723 ; REGISTRO_xn[25][7] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.783     ;
+; -18.716 ; REGISTRO_xn[6][1]  ; yn_2[27] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.770     ;
+; -18.713 ; REGISTRO_xn[26][3] ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.767     ;
+; -18.711 ; REGISTRO_xn[7][0]  ; yn_2[27] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.771     ;
+; -18.701 ; REGISTRO_xn[7][2]  ; yn_2[27] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.761     ;
+; -18.700 ; REGISTRO_xn[6][4]  ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.754     ;
+; -18.696 ; REGISTRO_xn[26][0] ; yn_2[27] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.750     ;
+; -18.687 ; REGISTRO_xn[26][1] ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.741     ;
+; -18.683 ; REGISTRO_xn[25][4] ; yn_2[26] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.743     ;
+; -18.674 ; REGISTRO_xn[25][5] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.734     ;
+; -18.673 ; REGISTRO_xn[25][0] ; yn_2[26] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.733     ;
+; -18.671 ; REGISTRO_xn[6][6]  ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.725     ;
+; -18.665 ; REGISTRO_xn[26][4] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.719     ;
+; -18.663 ; REGISTRO_xn[25][2] ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.723     ;
+; -18.662 ; REGISTRO_xn[25][8] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.722     ;
+; -18.657 ; REGISTRO_xn[25][1] ; yn_2[28] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.717     ;
+; -18.655 ; REGISTRO_xn[7][5]  ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.715     ;
+; -18.654 ; REGISTRO_xn[7][4]  ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.714     ;
+; -18.654 ; REGISTRO_xn[6][0]  ; yn_2[27] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.708     ;
+; -18.650 ; REGISTRO_xn[26][2] ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.704     ;
+; -18.645 ; REGISTRO_xn[6][1]  ; yn_2[26] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.699     ;
+; -18.640 ; REGISTRO_xn[7][0]  ; yn_2[26] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.700     ;
+; -18.636 ; REGISTRO_xn[6][2]  ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.690     ;
+; -18.630 ; REGISTRO_xn[7][2]  ; yn_2[26] ; clock_fs     ; clock_fs    ; 1.000        ; 0.024      ; 19.690     ;
+; -18.629 ; REGISTRO_xn[6][5]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.683     ;
+; -18.626 ; REGISTRO_xn[6][4]  ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.680     ;
+; -18.625 ; REGISTRO_xn[26][0] ; yn_2[26] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 19.679     ;
++---------+--------------------+----------+--------------+-------------+--------------+------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -269,106 +269,106 @@ No paths to report.
 +-------+---------------------+---------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node           ; To Node             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------------+---------------------+--------------+-------------+--------------+------------+------------+
-; 0.521 ; REGISTRO_xn[10][10] ; REGISTRO_xn[9][10]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.787      ;
-; 0.523 ; REGISTRO_xn[23][0]  ; REGISTRO_xn[22][0]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.789      ;
-; 0.523 ; REGISTRO_xn[12][2]  ; REGISTRO_xn[11][2]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.789      ;
-; 0.523 ; REGISTRO_xn[16][11] ; REGISTRO_xn[15][11] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.789      ;
-; 0.524 ; REGISTRO_xn[23][4]  ; REGISTRO_xn[22][4]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.790      ;
-; 0.524 ; REGISTRO_xn[11][5]  ; REGISTRO_xn[10][5]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.790      ;
-; 0.524 ; REGISTRO_xn[22][6]  ; REGISTRO_xn[21][6]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.790      ;
-; 0.524 ; REGISTRO_xn[21][6]  ; REGISTRO_xn[20][6]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.790      ;
-; 0.524 ; REGISTRO_xn[12][6]  ; REGISTRO_xn[11][6]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.790      ;
-; 0.524 ; REGISTRO_xn[10][6]  ; REGISTRO_xn[9][6]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.790      ;
-; 0.524 ; REGISTRO_xn[20][8]  ; REGISTRO_xn[19][8]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.790      ;
-; 0.524 ; REGISTRO_xn[10][8]  ; REGISTRO_xn[9][8]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.790      ;
-; 0.524 ; REGISTRO_xn[12][10] ; REGISTRO_xn[11][10] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.790      ;
-; 0.525 ; REGISTRO_xn[21][2]  ; REGISTRO_xn[20][2]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.791      ;
-; 0.525 ; REGISTRO_xn[11][9]  ; REGISTRO_xn[10][9]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.791      ;
-; 0.525 ; REGISTRO_xn[22][10] ; REGISTRO_xn[21][10] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.791      ;
-; 0.526 ; REGISTRO_xn[22][11] ; REGISTRO_xn[21][11] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.792      ;
-; 0.527 ; REGISTRO_xn[11][4]  ; REGISTRO_xn[10][4]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.793      ;
-; 0.527 ; REGISTRO_xn[22][7]  ; REGISTRO_xn[21][7]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.793      ;
-; 0.527 ; REGISTRO_xn[21][11] ; REGISTRO_xn[20][11] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.793      ;
-; 0.528 ; REGISTRO_xn[17][4]  ; REGISTRO_xn[16][4]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.794      ;
-; 0.528 ; REGISTRO_xn[13][8]  ; REGISTRO_xn[12][8]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.794      ;
-; 0.529 ; REGISTRO_xn[17][9]  ; REGISTRO_xn[16][9]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.795      ;
-; 0.530 ; REGISTRO_xn[21][1]  ; REGISTRO_xn[20][1]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.796      ;
-; 0.531 ; REGISTRO_xn[11][1]  ; REGISTRO_xn[10][1]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.797      ;
-; 0.532 ; REGISTRO_xn[23][1]  ; REGISTRO_xn[22][1]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.798      ;
-; 0.657 ; REGISTRO_xn[23][2]  ; REGISTRO_xn[22][2]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.923      ;
-; 0.659 ; REGISTRO_xn[11][7]  ; REGISTRO_xn[10][7]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.925      ;
-; 0.660 ; REGISTRO_xn[12][8]  ; REGISTRO_xn[11][8]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.926      ;
-; 0.662 ; REGISTRO_xn[21][4]  ; REGISTRO_xn[20][4]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.928      ;
-; 0.706 ; REGISTRO_xn[12][4]  ; REGISTRO_xn[11][4]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 0.971      ;
-; 0.710 ; REGISTRO_xn[13][6]  ; REGISTRO_xn[12][6]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.976      ;
-; 0.716 ; REGISTRO_xn[24][5]  ; REGISTRO_xn[23][5]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.001      ; 0.983      ;
-; 0.719 ; REGISTRO_xn[24][8]  ; REGISTRO_xn[23][8]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.001      ; 0.986      ;
-; 0.723 ; REGISTRO_xn[22][9]  ; REGISTRO_xn[21][9]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.989      ;
-; 0.799 ; REGISTRO_xn[17][11] ; REGISTRO_xn[16][11] ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 1.064      ;
-; 0.801 ; REGISTRO_xn[21][5]  ; REGISTRO_xn[20][5]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.067      ;
-; 0.803 ; REGISTRO_xn[12][9]  ; REGISTRO_xn[11][9]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.069      ;
-; 0.805 ; REGISTRO_xn[12][3]  ; REGISTRO_xn[11][3]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.071      ;
-; 0.828 ; REGISTRO_xn[11][3]  ; REGISTRO_xn[10][3]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.094      ;
-; 0.831 ; REGISTRO_xn[10][0]  ; REGISTRO_xn[9][0]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.097      ;
-; 0.832 ; REGISTRO_xn[10][9]  ; REGISTRO_xn[9][9]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.098      ;
-; 0.840 ; REGISTRO_xn[11][2]  ; REGISTRO_xn[10][2]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.106      ;
-; 0.848 ; REGISTRO_xn[17][5]  ; REGISTRO_xn[16][5]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.114      ;
-; 0.849 ; REGISTRO_xn[17][2]  ; REGISTRO_xn[16][2]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 1.114      ;
-; 0.932 ; REGISTRO_xn[14][11] ; REGISTRO_xn[13][11] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.198      ;
-; 0.938 ; REGISTRO_xn[17][8]  ; REGISTRO_xn[16][8]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 1.202      ;
-; 0.939 ; REGISTRO_xn[12][7]  ; REGISTRO_xn[11][7]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 1.204      ;
-; 0.942 ; REGISTRO_xn[17][3]  ; REGISTRO_xn[16][3]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 1.206      ;
-; 0.946 ; REGISTRO_xn[11][6]  ; REGISTRO_xn[10][6]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.001      ; 1.213      ;
-; 0.946 ; REGISTRO_xn[14][10] ; REGISTRO_xn[13][10] ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 1.210      ;
-; 0.951 ; REGISTRO_xn[24][9]  ; REGISTRO_xn[23][9]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.002      ; 1.219      ;
-; 0.970 ; REGISTRO_xn[17][10] ; REGISTRO_xn[16][10] ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 1.235      ;
-; 0.973 ; REGISTRO_xn[17][0]  ; REGISTRO_xn[16][0]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 1.238      ;
-; 0.975 ; REGISTRO_xn[11][10] ; REGISTRO_xn[10][10] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.241      ;
-; 0.986 ; REGISTRO_xn[24][1]  ; REGISTRO_xn[23][1]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.001      ; 1.253      ;
-; 0.988 ; REGISTRO_xn[20][2]  ; REGISTRO_xn[19][2]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.012      ; 1.266      ;
-; 1.003 ; REGISTRO_xn[13][9]  ; REGISTRO_xn[12][9]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.006     ; 1.263      ;
-; 1.007 ; REGISTRO_xn[21][8]  ; REGISTRO_xn[20][8]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.014      ; 1.287      ;
-; 1.015 ; REGISTRO_xn[11][8]  ; REGISTRO_xn[10][8]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.014     ; 1.267      ;
-; 1.016 ; REGISTRO_xn[3][6]   ; REGISTRO_xn[2][6]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.004      ; 1.286      ;
-; 1.026 ; REGISTRO_xn[13][3]  ; REGISTRO_xn[12][3]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.012     ; 1.280      ;
-; 1.031 ; REGISTRO_xn[13][10] ; REGISTRO_xn[12][10] ; clock_fs     ; clock_fs    ; 0.000        ; -0.012     ; 1.285      ;
-; 1.037 ; REGISTRO_xn[13][11] ; REGISTRO_xn[12][11] ; clock_fs     ; clock_fs    ; 0.000        ; -0.013     ; 1.290      ;
-; 1.040 ; REGISTRO_xn[10][2]  ; REGISTRO_xn[9][2]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.023     ; 1.283      ;
-; 1.065 ; REGISTRO_xn[24][4]  ; REGISTRO_xn[23][4]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.001      ; 1.332      ;
-; 1.067 ; REGISTRO_xn[24][2]  ; REGISTRO_xn[23][2]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.001      ; 1.334      ;
-; 1.070 ; REGISTRO_xn[24][11] ; REGISTRO_xn[23][11] ; clock_fs     ; clock_fs    ; 0.000        ; 0.001      ; 1.337      ;
-; 1.074 ; REGISTRO_xn[24][6]  ; REGISTRO_xn[23][6]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.003      ; 1.343      ;
-; 1.082 ; REGISTRO_xn[12][5]  ; REGISTRO_xn[11][5]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.348      ;
-; 1.100 ; REGISTRO_xn[20][9]  ; REGISTRO_xn[19][9]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 1.365      ;
-; 1.103 ; REGISTRO_xn[18][10] ; REGISTRO_xn[17][10] ; clock_fs     ; clock_fs    ; 0.000        ; 0.004      ; 1.373      ;
-; 1.117 ; REGISTRO_xn[23][9]  ; REGISTRO_xn[22][9]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.010      ; 1.393      ;
-; 1.120 ; REGISTRO_xn[22][4]  ; REGISTRO_xn[21][4]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.024      ; 1.410      ;
-; 1.125 ; REGISTRO_xn[22][0]  ; REGISTRO_xn[21][0]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.017      ; 1.408      ;
-; 1.125 ; REGISTRO_xn[30][3]  ; REGISTRO_xn[29][3]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 1.389      ;
-; 1.143 ; REGISTRO_xn[22][8]  ; REGISTRO_xn[21][8]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.009      ; 1.418      ;
-; 1.158 ; REGISTRO_xn[10][7]  ; REGISTRO_xn[9][7]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.016     ; 1.408      ;
-; 1.173 ; REGISTRO_xn[6][1]   ; REGISTRO_xn[5][1]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.013     ; 1.426      ;
-; 1.198 ; REGISTRO_xn[23][6]  ; REGISTRO_xn[22][6]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.024      ; 1.488      ;
-; 1.206 ; REGISTRO_xn[14][5]  ; REGISTRO_xn[13][5]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 1.471      ;
-; 1.207 ; REGISTRO_xn[12][1]  ; REGISTRO_xn[11][1]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.001      ; 1.474      ;
-; 1.209 ; REGISTRO_xn[23][10] ; REGISTRO_xn[22][10] ; clock_fs     ; clock_fs    ; 0.000        ; 0.027      ; 1.502      ;
-; 1.210 ; REGISTRO_xn[17][6]  ; REGISTRO_xn[16][6]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 1.475      ;
-; 1.215 ; REGISTRO_xn[10][3]  ; REGISTRO_xn[9][3]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.007     ; 1.474      ;
-; 1.216 ; REGISTRO_xn[22][2]  ; REGISTRO_xn[21][2]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.018      ; 1.500      ;
-; 1.217 ; REGISTRO_xn[24][0]  ; REGISTRO_xn[23][0]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.002      ; 1.485      ;
-; 1.220 ; REGISTRO_xn[11][0]  ; REGISTRO_xn[10][0]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.008     ; 1.478      ;
-; 1.227 ; REGISTRO_xn[23][5]  ; REGISTRO_xn[22][5]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.025      ; 1.518      ;
-; 1.229 ; REGISTRO_xn[20][6]  ; REGISTRO_xn[19][6]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.005      ; 1.500      ;
-; 1.230 ; REGISTRO_xn[30][9]  ; REGISTRO_xn[29][9]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.003     ; 1.493      ;
-; 1.249 ; REGISTRO_xn[18][1]  ; REGISTRO_xn[17][1]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.004      ; 1.519      ;
-; 1.251 ; REGISTRO_xn[23][3]  ; REGISTRO_xn[22][3]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.025      ; 1.542      ;
-; 1.252 ; REGISTRO_xn[10][1]  ; REGISTRO_xn[9][1]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.005      ; 1.523      ;
-; 1.255 ; REGISTRO_xn[21][7]  ; REGISTRO_xn[20][7]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 1.520      ;
-; 1.256 ; REGISTRO_xn[6][2]   ; REGISTRO_xn[5][2]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.013     ; 1.509      ;
-; 1.256 ; REGISTRO_xn[14][4]  ; REGISTRO_xn[13][4]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.522      ;
-; 1.284 ; REGISTRO_xn[24][7]  ; REGISTRO_xn[23][7]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.002      ; 1.552      ;
-; 1.289 ; REGISTRO_xn[10][4]  ; REGISTRO_xn[9][4]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.017     ; 1.538      ;
-; 1.302 ; REGISTRO_xn[30][7]  ; REGISTRO_xn[29][7]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.003     ; 1.565      ;
+; 0.521 ; REGISTRO_xn[21][7]  ; REGISTRO_xn[20][7]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.787      ;
+; 0.521 ; REGISTRO_xn[1][8]   ; REGISTRO_xn[0][8]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.787      ;
+; 0.523 ; REGISTRO_xn[31][4]  ; REGISTRO_xn[30][4]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.789      ;
+; 0.523 ; REGISTRO_xn[21][4]  ; REGISTRO_xn[20][4]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.789      ;
+; 0.523 ; REGISTRO_xn[1][7]   ; REGISTRO_xn[0][7]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.789      ;
+; 0.523 ; REGISTRO_xn[2][11]  ; REGISTRO_xn[1][11]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.789      ;
+; 0.524 ; REGISTRO_xn[1][2]   ; REGISTRO_xn[0][2]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.790      ;
+; 0.524 ; REGISTRO_xn[2][9]   ; REGISTRO_xn[1][9]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.790      ;
+; 0.524 ; REGISTRO_xn[31][11] ; REGISTRO_xn[30][11] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.790      ;
+; 0.524 ; REGISTRO_xn[9][13]  ; REGISTRO_xn[8][13]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.790      ;
+; 0.524 ; REGISTRO_xn[10][15] ; REGISTRO_xn[9][15]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.790      ;
+; 0.526 ; REGISTRO_xn[1][13]  ; REGISTRO_xn[0][13]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.792      ;
+; 0.527 ; REGISTRO_xn[21][2]  ; REGISTRO_xn[20][2]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.793      ;
+; 0.527 ; REGISTRO_xn[2][3]   ; REGISTRO_xn[1][3]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.793      ;
+; 0.527 ; REGISTRO_xn[1][3]   ; REGISTRO_xn[0][3]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.793      ;
+; 0.527 ; REGISTRO_xn[9][9]   ; REGISTRO_xn[8][9]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.793      ;
+; 0.527 ; REGISTRO_xn[21][10] ; REGISTRO_xn[20][10] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.793      ;
+; 0.527 ; REGISTRO_xn[24][12] ; REGISTRO_xn[23][12] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.793      ;
+; 0.527 ; REGISTRO_xn[21][13] ; REGISTRO_xn[20][13] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.793      ;
+; 0.527 ; REGISTRO_xn[24][14] ; REGISTRO_xn[23][14] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.793      ;
+; 0.527 ; REGISTRO_xn[9][15]  ; REGISTRO_xn[8][15]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.793      ;
+; 0.528 ; REGISTRO_xn[9][14]  ; REGISTRO_xn[8][14]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.794      ;
+; 0.529 ; REGISTRO_xn[24][13] ; REGISTRO_xn[23][13] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.795      ;
+; 0.539 ; REGISTRO_xn[24][9]  ; REGISTRO_xn[23][9]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.805      ;
+; 0.539 ; REGISTRO_xn[24][10] ; REGISTRO_xn[23][10] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.805      ;
+; 0.539 ; REGISTRO_xn[9][11]  ; REGISTRO_xn[8][11]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.805      ;
+; 0.657 ; REGISTRO_xn[2][7]   ; REGISTRO_xn[1][7]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.923      ;
+; 0.659 ; REGISTRO_xn[31][13] ; REGISTRO_xn[30][13] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.925      ;
+; 0.660 ; REGISTRO_xn[24][6]  ; REGISTRO_xn[23][6]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.926      ;
+; 0.660 ; REGISTRO_xn[21][6]  ; REGISTRO_xn[20][6]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.926      ;
+; 0.661 ; REGISTRO_xn[21][9]  ; REGISTRO_xn[20][9]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.927      ;
+; 0.661 ; REGISTRO_xn[1][11]  ; REGISTRO_xn[0][11]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.927      ;
+; 0.677 ; REGISTRO_xn[3][10]  ; REGISTRO_xn[2][10]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.004     ; 0.939      ;
+; 0.700 ; REGISTRO_xn[17][4]  ; REGISTRO_xn[16][4]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.004      ; 0.970      ;
+; 0.702 ; REGISTRO_xn[1][9]   ; REGISTRO_xn[0][9]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.002      ; 0.970      ;
+; 0.710 ; REGISTRO_xn[17][7]  ; REGISTRO_xn[16][7]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.004      ; 0.980      ;
+; 0.710 ; REGISTRO_xn[3][13]  ; REGISTRO_xn[2][13]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.004     ; 0.972      ;
+; 0.712 ; REGISTRO_xn[12][12] ; REGISTRO_xn[11][12] ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 0.976      ;
+; 0.713 ; REGISTRO_xn[12][9]  ; REGISTRO_xn[11][9]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 0.977      ;
+; 0.714 ; REGISTRO_xn[24][15] ; REGISTRO_xn[23][15] ; clock_fs     ; clock_fs    ; 0.000        ; 0.001      ; 0.981      ;
+; 0.715 ; REGISTRO_xn[3][12]  ; REGISTRO_xn[2][12]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.004     ; 0.977      ;
+; 0.716 ; REGISTRO_xn[12][5]  ; REGISTRO_xn[11][5]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 0.980      ;
+; 0.717 ; REGISTRO_xn[20][15] ; REGISTRO_xn[19][15] ; clock_fs     ; clock_fs    ; 0.000        ; 0.004      ; 0.987      ;
+; 0.736 ; REGISTRO_xn[31][9]  ; REGISTRO_xn[30][9]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 1.000      ;
+; 0.736 ; REGISTRO_xn[1][10]  ; REGISTRO_xn[0][10]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.002      ;
+; 0.752 ; REGISTRO_xn[1][5]   ; REGISTRO_xn[0][5]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.018      ;
+; 0.756 ; REGISTRO_xn[1][0]   ; REGISTRO_xn[0][0]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.022      ;
+; 0.757 ; REGISTRO_xn[1][4]   ; REGISTRO_xn[0][4]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.023      ;
+; 0.795 ; REGISTRO_xn[25][7]  ; REGISTRO_xn[24][7]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.061      ;
+; 0.795 ; REGISTRO_xn[21][11] ; REGISTRO_xn[20][11] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.061      ;
+; 0.800 ; REGISTRO_xn[23][14] ; REGISTRO_xn[22][14] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.066      ;
+; 0.803 ; REGISTRO_xn[31][7]  ; REGISTRO_xn[30][7]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.069      ;
+; 0.807 ; REGISTRO_xn[3][5]   ; REGISTRO_xn[2][5]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.004     ; 1.069      ;
+; 0.814 ; REGISTRO_xn[13][3]  ; REGISTRO_xn[12][3]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.004     ; 1.076      ;
+; 0.830 ; REGISTRO_xn[21][14] ; REGISTRO_xn[20][14] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.096      ;
+; 0.832 ; REGISTRO_xn[31][6]  ; REGISTRO_xn[30][6]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.098      ;
+; 0.832 ; REGISTRO_xn[2][6]   ; REGISTRO_xn[1][6]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.098      ;
+; 0.832 ; REGISTRO_xn[24][8]  ; REGISTRO_xn[23][8]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.098      ;
+; 0.832 ; REGISTRO_xn[2][8]   ; REGISTRO_xn[1][8]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.098      ;
+; 0.832 ; REGISTRO_xn[23][12] ; REGISTRO_xn[22][12] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.098      ;
+; 0.832 ; REGISTRO_xn[31][14] ; REGISTRO_xn[30][14] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.098      ;
+; 0.838 ; REGISTRO_xn[24][11] ; REGISTRO_xn[23][11] ; clock_fs     ; clock_fs    ; 0.000        ; 0.001      ; 1.105      ;
+; 0.840 ; REGISTRO_xn[3][4]   ; REGISTRO_xn[2][4]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.004     ; 1.102      ;
+; 0.844 ; REGISTRO_xn[17][14] ; REGISTRO_xn[16][14] ; clock_fs     ; clock_fs    ; 0.000        ; 0.008      ; 1.118      ;
+; 0.851 ; REGISTRO_xn[3][15]  ; REGISTRO_xn[2][15]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.004     ; 1.113      ;
+; 0.917 ; REGISTRO_xn[9][1]   ; REGISTRO_xn[8][1]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.005     ; 1.178      ;
+; 0.927 ; REGISTRO_xn[31][0]  ; REGISTRO_xn[30][0]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 1.191      ;
+; 0.933 ; REGISTRO_xn[16][1]  ; REGISTRO_xn[15][1]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.004     ; 1.195      ;
+; 0.942 ; REGISTRO_xn[16][11] ; REGISTRO_xn[15][11] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.208      ;
+; 0.945 ; REGISTRO_xn[9][10]  ; REGISTRO_xn[8][10]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.004     ; 1.207      ;
+; 0.948 ; REGISTRO_xn[9][5]   ; REGISTRO_xn[8][5]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.005     ; 1.209      ;
+; 0.949 ; REGISTRO_xn[3][2]   ; REGISTRO_xn[2][2]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.007     ; 1.208      ;
+; 0.950 ; REGISTRO_xn[12][13] ; REGISTRO_xn[11][13] ; clock_fs     ; clock_fs    ; 0.000        ; -0.006     ; 1.210      ;
+; 0.953 ; REGISTRO_xn[31][3]  ; REGISTRO_xn[30][3]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 1.217      ;
+; 0.953 ; REGISTRO_xn[9][4]   ; REGISTRO_xn[8][4]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.005     ; 1.214      ;
+; 0.957 ; REGISTRO_xn[3][0]   ; REGISTRO_xn[2][0]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.007     ; 1.216      ;
+; 0.959 ; REGISTRO_xn[3][6]   ; REGISTRO_xn[2][6]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.005     ; 1.220      ;
+; 0.959 ; REGISTRO_xn[31][12] ; REGISTRO_xn[30][12] ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 1.223      ;
+; 0.960 ; REGISTRO_xn[9][12]  ; REGISTRO_xn[8][12]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.005     ; 1.221      ;
+; 0.970 ; REGISTRO_xn[9][3]   ; REGISTRO_xn[8][3]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.005     ; 1.231      ;
+; 0.972 ; REGISTRO_xn[16][6]  ; REGISTRO_xn[15][6]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.005     ; 1.233      ;
+; 0.975 ; REGISTRO_xn[31][1]  ; REGISTRO_xn[30][1]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.001      ; 1.242      ;
+; 0.980 ; REGISTRO_xn[2][14]  ; REGISTRO_xn[1][14]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.007     ; 1.239      ;
+; 0.983 ; REGISTRO_xn[3][1]   ; REGISTRO_xn[2][1]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.004     ; 1.245      ;
+; 0.984 ; REGISTRO_xn[26][9]  ; REGISTRO_xn[25][9]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.010     ; 1.240      ;
+; 0.994 ; REGISTRO_xn[12][2]  ; REGISTRO_xn[11][2]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.005     ; 1.255      ;
+; 0.998 ; REGISTRO_xn[31][10] ; REGISTRO_xn[30][10] ; clock_fs     ; clock_fs    ; 0.000        ; -0.004     ; 1.260      ;
+; 0.999 ; REGISTRO_xn[31][5]  ; REGISTRO_xn[30][5]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 1.263      ;
+; 0.999 ; REGISTRO_xn[21][12] ; REGISTRO_xn[20][12] ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 1.263      ;
+; 1.001 ; REGISTRO_xn[21][1]  ; REGISTRO_xn[20][1]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.009      ; 1.276      ;
+; 1.008 ; REGISTRO_xn[12][8]  ; REGISTRO_xn[11][8]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.005     ; 1.269      ;
+; 1.011 ; REGISTRO_xn[21][0]  ; REGISTRO_xn[20][0]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.009      ; 1.286      ;
+; 1.011 ; REGISTRO_xn[27][11] ; REGISTRO_xn[26][11] ; clock_fs     ; clock_fs    ; 0.000        ; -0.004     ; 1.273      ;
+; 1.015 ; REGISTRO_xn[1][1]   ; REGISTRO_xn[0][1]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.281      ;
+; 1.015 ; REGISTRO_xn[22][12] ; REGISTRO_xn[21][12] ; clock_fs     ; clock_fs    ; 0.000        ; -0.004     ; 1.277      ;
+; 1.015 ; REGISTRO_xn[1][14]  ; REGISTRO_xn[0][14]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 1.281      ;
+; 1.017 ; REGISTRO_xn[20][13] ; REGISTRO_xn[19][13] ; clock_fs     ; clock_fs    ; 0.000        ; 0.004      ; 1.287      ;
+; 1.019 ; REGISTRO_xn[22][2]  ; REGISTRO_xn[21][2]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.011     ; 1.274      ;
+; 1.019 ; REGISTRO_xn[14][14] ; REGISTRO_xn[13][14] ; clock_fs     ; clock_fs    ; 0.000        ; 0.019      ; 1.304      ;
+; 1.020 ; REGISTRO_xn[3][14]  ; REGISTRO_xn[2][14]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.005      ; 1.291      ;
 +-------+---------------------+---------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -384,6 +384,14 @@ No paths to report.
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[0][10]  ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[0][11]  ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[0][11]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[0][12]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[0][12]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[0][13]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[0][13]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[0][14]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[0][14]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[0][15]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[0][15]  ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[0][1]   ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[0][1]   ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[0][2]   ;
@@ -408,6 +416,14 @@ No paths to report.
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[10][10] ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[10][11] ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[10][11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[10][12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[10][12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[10][13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[10][13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[10][14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[10][14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[10][15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[10][15] ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[10][1]  ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[10][1]  ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[10][2]  ;
@@ -432,6 +448,14 @@ No paths to report.
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[11][10] ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[11][11] ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[11][11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[11][12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[11][12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[11][13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[11][13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[11][14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[11][14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[11][15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[11][15] ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[11][1]  ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[11][1]  ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[11][2]  ;
@@ -453,30 +477,6 @@ No paths to report.
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[12][0]  ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[12][0]  ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[12][10] ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[12][10] ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[12][11] ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[12][11] ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[12][1]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[12][1]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[12][2]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[12][2]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[12][3]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[12][3]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[12][4]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[12][4]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[12][5]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[12][5]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[12][6]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[12][6]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[12][7]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[12][7]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[12][8]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[12][8]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[12][9]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[12][9]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[13][0]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[13][0]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[13][10] ;
 +--------+--------------+----------------+------------------+----------+------------+---------------------+
 
 
@@ -485,21 +485,25 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; enable    ; clock_fs   ; 2.360  ; 2.360  ; Rise       ; clock_fs        ;
-; sreset    ; clock_fs   ; 3.795  ; 3.795  ; Rise       ; clock_fs        ;
-; xn[*]     ; clock_fs   ; 18.923 ; 18.923 ; Rise       ; clock_fs        ;
-;  xn[0]    ; clock_fs   ; 18.923 ; 18.923 ; Rise       ; clock_fs        ;
-;  xn[1]    ; clock_fs   ; 18.506 ; 18.506 ; Rise       ; clock_fs        ;
-;  xn[2]    ; clock_fs   ; 18.362 ; 18.362 ; Rise       ; clock_fs        ;
-;  xn[3]    ; clock_fs   ; 18.081 ; 18.081 ; Rise       ; clock_fs        ;
-;  xn[4]    ; clock_fs   ; 18.220 ; 18.220 ; Rise       ; clock_fs        ;
-;  xn[5]    ; clock_fs   ; 17.945 ; 17.945 ; Rise       ; clock_fs        ;
-;  xn[6]    ; clock_fs   ; 17.844 ; 17.844 ; Rise       ; clock_fs        ;
-;  xn[7]    ; clock_fs   ; 17.696 ; 17.696 ; Rise       ; clock_fs        ;
-;  xn[8]    ; clock_fs   ; 17.874 ; 17.874 ; Rise       ; clock_fs        ;
-;  xn[9]    ; clock_fs   ; 17.713 ; 17.713 ; Rise       ; clock_fs        ;
-;  xn[10]   ; clock_fs   ; 17.777 ; 17.777 ; Rise       ; clock_fs        ;
-;  xn[11]   ; clock_fs   ; 17.637 ; 17.637 ; Rise       ; clock_fs        ;
+; enable    ; clock_fs   ; 3.795  ; 3.795  ; Rise       ; clock_fs        ;
+; sreset    ; clock_fs   ; 3.871  ; 3.871  ; Rise       ; clock_fs        ;
+; xn[*]     ; clock_fs   ; 14.614 ; 14.614 ; Rise       ; clock_fs        ;
+;  xn[0]    ; clock_fs   ; 14.614 ; 14.614 ; Rise       ; clock_fs        ;
+;  xn[1]    ; clock_fs   ; 14.174 ; 14.174 ; Rise       ; clock_fs        ;
+;  xn[2]    ; clock_fs   ; 14.355 ; 14.355 ; Rise       ; clock_fs        ;
+;  xn[3]    ; clock_fs   ; 14.209 ; 14.209 ; Rise       ; clock_fs        ;
+;  xn[4]    ; clock_fs   ; 14.197 ; 14.197 ; Rise       ; clock_fs        ;
+;  xn[5]    ; clock_fs   ; 13.849 ; 13.849 ; Rise       ; clock_fs        ;
+;  xn[6]    ; clock_fs   ; 14.267 ; 14.267 ; Rise       ; clock_fs        ;
+;  xn[7]    ; clock_fs   ; 13.854 ; 13.854 ; Rise       ; clock_fs        ;
+;  xn[8]    ; clock_fs   ; 13.819 ; 13.819 ; Rise       ; clock_fs        ;
+;  xn[9]    ; clock_fs   ; 13.648 ; 13.648 ; Rise       ; clock_fs        ;
+;  xn[10]   ; clock_fs   ; 13.686 ; 13.686 ; Rise       ; clock_fs        ;
+;  xn[11]   ; clock_fs   ; 13.448 ; 13.448 ; Rise       ; clock_fs        ;
+;  xn[12]   ; clock_fs   ; 13.117 ; 13.117 ; Rise       ; clock_fs        ;
+;  xn[13]   ; clock_fs   ; 13.446 ; 13.446 ; Rise       ; clock_fs        ;
+;  xn[14]   ; clock_fs   ; 12.744 ; 12.744 ; Rise       ; clock_fs        ;
+;  xn[15]   ; clock_fs   ; 12.587 ; 12.587 ; Rise       ; clock_fs        ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -508,21 +512,25 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; enable    ; clock_fs   ; -0.565 ; -0.565 ; Rise       ; clock_fs        ;
-; sreset    ; clock_fs   ; -0.053 ; -0.053 ; Rise       ; clock_fs        ;
-; xn[*]     ; clock_fs   ; -3.421 ; -3.421 ; Rise       ; clock_fs        ;
-;  xn[0]    ; clock_fs   ; -4.522 ; -4.522 ; Rise       ; clock_fs        ;
-;  xn[1]    ; clock_fs   ; -4.403 ; -4.403 ; Rise       ; clock_fs        ;
-;  xn[2]    ; clock_fs   ; -4.598 ; -4.598 ; Rise       ; clock_fs        ;
-;  xn[3]    ; clock_fs   ; -4.616 ; -4.616 ; Rise       ; clock_fs        ;
-;  xn[4]    ; clock_fs   ; -4.673 ; -4.673 ; Rise       ; clock_fs        ;
-;  xn[5]    ; clock_fs   ; -4.410 ; -4.410 ; Rise       ; clock_fs        ;
-;  xn[6]    ; clock_fs   ; -5.113 ; -5.113 ; Rise       ; clock_fs        ;
-;  xn[7]    ; clock_fs   ; -4.831 ; -4.831 ; Rise       ; clock_fs        ;
-;  xn[8]    ; clock_fs   ; -4.385 ; -4.385 ; Rise       ; clock_fs        ;
-;  xn[9]    ; clock_fs   ; -4.827 ; -4.827 ; Rise       ; clock_fs        ;
-;  xn[10]   ; clock_fs   ; -4.411 ; -4.411 ; Rise       ; clock_fs        ;
-;  xn[11]   ; clock_fs   ; -3.421 ; -3.421 ; Rise       ; clock_fs        ;
+; enable    ; clock_fs   ; -0.554 ; -0.554 ; Rise       ; clock_fs        ;
+; sreset    ; clock_fs   ; 0.323  ; 0.323  ; Rise       ; clock_fs        ;
+; xn[*]     ; clock_fs   ; -3.483 ; -3.483 ; Rise       ; clock_fs        ;
+;  xn[0]    ; clock_fs   ; -3.751 ; -3.751 ; Rise       ; clock_fs        ;
+;  xn[1]    ; clock_fs   ; -3.772 ; -3.772 ; Rise       ; clock_fs        ;
+;  xn[2]    ; clock_fs   ; -4.026 ; -4.026 ; Rise       ; clock_fs        ;
+;  xn[3]    ; clock_fs   ; -3.968 ; -3.968 ; Rise       ; clock_fs        ;
+;  xn[4]    ; clock_fs   ; -4.165 ; -4.165 ; Rise       ; clock_fs        ;
+;  xn[5]    ; clock_fs   ; -3.754 ; -3.754 ; Rise       ; clock_fs        ;
+;  xn[6]    ; clock_fs   ; -3.851 ; -3.851 ; Rise       ; clock_fs        ;
+;  xn[7]    ; clock_fs   ; -3.729 ; -3.729 ; Rise       ; clock_fs        ;
+;  xn[8]    ; clock_fs   ; -3.591 ; -3.591 ; Rise       ; clock_fs        ;
+;  xn[9]    ; clock_fs   ; -3.881 ; -3.881 ; Rise       ; clock_fs        ;
+;  xn[10]   ; clock_fs   ; -4.033 ; -4.033 ; Rise       ; clock_fs        ;
+;  xn[11]   ; clock_fs   ; -3.824 ; -3.824 ; Rise       ; clock_fs        ;
+;  xn[12]   ; clock_fs   ; -3.608 ; -3.608 ; Rise       ; clock_fs        ;
+;  xn[13]   ; clock_fs   ; -4.012 ; -4.012 ; Rise       ; clock_fs        ;
+;  xn[14]   ; clock_fs   ; -3.742 ; -3.742 ; Rise       ; clock_fs        ;
+;  xn[15]   ; clock_fs   ; -3.483 ; -3.483 ; Rise       ; clock_fs        ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -531,41 +539,49 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; yn[*]     ; clock_fs   ; 17.084 ; 17.084 ; Rise       ; clock_fs        ;
-;  yn[0]    ; clock_fs   ; 15.813 ; 15.813 ; Rise       ; clock_fs        ;
-;  yn[1]    ; clock_fs   ; 16.294 ; 16.294 ; Rise       ; clock_fs        ;
-;  yn[2]    ; clock_fs   ; 16.103 ; 16.103 ; Rise       ; clock_fs        ;
-;  yn[3]    ; clock_fs   ; 16.552 ; 16.552 ; Rise       ; clock_fs        ;
-;  yn[4]    ; clock_fs   ; 16.711 ; 16.711 ; Rise       ; clock_fs        ;
-;  yn[5]    ; clock_fs   ; 16.449 ; 16.449 ; Rise       ; clock_fs        ;
-;  yn[6]    ; clock_fs   ; 16.508 ; 16.508 ; Rise       ; clock_fs        ;
-;  yn[7]    ; clock_fs   ; 16.732 ; 16.732 ; Rise       ; clock_fs        ;
-;  yn[8]    ; clock_fs   ; 16.636 ; 16.636 ; Rise       ; clock_fs        ;
-;  yn[9]    ; clock_fs   ; 16.728 ; 16.728 ; Rise       ; clock_fs        ;
-;  yn[10]   ; clock_fs   ; 16.780 ; 16.780 ; Rise       ; clock_fs        ;
-;  yn[11]   ; clock_fs   ; 17.084 ; 17.084 ; Rise       ; clock_fs        ;
+; yn[*]     ; clock_fs   ; 17.076 ; 17.076 ; Rise       ; clock_fs        ;
+;  yn[0]    ; clock_fs   ; 15.708 ; 15.708 ; Rise       ; clock_fs        ;
+;  yn[1]    ; clock_fs   ; 16.080 ; 16.080 ; Rise       ; clock_fs        ;
+;  yn[2]    ; clock_fs   ; 15.993 ; 15.993 ; Rise       ; clock_fs        ;
+;  yn[3]    ; clock_fs   ; 15.826 ; 15.826 ; Rise       ; clock_fs        ;
+;  yn[4]    ; clock_fs   ; 16.263 ; 16.263 ; Rise       ; clock_fs        ;
+;  yn[5]    ; clock_fs   ; 16.061 ; 16.061 ; Rise       ; clock_fs        ;
+;  yn[6]    ; clock_fs   ; 16.373 ; 16.373 ; Rise       ; clock_fs        ;
+;  yn[7]    ; clock_fs   ; 16.460 ; 16.460 ; Rise       ; clock_fs        ;
+;  yn[8]    ; clock_fs   ; 16.858 ; 16.858 ; Rise       ; clock_fs        ;
+;  yn[9]    ; clock_fs   ; 16.304 ; 16.304 ; Rise       ; clock_fs        ;
+;  yn[10]   ; clock_fs   ; 16.706 ; 16.706 ; Rise       ; clock_fs        ;
+;  yn[11]   ; clock_fs   ; 16.915 ; 16.915 ; Rise       ; clock_fs        ;
+;  yn[12]   ; clock_fs   ; 16.508 ; 16.508 ; Rise       ; clock_fs        ;
+;  yn[13]   ; clock_fs   ; 16.725 ; 16.725 ; Rise       ; clock_fs        ;
+;  yn[14]   ; clock_fs   ; 16.862 ; 16.862 ; Rise       ; clock_fs        ;
+;  yn[15]   ; clock_fs   ; 17.076 ; 17.076 ; Rise       ; clock_fs        ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
-+-----------------------------------------------------------------------+
-; Minimum Clock to Output Times                                         ;
-+-----------+------------+-------+-------+------------+-----------------+
-; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+------------+-------+-------+------------+-----------------+
-; yn[*]     ; clock_fs   ; 8.989 ; 8.989 ; Rise       ; clock_fs        ;
-;  yn[0]    ; clock_fs   ; 9.180 ; 9.180 ; Rise       ; clock_fs        ;
-;  yn[1]    ; clock_fs   ; 9.252 ; 9.252 ; Rise       ; clock_fs        ;
-;  yn[2]    ; clock_fs   ; 8.995 ; 8.995 ; Rise       ; clock_fs        ;
-;  yn[3]    ; clock_fs   ; 9.427 ; 9.427 ; Rise       ; clock_fs        ;
-;  yn[4]    ; clock_fs   ; 9.450 ; 9.450 ; Rise       ; clock_fs        ;
-;  yn[5]    ; clock_fs   ; 9.019 ; 9.019 ; Rise       ; clock_fs        ;
-;  yn[6]    ; clock_fs   ; 9.006 ; 9.006 ; Rise       ; clock_fs        ;
-;  yn[7]    ; clock_fs   ; 9.186 ; 9.186 ; Rise       ; clock_fs        ;
-;  yn[8]    ; clock_fs   ; 8.989 ; 8.989 ; Rise       ; clock_fs        ;
-;  yn[9]    ; clock_fs   ; 9.030 ; 9.030 ; Rise       ; clock_fs        ;
-;  yn[10]   ; clock_fs   ; 9.016 ; 9.016 ; Rise       ; clock_fs        ;
-;  yn[11]   ; clock_fs   ; 9.246 ; 9.246 ; Rise       ; clock_fs        ;
-+-----------+------------+-------+-------+------------+-----------------+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; yn[*]     ; clock_fs   ; 9.584  ; 9.584  ; Rise       ; clock_fs        ;
+;  yn[0]    ; clock_fs   ; 9.900  ; 9.900  ; Rise       ; clock_fs        ;
+;  yn[1]    ; clock_fs   ; 10.264 ; 10.264 ; Rise       ; clock_fs        ;
+;  yn[2]    ; clock_fs   ; 10.091 ; 10.091 ; Rise       ; clock_fs        ;
+;  yn[3]    ; clock_fs   ; 9.857  ; 9.857  ; Rise       ; clock_fs        ;
+;  yn[4]    ; clock_fs   ; 9.861  ; 9.861  ; Rise       ; clock_fs        ;
+;  yn[5]    ; clock_fs   ; 9.584  ; 9.584  ; Rise       ; clock_fs        ;
+;  yn[6]    ; clock_fs   ; 9.839  ; 9.839  ; Rise       ; clock_fs        ;
+;  yn[7]    ; clock_fs   ; 9.885  ; 9.885  ; Rise       ; clock_fs        ;
+;  yn[8]    ; clock_fs   ; 10.094 ; 10.094 ; Rise       ; clock_fs        ;
+;  yn[9]    ; clock_fs   ; 9.827  ; 9.827  ; Rise       ; clock_fs        ;
+;  yn[10]   ; clock_fs   ; 9.936  ; 9.936  ; Rise       ; clock_fs        ;
+;  yn[11]   ; clock_fs   ; 10.288 ; 10.288 ; Rise       ; clock_fs        ;
+;  yn[12]   ; clock_fs   ; 9.827  ; 9.827  ; Rise       ; clock_fs        ;
+;  yn[13]   ; clock_fs   ; 9.600  ; 9.600  ; Rise       ; clock_fs        ;
+;  yn[14]   ; clock_fs   ; 10.041 ; 10.041 ; Rise       ; clock_fs        ;
+;  yn[15]   ; clock_fs   ; 10.104 ; 10.104 ; Rise       ; clock_fs        ;
++-----------+------------+--------+--------+------------+-----------------+
 
 
 +-----------------------------------+
@@ -573,7 +589,7 @@ No paths to report.
 +----------+--------+---------------+
 ; Clock    ; Slack  ; End Point TNS ;
 +----------+--------+---------------+
-; clock_fs ; -5.394 ; -395.790      ;
+; clock_fs ; -7.075 ; -389.361      ;
 +----------+--------+---------------+
 
 
@@ -603,116 +619,116 @@ No paths to report.
 +----------+--------+--------------------+
 ; Clock    ; Slack  ; End Point TNS      ;
 +----------+--------+--------------------+
-; clock_fs ; -1.380 ; -483.380           ;
+; clock_fs ; -1.380 ; -579.380           ;
 +----------+--------+--------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; Fast Model Setup: 'clock_fs'                                                                                  ;
-+--------+---------------------+----------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node           ; To Node  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+---------------------+----------+--------------+-------------+--------------+------------+------------+
-; -5.394 ; REGISTRO_xn[26][0]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.006      ; 6.432      ;
-; -5.344 ; REGISTRO_xn[26][1]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 6.381      ;
-; -5.323 ; REGISTRO_xn[7][1]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.012      ; 6.367      ;
-; -5.322 ; REGISTRO_xn[26][2]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 6.359      ;
-; -5.311 ; REGISTRO_xn[25][1]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 6.354      ;
-; -5.294 ; REGISTRO_xn[6][0]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.006      ; 6.332      ;
-; -5.276 ; REGISTRO_xn[25][2]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 6.319      ;
-; -5.272 ; REGISTRO_xn[6][1]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.006      ; 6.310      ;
-; -5.271 ; REGISTRO_xn[7][0]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.012      ; 6.315      ;
-; -5.267 ; REGISTRO_xn[26][3]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 6.304      ;
-; -5.258 ; REGISTRO_xn[25][0]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.012      ; 6.302      ;
-; -5.252 ; REGISTRO_xn[26][0]  ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.006      ; 6.290      ;
-; -5.233 ; REGISTRO_xn[25][3]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.012      ; 6.277      ;
-; -5.231 ; REGISTRO_xn[26][4]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 6.268      ;
-; -5.225 ; REGISTRO_xn[6][2]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.006      ; 6.263      ;
-; -5.217 ; REGISTRO_xn[26][0]  ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.006      ; 6.255      ;
-; -5.213 ; REGISTRO_xn[26][5]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 6.250      ;
-; -5.203 ; REGISTRO_xn[6][3]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.006      ; 6.241      ;
-; -5.202 ; REGISTRO_xn[5][0]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.019      ; 6.253      ;
-; -5.202 ; REGISTRO_xn[7][2]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.012      ; 6.246      ;
-; -5.202 ; REGISTRO_xn[26][1]  ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 6.239      ;
-; -5.199 ; REGISTRO_xn[26][10] ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 6.236      ;
-; -5.198 ; REGISTRO_xn[7][4]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.012      ; 6.242      ;
-; -5.197 ; REGISTRO_xn[25][4]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 6.240      ;
-; -5.187 ; REGISTRO_xn[27][1]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 6.237      ;
-; -5.181 ; REGISTRO_xn[26][0]  ; yn_2[46] ; clock_fs     ; clock_fs    ; 1.000        ; 0.006      ; 6.219      ;
-; -5.180 ; REGISTRO_xn[26][2]  ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 6.217      ;
-; -5.170 ; REGISTRO_xn[1][1]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; -0.004     ; 6.198      ;
-; -5.168 ; REGISTRO_xn[6][4]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.006      ; 6.206      ;
-; -5.167 ; REGISTRO_xn[7][3]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.012      ; 6.211      ;
-; -5.167 ; REGISTRO_xn[26][1]  ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 6.204      ;
-; -5.160 ; REGISTRO_xn[7][1]   ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.012      ; 6.204      ;
-; -5.152 ; REGISTRO_xn[2][2]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; -0.006     ; 6.178      ;
-; -5.152 ; REGISTRO_xn[6][0]   ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.006      ; 6.190      ;
-; -5.148 ; REGISTRO_xn[25][1]  ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 6.191      ;
-; -5.145 ; REGISTRO_xn[26][2]  ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 6.182      ;
-; -5.144 ; REGISTRO_xn[26][0]  ; yn_2[45] ; clock_fs     ; clock_fs    ; 1.000        ; 0.006      ; 6.182      ;
-; -5.137 ; REGISTRO_xn[26][8]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.006      ; 6.175      ;
-; -5.131 ; REGISTRO_xn[26][1]  ; yn_2[46] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 6.168      ;
-; -5.130 ; REGISTRO_xn[6][1]   ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.006      ; 6.168      ;
-; -5.125 ; REGISTRO_xn[26][3]  ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 6.162      ;
-; -5.125 ; REGISTRO_xn[7][1]   ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.012      ; 6.169      ;
-; -5.119 ; REGISTRO_xn[2][3]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; -0.006     ; 6.145      ;
-; -5.118 ; REGISTRO_xn[8][3]   ; yn_1[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 6.161      ;
-; -5.117 ; REGISTRO_xn[6][0]   ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.006      ; 6.155      ;
-; -5.116 ; REGISTRO_xn[6][5]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.006      ; 6.154      ;
-; -5.114 ; REGISTRO_xn[5][8]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.019      ; 6.165      ;
-; -5.113 ; REGISTRO_xn[25][2]  ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 6.156      ;
-; -5.113 ; REGISTRO_xn[25][1]  ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 6.156      ;
-; -5.109 ; REGISTRO_xn[26][0]  ; yn_2[44] ; clock_fs     ; clock_fs    ; 1.000        ; 0.006      ; 6.147      ;
-; -5.109 ; REGISTRO_xn[26][2]  ; yn_2[46] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 6.146      ;
-; -5.108 ; REGISTRO_xn[26][6]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 6.145      ;
-; -5.108 ; REGISTRO_xn[5][0]   ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.019      ; 6.159      ;
-; -5.108 ; REGISTRO_xn[7][0]   ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.012      ; 6.152      ;
-; -5.102 ; REGISTRO_xn[31][0]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; -0.003     ; 6.131      ;
-; -5.099 ; REGISTRO_xn[25][5]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 6.142      ;
-; -5.095 ; REGISTRO_xn[6][1]   ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.006      ; 6.133      ;
-; -5.095 ; REGISTRO_xn[25][0]  ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.012      ; 6.139      ;
-; -5.094 ; REGISTRO_xn[30][1]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; -0.006     ; 6.120      ;
-; -5.094 ; REGISTRO_xn[26][1]  ; yn_2[45] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 6.131      ;
-; -5.093 ; REGISTRO_xn[27][1]  ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 6.143      ;
-; -5.092 ; REGISTRO_xn[5][4]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.019      ; 6.143      ;
-; -5.090 ; REGISTRO_xn[26][7]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.006      ; 6.128      ;
-; -5.090 ; REGISTRO_xn[26][3]  ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 6.127      ;
-; -5.089 ; REGISTRO_xn[26][4]  ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 6.126      ;
-; -5.088 ; REGISTRO_xn[25][6]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 6.131      ;
-; -5.088 ; REGISTRO_xn[7][1]   ; yn_2[46] ; clock_fs     ; clock_fs    ; 1.000        ; 0.012      ; 6.132      ;
-; -5.086 ; REGISTRO_xn[2][4]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; -0.006     ; 6.112      ;
-; -5.083 ; REGISTRO_xn[8][3]   ; yn_1[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 6.126      ;
-; -5.083 ; REGISTRO_xn[6][2]   ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.006      ; 6.121      ;
-; -5.081 ; REGISTRO_xn[6][0]   ; yn_2[46] ; clock_fs     ; clock_fs    ; 1.000        ; 0.006      ; 6.119      ;
-; -5.078 ; REGISTRO_xn[25][2]  ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 6.121      ;
-; -5.077 ; REGISTRO_xn[7][9]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 6.120      ;
-; -5.076 ; REGISTRO_xn[1][1]   ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; -0.004     ; 6.104      ;
-; -5.076 ; REGISTRO_xn[25][1]  ; yn_2[46] ; clock_fs     ; clock_fs    ; 1.000        ; 0.011      ; 6.119      ;
-; -5.074 ; REGISTRO_xn[26][0]  ; yn_2[43] ; clock_fs     ; clock_fs    ; 1.000        ; 0.006      ; 6.112      ;
-; -5.073 ; REGISTRO_xn[5][0]   ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.019      ; 6.124      ;
-; -5.073 ; REGISTRO_xn[7][0]   ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.012      ; 6.117      ;
-; -5.073 ; REGISTRO_xn[2][1]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; -0.006     ; 6.099      ;
-; -5.072 ; REGISTRO_xn[26][2]  ; yn_2[45] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 6.109      ;
-; -5.071 ; REGISTRO_xn[26][5]  ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 6.108      ;
-; -5.070 ; REGISTRO_xn[25][3]  ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.012      ; 6.114      ;
-; -5.066 ; REGISTRO_xn[29][1]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; -0.003     ; 6.095      ;
-; -5.061 ; REGISTRO_xn[6][3]   ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.006      ; 6.099      ;
-; -5.061 ; REGISTRO_xn[5][1]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 6.111      ;
-; -5.060 ; REGISTRO_xn[25][0]  ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.012      ; 6.104      ;
-; -5.059 ; REGISTRO_xn[6][1]   ; yn_2[46] ; clock_fs     ; clock_fs    ; 1.000        ; 0.006      ; 6.097      ;
-; -5.059 ; REGISTRO_xn[26][1]  ; yn_2[44] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 6.096      ;
-; -5.058 ; REGISTRO_xn[2][2]   ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; -0.006     ; 6.084      ;
-; -5.058 ; REGISTRO_xn[27][1]  ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.018      ; 6.108      ;
-; -5.057 ; REGISTRO_xn[26][10] ; yn_2[48] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 6.094      ;
-; -5.054 ; REGISTRO_xn[26][11] ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 6.091      ;
-; -5.054 ; REGISTRO_xn[26][4]  ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 6.091      ;
-; -5.054 ; REGISTRO_xn[26][3]  ; yn_2[46] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 6.091      ;
-; -5.053 ; REGISTRO_xn[7][1]   ; yn_2[45] ; clock_fs     ; clock_fs    ; 1.000        ; 0.012      ; 6.097      ;
-; -5.052 ; REGISTRO_xn[31][1]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; -0.004     ; 6.080      ;
-; -5.050 ; REGISTRO_xn[30][5]  ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; -0.006     ; 6.076      ;
-; -5.048 ; REGISTRO_xn[6][2]   ; yn_2[47] ; clock_fs     ; clock_fs    ; 1.000        ; 0.006      ; 6.086      ;
-; -5.047 ; REGISTRO_xn[3][1]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; -0.003     ; 6.076      ;
-; -5.046 ; REGISTRO_xn[0][0]   ; yn_2[49] ; clock_fs     ; clock_fs    ; 1.000        ; 0.005      ; 6.083      ;
-+--------+---------------------+----------+--------------+-------------+--------------+------------+------------+
++--------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clock_fs'                                                                                 ;
++--------+--------------------+----------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+----------+--------------+-------------+--------------+------------+------------+
+; -7.075 ; REGISTRO_xn[25][0] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 8.129      ;
+; -7.070 ; REGISTRO_xn[26][0] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 8.117      ;
+; -7.064 ; REGISTRO_xn[6][1]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 8.111      ;
+; -7.063 ; REGISTRO_xn[7][0]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 8.117      ;
+; -7.059 ; REGISTRO_xn[25][4] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 8.113      ;
+; -7.054 ; REGISTRO_xn[6][0]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 8.101      ;
+; -7.040 ; REGISTRO_xn[7][2]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 8.094      ;
+; -6.989 ; REGISTRO_xn[25][1] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 8.043      ;
+; -6.981 ; REGISTRO_xn[25][0] ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 8.035      ;
+; -6.976 ; REGISTRO_xn[7][1]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 8.030      ;
+; -6.976 ; REGISTRO_xn[26][0] ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 8.023      ;
+; -6.973 ; REGISTRO_xn[26][1] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 8.020      ;
+; -6.970 ; REGISTRO_xn[6][1]  ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 8.017      ;
+; -6.969 ; REGISTRO_xn[7][0]  ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 8.023      ;
+; -6.965 ; REGISTRO_xn[25][4] ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 8.019      ;
+; -6.960 ; REGISTRO_xn[6][0]  ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 8.007      ;
+; -6.951 ; REGISTRO_xn[6][2]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.998      ;
+; -6.949 ; REGISTRO_xn[26][2] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.996      ;
+; -6.946 ; REGISTRO_xn[25][0] ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 8.000      ;
+; -6.946 ; REGISTRO_xn[7][2]  ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 8.000      ;
+; -6.942 ; REGISTRO_xn[25][2] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.996      ;
+; -6.941 ; REGISTRO_xn[26][0] ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.988      ;
+; -6.935 ; REGISTRO_xn[6][1]  ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.982      ;
+; -6.934 ; REGISTRO_xn[7][0]  ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.988      ;
+; -6.930 ; REGISTRO_xn[25][4] ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.984      ;
+; -6.925 ; REGISTRO_xn[6][0]  ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.972      ;
+; -6.913 ; REGISTRO_xn[6][3]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.960      ;
+; -6.911 ; REGISTRO_xn[7][2]  ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.965      ;
+; -6.909 ; REGISTRO_xn[7][3]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.963      ;
+; -6.899 ; REGISTRO_xn[25][0] ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.953      ;
+; -6.897 ; REGISTRO_xn[26][3] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.944      ;
+; -6.896 ; REGISTRO_xn[25][3] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.950      ;
+; -6.895 ; REGISTRO_xn[25][1] ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.949      ;
+; -6.894 ; REGISTRO_xn[26][0] ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.941      ;
+; -6.888 ; REGISTRO_xn[6][1]  ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.935      ;
+; -6.887 ; REGISTRO_xn[7][0]  ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.941      ;
+; -6.883 ; REGISTRO_xn[25][4] ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.937      ;
+; -6.882 ; REGISTRO_xn[7][1]  ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.936      ;
+; -6.879 ; REGISTRO_xn[26][1] ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.926      ;
+; -6.878 ; REGISTRO_xn[6][0]  ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.925      ;
+; -6.870 ; REGISTRO_xn[6][6]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.917      ;
+; -6.864 ; REGISTRO_xn[7][2]  ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.918      ;
+; -6.863 ; REGISTRO_xn[6][4]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.910      ;
+; -6.860 ; REGISTRO_xn[25][1] ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.914      ;
+; -6.859 ; REGISTRO_xn[7][4]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.913      ;
+; -6.857 ; REGISTRO_xn[6][2]  ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.904      ;
+; -6.855 ; REGISTRO_xn[26][2] ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.902      ;
+; -6.848 ; REGISTRO_xn[25][2] ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.902      ;
+; -6.847 ; REGISTRO_xn[7][1]  ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.901      ;
+; -6.844 ; REGISTRO_xn[26][1] ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.891      ;
+; -6.829 ; REGISTRO_xn[25][0] ; yn_2[28] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.883      ;
+; -6.824 ; REGISTRO_xn[26][0] ; yn_2[28] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.871      ;
+; -6.822 ; REGISTRO_xn[6][2]  ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.869      ;
+; -6.821 ; REGISTRO_xn[7][5]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.875      ;
+; -6.820 ; REGISTRO_xn[26][2] ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.867      ;
+; -6.819 ; REGISTRO_xn[6][3]  ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.866      ;
+; -6.818 ; REGISTRO_xn[6][1]  ; yn_2[28] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.865      ;
+; -6.817 ; REGISTRO_xn[7][0]  ; yn_2[28] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.871      ;
+; -6.815 ; REGISTRO_xn[7][3]  ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.869      ;
+; -6.813 ; REGISTRO_xn[25][2] ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.867      ;
+; -6.813 ; REGISTRO_xn[25][1] ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.867      ;
+; -6.813 ; REGISTRO_xn[25][4] ; yn_2[28] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.867      ;
+; -6.808 ; REGISTRO_xn[6][0]  ; yn_2[28] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.855      ;
+; -6.803 ; REGISTRO_xn[26][3] ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.850      ;
+; -6.802 ; REGISTRO_xn[25][3] ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.856      ;
+; -6.801 ; REGISTRO_xn[5][0]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.012      ; 7.845      ;
+; -6.800 ; REGISTRO_xn[7][1]  ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.854      ;
+; -6.797 ; REGISTRO_xn[26][1] ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.844      ;
+; -6.794 ; REGISTRO_xn[25][0] ; yn_2[27] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.848      ;
+; -6.794 ; REGISTRO_xn[7][2]  ; yn_2[28] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.848      ;
+; -6.789 ; REGISTRO_xn[26][0] ; yn_2[27] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.836      ;
+; -6.784 ; REGISTRO_xn[6][3]  ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.831      ;
+; -6.783 ; REGISTRO_xn[6][1]  ; yn_2[27] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.830      ;
+; -6.782 ; REGISTRO_xn[7][0]  ; yn_2[27] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.836      ;
+; -6.780 ; REGISTRO_xn[7][3]  ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.834      ;
+; -6.778 ; REGISTRO_xn[25][4] ; yn_2[27] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.832      ;
+; -6.776 ; REGISTRO_xn[6][6]  ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.823      ;
+; -6.775 ; REGISTRO_xn[6][2]  ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.822      ;
+; -6.773 ; REGISTRO_xn[25][7] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.021      ; 7.826      ;
+; -6.773 ; REGISTRO_xn[26][2] ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.820      ;
+; -6.773 ; REGISTRO_xn[6][0]  ; yn_2[27] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.820      ;
+; -6.769 ; REGISTRO_xn[26][4] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.816      ;
+; -6.769 ; REGISTRO_xn[6][4]  ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.816      ;
+; -6.768 ; REGISTRO_xn[26][3] ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.815      ;
+; -6.767 ; REGISTRO_xn[25][3] ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.821      ;
+; -6.766 ; REGISTRO_xn[25][2] ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.820      ;
+; -6.765 ; REGISTRO_xn[7][4]  ; yn_2[31] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.819      ;
+; -6.759 ; REGISTRO_xn[25][0] ; yn_2[26] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.813      ;
+; -6.759 ; REGISTRO_xn[7][2]  ; yn_2[27] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.813      ;
+; -6.755 ; REGISTRO_xn[25][5] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.809      ;
+; -6.754 ; REGISTRO_xn[26][0] ; yn_2[26] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.801      ;
+; -6.748 ; REGISTRO_xn[6][1]  ; yn_2[26] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.795      ;
+; -6.747 ; REGISTRO_xn[6][5]  ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.794      ;
+; -6.747 ; REGISTRO_xn[7][0]  ; yn_2[26] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.801      ;
+; -6.743 ; REGISTRO_xn[25][1] ; yn_2[28] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.797      ;
+; -6.743 ; REGISTRO_xn[25][4] ; yn_2[26] ; clock_fs     ; clock_fs    ; 1.000        ; 0.022      ; 7.797      ;
+; -6.741 ; REGISTRO_xn[6][6]  ; yn_2[30] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.788      ;
+; -6.738 ; REGISTRO_xn[6][0]  ; yn_2[26] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.785      ;
+; -6.737 ; REGISTRO_xn[6][3]  ; yn_2[29] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.784      ;
+; -6.736 ; REGISTRO_xn[26][5] ; yn_2[32] ; clock_fs     ; clock_fs    ; 1.000        ; 0.015      ; 7.783      ;
++--------+--------------------+----------+--------------+-------------+--------------+------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -720,106 +736,106 @@ No paths to report.
 +-------+---------------------+---------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node           ; To Node             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------------+---------------------+--------------+-------------+--------------+------------+------------+
-; 0.238 ; REGISTRO_xn[23][0]  ; REGISTRO_xn[22][0]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.390      ;
-; 0.238 ; REGISTRO_xn[10][10] ; REGISTRO_xn[9][10]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.390      ;
-; 0.239 ; REGISTRO_xn[12][2]  ; REGISTRO_xn[11][2]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.391      ;
-; 0.239 ; REGISTRO_xn[23][4]  ; REGISTRO_xn[22][4]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.391      ;
-; 0.239 ; REGISTRO_xn[22][6]  ; REGISTRO_xn[21][6]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.391      ;
-; 0.239 ; REGISTRO_xn[20][8]  ; REGISTRO_xn[19][8]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.391      ;
-; 0.239 ; REGISTRO_xn[10][8]  ; REGISTRO_xn[9][8]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.391      ;
-; 0.239 ; REGISTRO_xn[16][11] ; REGISTRO_xn[15][11] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.391      ;
-; 0.240 ; REGISTRO_xn[11][5]  ; REGISTRO_xn[10][5]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.392      ;
-; 0.240 ; REGISTRO_xn[21][6]  ; REGISTRO_xn[20][6]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.392      ;
-; 0.240 ; REGISTRO_xn[12][6]  ; REGISTRO_xn[11][6]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.392      ;
-; 0.240 ; REGISTRO_xn[10][6]  ; REGISTRO_xn[9][6]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.392      ;
-; 0.240 ; REGISTRO_xn[12][10] ; REGISTRO_xn[11][10] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.392      ;
-; 0.241 ; REGISTRO_xn[11][4]  ; REGISTRO_xn[10][4]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.393      ;
-; 0.241 ; REGISTRO_xn[22][7]  ; REGISTRO_xn[21][7]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.393      ;
-; 0.241 ; REGISTRO_xn[11][9]  ; REGISTRO_xn[10][9]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.393      ;
-; 0.241 ; REGISTRO_xn[22][10] ; REGISTRO_xn[21][10] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.393      ;
-; 0.241 ; REGISTRO_xn[22][11] ; REGISTRO_xn[21][11] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.393      ;
-; 0.242 ; REGISTRO_xn[21][2]  ; REGISTRO_xn[20][2]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.394      ;
-; 0.242 ; REGISTRO_xn[17][4]  ; REGISTRO_xn[16][4]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.394      ;
-; 0.242 ; REGISTRO_xn[13][8]  ; REGISTRO_xn[12][8]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.394      ;
-; 0.242 ; REGISTRO_xn[21][11] ; REGISTRO_xn[20][11] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.394      ;
-; 0.243 ; REGISTRO_xn[21][1]  ; REGISTRO_xn[20][1]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.395      ;
-; 0.243 ; REGISTRO_xn[17][9]  ; REGISTRO_xn[16][9]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.395      ;
-; 0.244 ; REGISTRO_xn[23][1]  ; REGISTRO_xn[22][1]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.396      ;
-; 0.244 ; REGISTRO_xn[11][1]  ; REGISTRO_xn[10][1]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.396      ;
-; 0.317 ; REGISTRO_xn[23][2]  ; REGISTRO_xn[22][2]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.469      ;
-; 0.317 ; REGISTRO_xn[12][8]  ; REGISTRO_xn[11][8]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.469      ;
-; 0.319 ; REGISTRO_xn[21][4]  ; REGISTRO_xn[20][4]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.471      ;
-; 0.319 ; REGISTRO_xn[11][7]  ; REGISTRO_xn[10][7]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.471      ;
-; 0.322 ; REGISTRO_xn[12][4]  ; REGISTRO_xn[11][4]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 0.473      ;
-; 0.324 ; REGISTRO_xn[13][6]  ; REGISTRO_xn[12][6]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.476      ;
-; 0.327 ; REGISTRO_xn[24][5]  ; REGISTRO_xn[23][5]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.001      ; 0.480      ;
-; 0.328 ; REGISTRO_xn[24][8]  ; REGISTRO_xn[23][8]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.001      ; 0.481      ;
-; 0.330 ; REGISTRO_xn[22][9]  ; REGISTRO_xn[21][9]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.482      ;
-; 0.363 ; REGISTRO_xn[21][5]  ; REGISTRO_xn[20][5]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.515      ;
-; 0.364 ; REGISTRO_xn[12][9]  ; REGISTRO_xn[11][9]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.516      ;
-; 0.366 ; REGISTRO_xn[12][3]  ; REGISTRO_xn[11][3]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.518      ;
-; 0.374 ; REGISTRO_xn[10][0]  ; REGISTRO_xn[9][0]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.526      ;
-; 0.374 ; REGISTRO_xn[11][3]  ; REGISTRO_xn[10][3]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.526      ;
-; 0.375 ; REGISTRO_xn[10][9]  ; REGISTRO_xn[9][9]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.527      ;
-; 0.376 ; REGISTRO_xn[17][11] ; REGISTRO_xn[16][11] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.528      ;
-; 0.380 ; REGISTRO_xn[11][2]  ; REGISTRO_xn[10][2]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.532      ;
-; 0.404 ; REGISTRO_xn[17][2]  ; REGISTRO_xn[16][2]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.556      ;
-; 0.406 ; REGISTRO_xn[17][5]  ; REGISTRO_xn[16][5]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.558      ;
-; 0.424 ; REGISTRO_xn[17][8]  ; REGISTRO_xn[16][8]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 0.575      ;
-; 0.424 ; REGISTRO_xn[14][11] ; REGISTRO_xn[13][11] ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 0.574      ;
-; 0.425 ; REGISTRO_xn[17][3]  ; REGISTRO_xn[16][3]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 0.576      ;
-; 0.425 ; REGISTRO_xn[12][7]  ; REGISTRO_xn[11][7]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 0.575      ;
-; 0.429 ; REGISTRO_xn[14][10] ; REGISTRO_xn[13][10] ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 0.580      ;
-; 0.431 ; REGISTRO_xn[24][9]  ; REGISTRO_xn[23][9]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.003      ; 0.586      ;
-; 0.438 ; REGISTRO_xn[11][6]  ; REGISTRO_xn[10][6]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 0.589      ;
-; 0.446 ; REGISTRO_xn[17][0]  ; REGISTRO_xn[16][0]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 0.597      ;
-; 0.447 ; REGISTRO_xn[20][2]  ; REGISTRO_xn[19][2]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.011      ; 0.610      ;
-; 0.453 ; REGISTRO_xn[24][1]  ; REGISTRO_xn[23][1]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.002      ; 0.607      ;
-; 0.458 ; REGISTRO_xn[3][6]   ; REGISTRO_xn[2][6]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.004      ; 0.614      ;
-; 0.458 ; REGISTRO_xn[13][9]  ; REGISTRO_xn[12][9]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.005     ; 0.605      ;
-; 0.459 ; REGISTRO_xn[21][8]  ; REGISTRO_xn[20][8]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.014      ; 0.625      ;
-; 0.461 ; REGISTRO_xn[17][10] ; REGISTRO_xn[16][10] ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 0.612      ;
-; 0.461 ; REGISTRO_xn[11][10] ; REGISTRO_xn[10][10] ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 0.612      ;
-; 0.471 ; REGISTRO_xn[11][8]  ; REGISTRO_xn[10][8]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.013     ; 0.610      ;
-; 0.477 ; REGISTRO_xn[13][3]  ; REGISTRO_xn[12][3]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.011     ; 0.618      ;
-; 0.478 ; REGISTRO_xn[13][10] ; REGISTRO_xn[12][10] ; clock_fs     ; clock_fs    ; 0.000        ; -0.011     ; 0.619      ;
-; 0.483 ; REGISTRO_xn[20][9]  ; REGISTRO_xn[19][9]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.635      ;
-; 0.485 ; REGISTRO_xn[13][11] ; REGISTRO_xn[12][11] ; clock_fs     ; clock_fs    ; 0.000        ; -0.010     ; 0.627      ;
-; 0.496 ; REGISTRO_xn[10][2]  ; REGISTRO_xn[9][2]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.022     ; 0.626      ;
-; 0.498 ; REGISTRO_xn[24][4]  ; REGISTRO_xn[23][4]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.002      ; 0.652      ;
-; 0.501 ; REGISTRO_xn[24][11] ; REGISTRO_xn[23][11] ; clock_fs     ; clock_fs    ; 0.000        ; 0.001      ; 0.654      ;
-; 0.502 ; REGISTRO_xn[24][2]  ; REGISTRO_xn[23][2]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.001      ; 0.655      ;
-; 0.505 ; REGISTRO_xn[24][6]  ; REGISTRO_xn[23][6]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.002      ; 0.659      ;
-; 0.508 ; REGISTRO_xn[12][5]  ; REGISTRO_xn[11][5]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 0.659      ;
-; 0.518 ; REGISTRO_xn[23][9]  ; REGISTRO_xn[22][9]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.009      ; 0.679      ;
-; 0.522 ; REGISTRO_xn[22][4]  ; REGISTRO_xn[21][4]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.022      ; 0.696      ;
-; 0.525 ; REGISTRO_xn[22][0]  ; REGISTRO_xn[21][0]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.016      ; 0.693      ;
-; 0.525 ; REGISTRO_xn[18][10] ; REGISTRO_xn[17][10] ; clock_fs     ; clock_fs    ; 0.000        ; 0.004      ; 0.681      ;
-; 0.530 ; REGISTRO_xn[30][3]  ; REGISTRO_xn[29][3]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 0.680      ;
-; 0.534 ; REGISTRO_xn[22][8]  ; REGISTRO_xn[21][8]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.008      ; 0.694      ;
-; 0.535 ; REGISTRO_xn[23][6]  ; REGISTRO_xn[22][6]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.024      ; 0.711      ;
-; 0.543 ; REGISTRO_xn[23][10] ; REGISTRO_xn[22][10] ; clock_fs     ; clock_fs    ; 0.000        ; 0.026      ; 0.721      ;
-; 0.545 ; REGISTRO_xn[12][1]  ; REGISTRO_xn[11][1]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.697      ;
-; 0.547 ; REGISTRO_xn[24][0]  ; REGISTRO_xn[23][0]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.002      ; 0.701      ;
-; 0.547 ; REGISTRO_xn[22][2]  ; REGISTRO_xn[21][2]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.016      ; 0.715      ;
-; 0.547 ; REGISTRO_xn[14][5]  ; REGISTRO_xn[13][5]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 0.698      ;
-; 0.548 ; REGISTRO_xn[17][6]  ; REGISTRO_xn[16][6]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 0.699      ;
-; 0.550 ; REGISTRO_xn[11][0]  ; REGISTRO_xn[10][0]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.006     ; 0.696      ;
-; 0.550 ; REGISTRO_xn[10][3]  ; REGISTRO_xn[9][3]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.007     ; 0.695      ;
-; 0.550 ; REGISTRO_xn[23][5]  ; REGISTRO_xn[22][5]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.025      ; 0.727      ;
-; 0.556 ; REGISTRO_xn[10][7]  ; REGISTRO_xn[9][7]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.016     ; 0.692      ;
-; 0.556 ; REGISTRO_xn[30][9]  ; REGISTRO_xn[29][9]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.003     ; 0.705      ;
-; 0.559 ; REGISTRO_xn[20][6]  ; REGISTRO_xn[19][6]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.003      ; 0.714      ;
-; 0.565 ; REGISTRO_xn[23][3]  ; REGISTRO_xn[22][3]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.022      ; 0.739      ;
-; 0.567 ; REGISTRO_xn[6][1]   ; REGISTRO_xn[5][1]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.012     ; 0.707      ;
-; 0.571 ; REGISTRO_xn[10][1]  ; REGISTRO_xn[9][1]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.006      ; 0.729      ;
-; 0.578 ; REGISTRO_xn[21][7]  ; REGISTRO_xn[20][7]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.730      ;
-; 0.581 ; REGISTRO_xn[14][4]  ; REGISTRO_xn[13][4]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.733      ;
-; 0.582 ; REGISTRO_xn[18][1]  ; REGISTRO_xn[17][1]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.004      ; 0.738      ;
-; 0.583 ; REGISTRO_xn[6][2]   ; REGISTRO_xn[5][2]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.012     ; 0.723      ;
-; 0.585 ; REGISTRO_xn[23][7]  ; REGISTRO_xn[22][7]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.016      ; 0.753      ;
-; 0.588 ; REGISTRO_xn[30][7]  ; REGISTRO_xn[29][7]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.003     ; 0.737      ;
-; 0.595 ; REGISTRO_xn[10][4]  ; REGISTRO_xn[9][4]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.016     ; 0.731      ;
+; 0.238 ; REGISTRO_xn[21][7]  ; REGISTRO_xn[20][7]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.390      ;
+; 0.238 ; REGISTRO_xn[2][11]  ; REGISTRO_xn[1][11]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.390      ;
+; 0.239 ; REGISTRO_xn[1][2]   ; REGISTRO_xn[0][2]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.391      ;
+; 0.239 ; REGISTRO_xn[31][4]  ; REGISTRO_xn[30][4]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.391      ;
+; 0.239 ; REGISTRO_xn[21][4]  ; REGISTRO_xn[20][4]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.391      ;
+; 0.239 ; REGISTRO_xn[1][7]   ; REGISTRO_xn[0][7]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.391      ;
+; 0.239 ; REGISTRO_xn[1][8]   ; REGISTRO_xn[0][8]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.391      ;
+; 0.239 ; REGISTRO_xn[2][9]   ; REGISTRO_xn[1][9]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.391      ;
+; 0.239 ; REGISTRO_xn[31][11] ; REGISTRO_xn[30][11] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.391      ;
+; 0.239 ; REGISTRO_xn[9][13]  ; REGISTRO_xn[8][13]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.391      ;
+; 0.239 ; REGISTRO_xn[10][15] ; REGISTRO_xn[9][15]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.391      ;
+; 0.241 ; REGISTRO_xn[21][2]  ; REGISTRO_xn[20][2]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.393      ;
+; 0.241 ; REGISTRO_xn[2][3]   ; REGISTRO_xn[1][3]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.393      ;
+; 0.241 ; REGISTRO_xn[9][9]   ; REGISTRO_xn[8][9]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.393      ;
+; 0.241 ; REGISTRO_xn[21][13] ; REGISTRO_xn[20][13] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.393      ;
+; 0.241 ; REGISTRO_xn[1][13]  ; REGISTRO_xn[0][13]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.393      ;
+; 0.241 ; REGISTRO_xn[24][14] ; REGISTRO_xn[23][14] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.393      ;
+; 0.242 ; REGISTRO_xn[1][3]   ; REGISTRO_xn[0][3]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.394      ;
+; 0.242 ; REGISTRO_xn[24][12] ; REGISTRO_xn[23][12] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.394      ;
+; 0.242 ; REGISTRO_xn[9][15]  ; REGISTRO_xn[8][15]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.394      ;
+; 0.243 ; REGISTRO_xn[21][10] ; REGISTRO_xn[20][10] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.395      ;
+; 0.243 ; REGISTRO_xn[9][14]  ; REGISTRO_xn[8][14]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.395      ;
+; 0.244 ; REGISTRO_xn[24][13] ; REGISTRO_xn[23][13] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.396      ;
+; 0.248 ; REGISTRO_xn[24][10] ; REGISTRO_xn[23][10] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.400      ;
+; 0.248 ; REGISTRO_xn[9][11]  ; REGISTRO_xn[8][11]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.400      ;
+; 0.249 ; REGISTRO_xn[24][9]  ; REGISTRO_xn[23][9]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.401      ;
+; 0.316 ; REGISTRO_xn[24][6]  ; REGISTRO_xn[23][6]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.468      ;
+; 0.316 ; REGISTRO_xn[3][10]  ; REGISTRO_xn[2][10]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 0.467      ;
+; 0.316 ; REGISTRO_xn[31][13] ; REGISTRO_xn[30][13] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.468      ;
+; 0.317 ; REGISTRO_xn[21][6]  ; REGISTRO_xn[20][6]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.469      ;
+; 0.317 ; REGISTRO_xn[2][7]   ; REGISTRO_xn[1][7]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.469      ;
+; 0.317 ; REGISTRO_xn[1][9]   ; REGISTRO_xn[0][9]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.002      ; 0.471      ;
+; 0.318 ; REGISTRO_xn[17][4]  ; REGISTRO_xn[16][4]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.002      ; 0.472      ;
+; 0.318 ; REGISTRO_xn[21][9]  ; REGISTRO_xn[20][9]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.470      ;
+; 0.318 ; REGISTRO_xn[1][11]  ; REGISTRO_xn[0][11]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.470      ;
+; 0.323 ; REGISTRO_xn[17][7]  ; REGISTRO_xn[16][7]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.002      ; 0.477      ;
+; 0.324 ; REGISTRO_xn[3][13]  ; REGISTRO_xn[2][13]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 0.475      ;
+; 0.324 ; REGISTRO_xn[24][15] ; REGISTRO_xn[23][15] ; clock_fs     ; clock_fs    ; 0.000        ; 0.001      ; 0.477      ;
+; 0.325 ; REGISTRO_xn[12][9]  ; REGISTRO_xn[11][9]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 0.475      ;
+; 0.325 ; REGISTRO_xn[12][12] ; REGISTRO_xn[11][12] ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 0.475      ;
+; 0.326 ; REGISTRO_xn[12][5]  ; REGISTRO_xn[11][5]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 0.476      ;
+; 0.326 ; REGISTRO_xn[3][12]  ; REGISTRO_xn[2][12]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 0.477      ;
+; 0.327 ; REGISTRO_xn[20][15] ; REGISTRO_xn[19][15] ; clock_fs     ; clock_fs    ; 0.000        ; 0.001      ; 0.480      ;
+; 0.339 ; REGISTRO_xn[31][9]  ; REGISTRO_xn[30][9]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 0.489      ;
+; 0.340 ; REGISTRO_xn[1][10]  ; REGISTRO_xn[0][10]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.492      ;
+; 0.348 ; REGISTRO_xn[1][5]   ; REGISTRO_xn[0][5]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.500      ;
+; 0.352 ; REGISTRO_xn[1][0]   ; REGISTRO_xn[0][0]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.504      ;
+; 0.352 ; REGISTRO_xn[1][4]   ; REGISTRO_xn[0][4]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.504      ;
+; 0.361 ; REGISTRO_xn[25][7]  ; REGISTRO_xn[24][7]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; REGISTRO_xn[21][11] ; REGISTRO_xn[20][11] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.363 ; REGISTRO_xn[23][14] ; REGISTRO_xn[22][14] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.515      ;
+; 0.364 ; REGISTRO_xn[31][7]  ; REGISTRO_xn[30][7]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.516      ;
+; 0.375 ; REGISTRO_xn[2][8]   ; REGISTRO_xn[1][8]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.527      ;
+; 0.375 ; REGISTRO_xn[23][12] ; REGISTRO_xn[22][12] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.527      ;
+; 0.375 ; REGISTRO_xn[21][14] ; REGISTRO_xn[20][14] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.527      ;
+; 0.376 ; REGISTRO_xn[31][6]  ; REGISTRO_xn[30][6]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; REGISTRO_xn[2][6]   ; REGISTRO_xn[1][6]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; REGISTRO_xn[24][8]  ; REGISTRO_xn[23][8]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; REGISTRO_xn[31][14] ; REGISTRO_xn[30][14] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.528      ;
+; 0.390 ; REGISTRO_xn[3][5]   ; REGISTRO_xn[2][5]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 0.540      ;
+; 0.394 ; REGISTRO_xn[13][3]  ; REGISTRO_xn[12][3]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 0.544      ;
+; 0.396 ; REGISTRO_xn[24][11] ; REGISTRO_xn[23][11] ; clock_fs     ; clock_fs    ; 0.000        ; 0.001      ; 0.549      ;
+; 0.397 ; REGISTRO_xn[3][4]   ; REGISTRO_xn[2][4]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 0.547      ;
+; 0.399 ; REGISTRO_xn[17][14] ; REGISTRO_xn[16][14] ; clock_fs     ; clock_fs    ; 0.000        ; 0.007      ; 0.558      ;
+; 0.402 ; REGISTRO_xn[3][15]  ; REGISTRO_xn[2][15]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 0.553      ;
+; 0.422 ; REGISTRO_xn[16][1]  ; REGISTRO_xn[15][1]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 0.572      ;
+; 0.426 ; REGISTRO_xn[16][11] ; REGISTRO_xn[15][11] ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.578      ;
+; 0.428 ; REGISTRO_xn[9][1]   ; REGISTRO_xn[8][1]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.005     ; 0.575      ;
+; 0.430 ; REGISTRO_xn[31][0]  ; REGISTRO_xn[30][0]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 0.581      ;
+; 0.431 ; REGISTRO_xn[3][2]   ; REGISTRO_xn[2][2]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.005     ; 0.578      ;
+; 0.431 ; REGISTRO_xn[12][13] ; REGISTRO_xn[11][13] ; clock_fs     ; clock_fs    ; 0.000        ; -0.003     ; 0.580      ;
+; 0.432 ; REGISTRO_xn[31][3]  ; REGISTRO_xn[30][3]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 0.583      ;
+; 0.432 ; REGISTRO_xn[9][10]  ; REGISTRO_xn[8][10]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.004     ; 0.580      ;
+; 0.434 ; REGISTRO_xn[9][5]   ; REGISTRO_xn[8][5]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.005     ; 0.581      ;
+; 0.434 ; REGISTRO_xn[3][6]   ; REGISTRO_xn[2][6]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.003     ; 0.583      ;
+; 0.435 ; REGISTRO_xn[9][4]   ; REGISTRO_xn[8][4]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.005     ; 0.582      ;
+; 0.437 ; REGISTRO_xn[3][0]   ; REGISTRO_xn[2][0]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.005     ; 0.584      ;
+; 0.438 ; REGISTRO_xn[31][12] ; REGISTRO_xn[30][12] ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 0.588      ;
+; 0.439 ; REGISTRO_xn[31][1]  ; REGISTRO_xn[30][1]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.002      ; 0.593      ;
+; 0.440 ; REGISTRO_xn[9][12]  ; REGISTRO_xn[8][12]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.005     ; 0.587      ;
+; 0.444 ; REGISTRO_xn[3][1]   ; REGISTRO_xn[2][1]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 0.594      ;
+; 0.445 ; REGISTRO_xn[9][3]   ; REGISTRO_xn[8][3]   ; clock_fs     ; clock_fs    ; 0.000        ; -0.005     ; 0.592      ;
+; 0.448 ; REGISTRO_xn[16][6]  ; REGISTRO_xn[15][6]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.005     ; 0.595      ;
+; 0.452 ; REGISTRO_xn[12][2]  ; REGISTRO_xn[11][2]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.005     ; 0.599      ;
+; 0.453 ; REGISTRO_xn[31][10] ; REGISTRO_xn[30][10] ; clock_fs     ; clock_fs    ; 0.000        ; -0.004     ; 0.601      ;
+; 0.453 ; REGISTRO_xn[21][12] ; REGISTRO_xn[20][12] ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 0.604      ;
+; 0.454 ; REGISTRO_xn[21][1]  ; REGISTRO_xn[20][1]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.008      ; 0.614      ;
+; 0.454 ; REGISTRO_xn[31][5]  ; REGISTRO_xn[30][5]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.001     ; 0.605      ;
+; 0.459 ; REGISTRO_xn[22][12] ; REGISTRO_xn[21][12] ; clock_fs     ; clock_fs    ; 0.000        ; -0.002     ; 0.609      ;
+; 0.460 ; REGISTRO_xn[20][13] ; REGISTRO_xn[19][13] ; clock_fs     ; clock_fs    ; 0.000        ; 0.001      ; 0.613      ;
+; 0.462 ; REGISTRO_xn[21][0]  ; REGISTRO_xn[20][0]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.008      ; 0.622      ;
+; 0.462 ; REGISTRO_xn[12][8]  ; REGISTRO_xn[11][8]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.005     ; 0.609      ;
+; 0.463 ; REGISTRO_xn[26][9]  ; REGISTRO_xn[25][9]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.008     ; 0.607      ;
+; 0.465 ; REGISTRO_xn[27][11] ; REGISTRO_xn[26][11] ; clock_fs     ; clock_fs    ; 0.000        ; -0.005     ; 0.612      ;
+; 0.465 ; REGISTRO_xn[3][14]  ; REGISTRO_xn[2][14]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.005      ; 0.622      ;
+; 0.466 ; REGISTRO_xn[1][1]   ; REGISTRO_xn[0][1]   ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.618      ;
+; 0.466 ; REGISTRO_xn[2][14]  ; REGISTRO_xn[1][14]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.005     ; 0.613      ;
+; 0.472 ; REGISTRO_xn[22][2]  ; REGISTRO_xn[21][2]  ; clock_fs     ; clock_fs    ; 0.000        ; -0.008     ; 0.616      ;
+; 0.473 ; REGISTRO_xn[1][14]  ; REGISTRO_xn[0][14]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.000      ; 0.625      ;
+; 0.475 ; REGISTRO_xn[14][1]  ; REGISTRO_xn[13][1]  ; clock_fs     ; clock_fs    ; 0.000        ; 0.019      ; 0.646      ;
 +-------+---------------------+---------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -835,6 +851,14 @@ No paths to report.
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[0][10]  ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[0][11]  ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[0][11]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[0][12]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[0][12]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[0][13]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[0][13]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[0][14]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[0][14]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[0][15]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[0][15]  ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[0][1]   ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[0][1]   ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[0][2]   ;
@@ -859,6 +883,14 @@ No paths to report.
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[10][10] ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[10][11] ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[10][11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[10][12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[10][12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[10][13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[10][13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[10][14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[10][14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[10][15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[10][15] ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[10][1]  ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[10][1]  ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[10][2]  ;
@@ -883,6 +915,14 @@ No paths to report.
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[11][10] ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[11][11] ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[11][11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[11][12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[11][12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[11][13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[11][13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[11][14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[11][14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[11][15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[11][15] ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[11][1]  ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[11][1]  ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[11][2]  ;
@@ -904,30 +944,6 @@ No paths to report.
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[12][0]  ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[12][0]  ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[12][10] ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[12][10] ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[12][11] ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[12][11] ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[12][1]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[12][1]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[12][2]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[12][2]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[12][3]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[12][3]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[12][4]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[12][4]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[12][5]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[12][5]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[12][6]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[12][6]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[12][7]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[12][7]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[12][8]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[12][8]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[12][9]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[12][9]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[13][0]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_fs ; Rise       ; REGISTRO_xn[13][0]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_fs ; Rise       ; REGISTRO_xn[13][10] ;
 +--------+--------------+----------------+------------------+----------+------------+---------------------+
 
 
@@ -936,21 +952,25 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; enable    ; clock_fs   ; 0.880 ; 0.880 ; Rise       ; clock_fs        ;
-; sreset    ; clock_fs   ; 1.538 ; 1.538 ; Rise       ; clock_fs        ;
-; xn[*]     ; clock_fs   ; 7.972 ; 7.972 ; Rise       ; clock_fs        ;
-;  xn[0]    ; clock_fs   ; 7.972 ; 7.972 ; Rise       ; clock_fs        ;
-;  xn[1]    ; clock_fs   ; 7.769 ; 7.769 ; Rise       ; clock_fs        ;
-;  xn[2]    ; clock_fs   ; 7.688 ; 7.688 ; Rise       ; clock_fs        ;
-;  xn[3]    ; clock_fs   ; 7.552 ; 7.552 ; Rise       ; clock_fs        ;
-;  xn[4]    ; clock_fs   ; 7.625 ; 7.625 ; Rise       ; clock_fs        ;
-;  xn[5]    ; clock_fs   ; 7.503 ; 7.503 ; Rise       ; clock_fs        ;
-;  xn[6]    ; clock_fs   ; 7.428 ; 7.428 ; Rise       ; clock_fs        ;
-;  xn[7]    ; clock_fs   ; 7.356 ; 7.356 ; Rise       ; clock_fs        ;
-;  xn[8]    ; clock_fs   ; 7.442 ; 7.442 ; Rise       ; clock_fs        ;
-;  xn[9]    ; clock_fs   ; 7.390 ; 7.390 ; Rise       ; clock_fs        ;
-;  xn[10]   ; clock_fs   ; 7.406 ; 7.406 ; Rise       ; clock_fs        ;
-;  xn[11]   ; clock_fs   ; 7.327 ; 7.327 ; Rise       ; clock_fs        ;
+; enable    ; clock_fs   ; 1.547 ; 1.547 ; Rise       ; clock_fs        ;
+; sreset    ; clock_fs   ; 1.600 ; 1.600 ; Rise       ; clock_fs        ;
+; xn[*]     ; clock_fs   ; 6.261 ; 6.261 ; Rise       ; clock_fs        ;
+;  xn[0]    ; clock_fs   ; 6.261 ; 6.261 ; Rise       ; clock_fs        ;
+;  xn[1]    ; clock_fs   ; 5.998 ; 5.998 ; Rise       ; clock_fs        ;
+;  xn[2]    ; clock_fs   ; 6.072 ; 6.072 ; Rise       ; clock_fs        ;
+;  xn[3]    ; clock_fs   ; 6.006 ; 6.006 ; Rise       ; clock_fs        ;
+;  xn[4]    ; clock_fs   ; 6.019 ; 6.019 ; Rise       ; clock_fs        ;
+;  xn[5]    ; clock_fs   ; 5.836 ; 5.836 ; Rise       ; clock_fs        ;
+;  xn[6]    ; clock_fs   ; 6.022 ; 6.022 ; Rise       ; clock_fs        ;
+;  xn[7]    ; clock_fs   ; 5.834 ; 5.834 ; Rise       ; clock_fs        ;
+;  xn[8]    ; clock_fs   ; 5.800 ; 5.800 ; Rise       ; clock_fs        ;
+;  xn[9]    ; clock_fs   ; 5.705 ; 5.705 ; Rise       ; clock_fs        ;
+;  xn[10]   ; clock_fs   ; 5.735 ; 5.735 ; Rise       ; clock_fs        ;
+;  xn[11]   ; clock_fs   ; 5.583 ; 5.583 ; Rise       ; clock_fs        ;
+;  xn[12]   ; clock_fs   ; 5.450 ; 5.450 ; Rise       ; clock_fs        ;
+;  xn[13]   ; clock_fs   ; 5.575 ; 5.575 ; Rise       ; clock_fs        ;
+;  xn[14]   ; clock_fs   ; 5.321 ; 5.321 ; Rise       ; clock_fs        ;
+;  xn[15]   ; clock_fs   ; 5.194 ; 5.194 ; Rise       ; clock_fs        ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -959,21 +979,25 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; enable    ; clock_fs   ; 0.006  ; 0.006  ; Rise       ; clock_fs        ;
-; sreset    ; clock_fs   ; 0.211  ; 0.211  ; Rise       ; clock_fs        ;
-; xn[*]     ; clock_fs   ; -1.865 ; -1.865 ; Rise       ; clock_fs        ;
-;  xn[0]    ; clock_fs   ; -2.385 ; -2.385 ; Rise       ; clock_fs        ;
-;  xn[1]    ; clock_fs   ; -2.333 ; -2.333 ; Rise       ; clock_fs        ;
-;  xn[2]    ; clock_fs   ; -2.397 ; -2.397 ; Rise       ; clock_fs        ;
-;  xn[3]    ; clock_fs   ; -2.391 ; -2.391 ; Rise       ; clock_fs        ;
-;  xn[4]    ; clock_fs   ; -2.426 ; -2.426 ; Rise       ; clock_fs        ;
-;  xn[5]    ; clock_fs   ; -2.331 ; -2.331 ; Rise       ; clock_fs        ;
-;  xn[6]    ; clock_fs   ; -2.610 ; -2.610 ; Rise       ; clock_fs        ;
-;  xn[7]    ; clock_fs   ; -2.493 ; -2.493 ; Rise       ; clock_fs        ;
-;  xn[8]    ; clock_fs   ; -2.300 ; -2.300 ; Rise       ; clock_fs        ;
-;  xn[9]    ; clock_fs   ; -2.523 ; -2.523 ; Rise       ; clock_fs        ;
-;  xn[10]   ; clock_fs   ; -2.330 ; -2.330 ; Rise       ; clock_fs        ;
-;  xn[11]   ; clock_fs   ; -1.865 ; -1.865 ; Rise       ; clock_fs        ;
+; enable    ; clock_fs   ; 0.005  ; 0.005  ; Rise       ; clock_fs        ;
+; sreset    ; clock_fs   ; 0.410  ; 0.410  ; Rise       ; clock_fs        ;
+; xn[*]     ; clock_fs   ; -1.907 ; -1.907 ; Rise       ; clock_fs        ;
+;  xn[0]    ; clock_fs   ; -2.040 ; -2.040 ; Rise       ; clock_fs        ;
+;  xn[1]    ; clock_fs   ; -2.039 ; -2.039 ; Rise       ; clock_fs        ;
+;  xn[2]    ; clock_fs   ; -2.151 ; -2.151 ; Rise       ; clock_fs        ;
+;  xn[3]    ; clock_fs   ; -2.121 ; -2.121 ; Rise       ; clock_fs        ;
+;  xn[4]    ; clock_fs   ; -2.241 ; -2.241 ; Rise       ; clock_fs        ;
+;  xn[5]    ; clock_fs   ; -2.026 ; -2.026 ; Rise       ; clock_fs        ;
+;  xn[6]    ; clock_fs   ; -2.100 ; -2.100 ; Rise       ; clock_fs        ;
+;  xn[7]    ; clock_fs   ; -2.026 ; -2.026 ; Rise       ; clock_fs        ;
+;  xn[8]    ; clock_fs   ; -1.978 ; -1.978 ; Rise       ; clock_fs        ;
+;  xn[9]    ; clock_fs   ; -2.111 ; -2.111 ; Rise       ; clock_fs        ;
+;  xn[10]   ; clock_fs   ; -2.200 ; -2.200 ; Rise       ; clock_fs        ;
+;  xn[11]   ; clock_fs   ; -2.061 ; -2.061 ; Rise       ; clock_fs        ;
+;  xn[12]   ; clock_fs   ; -1.983 ; -1.983 ; Rise       ; clock_fs        ;
+;  xn[13]   ; clock_fs   ; -2.147 ; -2.147 ; Rise       ; clock_fs        ;
+;  xn[14]   ; clock_fs   ; -2.032 ; -2.032 ; Rise       ; clock_fs        ;
+;  xn[15]   ; clock_fs   ; -1.907 ; -1.907 ; Rise       ; clock_fs        ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -982,19 +1006,23 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; yn[*]     ; clock_fs   ; 8.657 ; 8.657 ; Rise       ; clock_fs        ;
-;  yn[0]    ; clock_fs   ; 8.061 ; 8.061 ; Rise       ; clock_fs        ;
-;  yn[1]    ; clock_fs   ; 8.249 ; 8.249 ; Rise       ; clock_fs        ;
-;  yn[2]    ; clock_fs   ; 8.158 ; 8.158 ; Rise       ; clock_fs        ;
-;  yn[3]    ; clock_fs   ; 8.364 ; 8.364 ; Rise       ; clock_fs        ;
-;  yn[4]    ; clock_fs   ; 8.453 ; 8.453 ; Rise       ; clock_fs        ;
-;  yn[5]    ; clock_fs   ; 8.355 ; 8.355 ; Rise       ; clock_fs        ;
-;  yn[6]    ; clock_fs   ; 8.387 ; 8.387 ; Rise       ; clock_fs        ;
-;  yn[7]    ; clock_fs   ; 8.471 ; 8.471 ; Rise       ; clock_fs        ;
-;  yn[8]    ; clock_fs   ; 8.440 ; 8.440 ; Rise       ; clock_fs        ;
-;  yn[9]    ; clock_fs   ; 8.492 ; 8.492 ; Rise       ; clock_fs        ;
-;  yn[10]   ; clock_fs   ; 8.505 ; 8.505 ; Rise       ; clock_fs        ;
-;  yn[11]   ; clock_fs   ; 8.657 ; 8.657 ; Rise       ; clock_fs        ;
+; yn[*]     ; clock_fs   ; 8.512 ; 8.512 ; Rise       ; clock_fs        ;
+;  yn[0]    ; clock_fs   ; 7.839 ; 7.839 ; Rise       ; clock_fs        ;
+;  yn[1]    ; clock_fs   ; 7.961 ; 7.961 ; Rise       ; clock_fs        ;
+;  yn[2]    ; clock_fs   ; 7.920 ; 7.920 ; Rise       ; clock_fs        ;
+;  yn[3]    ; clock_fs   ; 7.877 ; 7.877 ; Rise       ; clock_fs        ;
+;  yn[4]    ; clock_fs   ; 8.060 ; 8.060 ; Rise       ; clock_fs        ;
+;  yn[5]    ; clock_fs   ; 7.960 ; 7.960 ; Rise       ; clock_fs        ;
+;  yn[6]    ; clock_fs   ; 8.108 ; 8.108 ; Rise       ; clock_fs        ;
+;  yn[7]    ; clock_fs   ; 8.158 ; 8.158 ; Rise       ; clock_fs        ;
+;  yn[8]    ; clock_fs   ; 8.362 ; 8.362 ; Rise       ; clock_fs        ;
+;  yn[9]    ; clock_fs   ; 8.114 ; 8.114 ; Rise       ; clock_fs        ;
+;  yn[10]   ; clock_fs   ; 8.309 ; 8.309 ; Rise       ; clock_fs        ;
+;  yn[11]   ; clock_fs   ; 8.385 ; 8.385 ; Rise       ; clock_fs        ;
+;  yn[12]   ; clock_fs   ; 8.217 ; 8.217 ; Rise       ; clock_fs        ;
+;  yn[13]   ; clock_fs   ; 8.305 ; 8.305 ; Rise       ; clock_fs        ;
+;  yn[14]   ; clock_fs   ; 8.368 ; 8.368 ; Rise       ; clock_fs        ;
+;  yn[15]   ; clock_fs   ; 8.512 ; 8.512 ; Rise       ; clock_fs        ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -1003,19 +1031,23 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; yn[*]     ; clock_fs   ; 4.849 ; 4.849 ; Rise       ; clock_fs        ;
-;  yn[0]    ; clock_fs   ; 4.917 ; 4.917 ; Rise       ; clock_fs        ;
-;  yn[1]    ; clock_fs   ; 4.973 ; 4.973 ; Rise       ; clock_fs        ;
-;  yn[2]    ; clock_fs   ; 4.851 ; 4.851 ; Rise       ; clock_fs        ;
-;  yn[3]    ; clock_fs   ; 5.038 ; 5.038 ; Rise       ; clock_fs        ;
-;  yn[4]    ; clock_fs   ; 5.055 ; 5.055 ; Rise       ; clock_fs        ;
-;  yn[5]    ; clock_fs   ; 4.872 ; 4.872 ; Rise       ; clock_fs        ;
-;  yn[6]    ; clock_fs   ; 4.868 ; 4.868 ; Rise       ; clock_fs        ;
-;  yn[7]    ; clock_fs   ; 4.917 ; 4.917 ; Rise       ; clock_fs        ;
-;  yn[8]    ; clock_fs   ; 4.849 ; 4.849 ; Rise       ; clock_fs        ;
-;  yn[9]    ; clock_fs   ; 4.879 ; 4.879 ; Rise       ; clock_fs        ;
-;  yn[10]   ; clock_fs   ; 4.861 ; 4.861 ; Rise       ; clock_fs        ;
-;  yn[11]   ; clock_fs   ; 4.974 ; 4.974 ; Rise       ; clock_fs        ;
+; yn[*]     ; clock_fs   ; 5.147 ; 5.147 ; Rise       ; clock_fs        ;
+;  yn[0]    ; clock_fs   ; 5.305 ; 5.305 ; Rise       ; clock_fs        ;
+;  yn[1]    ; clock_fs   ; 5.429 ; 5.429 ; Rise       ; clock_fs        ;
+;  yn[2]    ; clock_fs   ; 5.337 ; 5.337 ; Rise       ; clock_fs        ;
+;  yn[3]    ; clock_fs   ; 5.265 ; 5.265 ; Rise       ; clock_fs        ;
+;  yn[4]    ; clock_fs   ; 5.284 ; 5.284 ; Rise       ; clock_fs        ;
+;  yn[5]    ; clock_fs   ; 5.147 ; 5.147 ; Rise       ; clock_fs        ;
+;  yn[6]    ; clock_fs   ; 5.270 ; 5.270 ; Rise       ; clock_fs        ;
+;  yn[7]    ; clock_fs   ; 5.289 ; 5.289 ; Rise       ; clock_fs        ;
+;  yn[8]    ; clock_fs   ; 5.395 ; 5.395 ; Rise       ; clock_fs        ;
+;  yn[9]    ; clock_fs   ; 5.238 ; 5.238 ; Rise       ; clock_fs        ;
+;  yn[10]   ; clock_fs   ; 5.300 ; 5.300 ; Rise       ; clock_fs        ;
+;  yn[11]   ; clock_fs   ; 5.431 ; 5.431 ; Rise       ; clock_fs        ;
+;  yn[12]   ; clock_fs   ; 5.244 ; 5.244 ; Rise       ; clock_fs        ;
+;  yn[13]   ; clock_fs   ; 5.159 ; 5.159 ; Rise       ; clock_fs        ;
+;  yn[14]   ; clock_fs   ; 5.326 ; 5.326 ; Rise       ; clock_fs        ;
+;  yn[15]   ; clock_fs   ; 5.366 ; 5.366 ; Rise       ; clock_fs        ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -1024,10 +1056,10 @@ No paths to report.
 +------------------+-----------+-------+----------+---------+---------------------+
 ; Clock            ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+-----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -15.346   ; 0.238 ; N/A      ; N/A     ; -1.380              ;
-;  clock_fs        ; -15.346   ; 0.238 ; N/A      ; N/A     ; -1.380              ;
-; Design-wide TNS  ; -1505.729 ; 0.0   ; 0.0      ; 0.0     ; -483.38             ;
-;  clock_fs        ; -1505.729 ; 0.000 ; N/A      ; N/A     ; -483.380            ;
+; Worst-case Slack ; -19.343   ; 0.238 ; N/A      ; N/A     ; -1.380              ;
+;  clock_fs        ; -19.343   ; 0.238 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -1479.614 ; 0.0   ; 0.0      ; 0.0     ; -579.38             ;
+;  clock_fs        ; -1479.614 ; 0.000 ; N/A      ; N/A     ; -579.380            ;
 +------------------+-----------+-------+----------+---------+---------------------+
 
 
@@ -1036,21 +1068,25 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; enable    ; clock_fs   ; 2.360  ; 2.360  ; Rise       ; clock_fs        ;
-; sreset    ; clock_fs   ; 3.795  ; 3.795  ; Rise       ; clock_fs        ;
-; xn[*]     ; clock_fs   ; 18.923 ; 18.923 ; Rise       ; clock_fs        ;
-;  xn[0]    ; clock_fs   ; 18.923 ; 18.923 ; Rise       ; clock_fs        ;
-;  xn[1]    ; clock_fs   ; 18.506 ; 18.506 ; Rise       ; clock_fs        ;
-;  xn[2]    ; clock_fs   ; 18.362 ; 18.362 ; Rise       ; clock_fs        ;
-;  xn[3]    ; clock_fs   ; 18.081 ; 18.081 ; Rise       ; clock_fs        ;
-;  xn[4]    ; clock_fs   ; 18.220 ; 18.220 ; Rise       ; clock_fs        ;
-;  xn[5]    ; clock_fs   ; 17.945 ; 17.945 ; Rise       ; clock_fs        ;
-;  xn[6]    ; clock_fs   ; 17.844 ; 17.844 ; Rise       ; clock_fs        ;
-;  xn[7]    ; clock_fs   ; 17.696 ; 17.696 ; Rise       ; clock_fs        ;
-;  xn[8]    ; clock_fs   ; 17.874 ; 17.874 ; Rise       ; clock_fs        ;
-;  xn[9]    ; clock_fs   ; 17.713 ; 17.713 ; Rise       ; clock_fs        ;
-;  xn[10]   ; clock_fs   ; 17.777 ; 17.777 ; Rise       ; clock_fs        ;
-;  xn[11]   ; clock_fs   ; 17.637 ; 17.637 ; Rise       ; clock_fs        ;
+; enable    ; clock_fs   ; 3.795  ; 3.795  ; Rise       ; clock_fs        ;
+; sreset    ; clock_fs   ; 3.871  ; 3.871  ; Rise       ; clock_fs        ;
+; xn[*]     ; clock_fs   ; 14.614 ; 14.614 ; Rise       ; clock_fs        ;
+;  xn[0]    ; clock_fs   ; 14.614 ; 14.614 ; Rise       ; clock_fs        ;
+;  xn[1]    ; clock_fs   ; 14.174 ; 14.174 ; Rise       ; clock_fs        ;
+;  xn[2]    ; clock_fs   ; 14.355 ; 14.355 ; Rise       ; clock_fs        ;
+;  xn[3]    ; clock_fs   ; 14.209 ; 14.209 ; Rise       ; clock_fs        ;
+;  xn[4]    ; clock_fs   ; 14.197 ; 14.197 ; Rise       ; clock_fs        ;
+;  xn[5]    ; clock_fs   ; 13.849 ; 13.849 ; Rise       ; clock_fs        ;
+;  xn[6]    ; clock_fs   ; 14.267 ; 14.267 ; Rise       ; clock_fs        ;
+;  xn[7]    ; clock_fs   ; 13.854 ; 13.854 ; Rise       ; clock_fs        ;
+;  xn[8]    ; clock_fs   ; 13.819 ; 13.819 ; Rise       ; clock_fs        ;
+;  xn[9]    ; clock_fs   ; 13.648 ; 13.648 ; Rise       ; clock_fs        ;
+;  xn[10]   ; clock_fs   ; 13.686 ; 13.686 ; Rise       ; clock_fs        ;
+;  xn[11]   ; clock_fs   ; 13.448 ; 13.448 ; Rise       ; clock_fs        ;
+;  xn[12]   ; clock_fs   ; 13.117 ; 13.117 ; Rise       ; clock_fs        ;
+;  xn[13]   ; clock_fs   ; 13.446 ; 13.446 ; Rise       ; clock_fs        ;
+;  xn[14]   ; clock_fs   ; 12.744 ; 12.744 ; Rise       ; clock_fs        ;
+;  xn[15]   ; clock_fs   ; 12.587 ; 12.587 ; Rise       ; clock_fs        ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -1059,21 +1095,25 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; enable    ; clock_fs   ; 0.006  ; 0.006  ; Rise       ; clock_fs        ;
-; sreset    ; clock_fs   ; 0.211  ; 0.211  ; Rise       ; clock_fs        ;
-; xn[*]     ; clock_fs   ; -1.865 ; -1.865 ; Rise       ; clock_fs        ;
-;  xn[0]    ; clock_fs   ; -2.385 ; -2.385 ; Rise       ; clock_fs        ;
-;  xn[1]    ; clock_fs   ; -2.333 ; -2.333 ; Rise       ; clock_fs        ;
-;  xn[2]    ; clock_fs   ; -2.397 ; -2.397 ; Rise       ; clock_fs        ;
-;  xn[3]    ; clock_fs   ; -2.391 ; -2.391 ; Rise       ; clock_fs        ;
-;  xn[4]    ; clock_fs   ; -2.426 ; -2.426 ; Rise       ; clock_fs        ;
-;  xn[5]    ; clock_fs   ; -2.331 ; -2.331 ; Rise       ; clock_fs        ;
-;  xn[6]    ; clock_fs   ; -2.610 ; -2.610 ; Rise       ; clock_fs        ;
-;  xn[7]    ; clock_fs   ; -2.493 ; -2.493 ; Rise       ; clock_fs        ;
-;  xn[8]    ; clock_fs   ; -2.300 ; -2.300 ; Rise       ; clock_fs        ;
-;  xn[9]    ; clock_fs   ; -2.523 ; -2.523 ; Rise       ; clock_fs        ;
-;  xn[10]   ; clock_fs   ; -2.330 ; -2.330 ; Rise       ; clock_fs        ;
-;  xn[11]   ; clock_fs   ; -1.865 ; -1.865 ; Rise       ; clock_fs        ;
+; enable    ; clock_fs   ; 0.005  ; 0.005  ; Rise       ; clock_fs        ;
+; sreset    ; clock_fs   ; 0.410  ; 0.410  ; Rise       ; clock_fs        ;
+; xn[*]     ; clock_fs   ; -1.907 ; -1.907 ; Rise       ; clock_fs        ;
+;  xn[0]    ; clock_fs   ; -2.040 ; -2.040 ; Rise       ; clock_fs        ;
+;  xn[1]    ; clock_fs   ; -2.039 ; -2.039 ; Rise       ; clock_fs        ;
+;  xn[2]    ; clock_fs   ; -2.151 ; -2.151 ; Rise       ; clock_fs        ;
+;  xn[3]    ; clock_fs   ; -2.121 ; -2.121 ; Rise       ; clock_fs        ;
+;  xn[4]    ; clock_fs   ; -2.241 ; -2.241 ; Rise       ; clock_fs        ;
+;  xn[5]    ; clock_fs   ; -2.026 ; -2.026 ; Rise       ; clock_fs        ;
+;  xn[6]    ; clock_fs   ; -2.100 ; -2.100 ; Rise       ; clock_fs        ;
+;  xn[7]    ; clock_fs   ; -2.026 ; -2.026 ; Rise       ; clock_fs        ;
+;  xn[8]    ; clock_fs   ; -1.978 ; -1.978 ; Rise       ; clock_fs        ;
+;  xn[9]    ; clock_fs   ; -2.111 ; -2.111 ; Rise       ; clock_fs        ;
+;  xn[10]   ; clock_fs   ; -2.200 ; -2.200 ; Rise       ; clock_fs        ;
+;  xn[11]   ; clock_fs   ; -2.061 ; -2.061 ; Rise       ; clock_fs        ;
+;  xn[12]   ; clock_fs   ; -1.983 ; -1.983 ; Rise       ; clock_fs        ;
+;  xn[13]   ; clock_fs   ; -2.147 ; -2.147 ; Rise       ; clock_fs        ;
+;  xn[14]   ; clock_fs   ; -2.032 ; -2.032 ; Rise       ; clock_fs        ;
+;  xn[15]   ; clock_fs   ; -1.907 ; -1.907 ; Rise       ; clock_fs        ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -1082,19 +1122,23 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; yn[*]     ; clock_fs   ; 17.084 ; 17.084 ; Rise       ; clock_fs        ;
-;  yn[0]    ; clock_fs   ; 15.813 ; 15.813 ; Rise       ; clock_fs        ;
-;  yn[1]    ; clock_fs   ; 16.294 ; 16.294 ; Rise       ; clock_fs        ;
-;  yn[2]    ; clock_fs   ; 16.103 ; 16.103 ; Rise       ; clock_fs        ;
-;  yn[3]    ; clock_fs   ; 16.552 ; 16.552 ; Rise       ; clock_fs        ;
-;  yn[4]    ; clock_fs   ; 16.711 ; 16.711 ; Rise       ; clock_fs        ;
-;  yn[5]    ; clock_fs   ; 16.449 ; 16.449 ; Rise       ; clock_fs        ;
-;  yn[6]    ; clock_fs   ; 16.508 ; 16.508 ; Rise       ; clock_fs        ;
-;  yn[7]    ; clock_fs   ; 16.732 ; 16.732 ; Rise       ; clock_fs        ;
-;  yn[8]    ; clock_fs   ; 16.636 ; 16.636 ; Rise       ; clock_fs        ;
-;  yn[9]    ; clock_fs   ; 16.728 ; 16.728 ; Rise       ; clock_fs        ;
-;  yn[10]   ; clock_fs   ; 16.780 ; 16.780 ; Rise       ; clock_fs        ;
-;  yn[11]   ; clock_fs   ; 17.084 ; 17.084 ; Rise       ; clock_fs        ;
+; yn[*]     ; clock_fs   ; 17.076 ; 17.076 ; Rise       ; clock_fs        ;
+;  yn[0]    ; clock_fs   ; 15.708 ; 15.708 ; Rise       ; clock_fs        ;
+;  yn[1]    ; clock_fs   ; 16.080 ; 16.080 ; Rise       ; clock_fs        ;
+;  yn[2]    ; clock_fs   ; 15.993 ; 15.993 ; Rise       ; clock_fs        ;
+;  yn[3]    ; clock_fs   ; 15.826 ; 15.826 ; Rise       ; clock_fs        ;
+;  yn[4]    ; clock_fs   ; 16.263 ; 16.263 ; Rise       ; clock_fs        ;
+;  yn[5]    ; clock_fs   ; 16.061 ; 16.061 ; Rise       ; clock_fs        ;
+;  yn[6]    ; clock_fs   ; 16.373 ; 16.373 ; Rise       ; clock_fs        ;
+;  yn[7]    ; clock_fs   ; 16.460 ; 16.460 ; Rise       ; clock_fs        ;
+;  yn[8]    ; clock_fs   ; 16.858 ; 16.858 ; Rise       ; clock_fs        ;
+;  yn[9]    ; clock_fs   ; 16.304 ; 16.304 ; Rise       ; clock_fs        ;
+;  yn[10]   ; clock_fs   ; 16.706 ; 16.706 ; Rise       ; clock_fs        ;
+;  yn[11]   ; clock_fs   ; 16.915 ; 16.915 ; Rise       ; clock_fs        ;
+;  yn[12]   ; clock_fs   ; 16.508 ; 16.508 ; Rise       ; clock_fs        ;
+;  yn[13]   ; clock_fs   ; 16.725 ; 16.725 ; Rise       ; clock_fs        ;
+;  yn[14]   ; clock_fs   ; 16.862 ; 16.862 ; Rise       ; clock_fs        ;
+;  yn[15]   ; clock_fs   ; 17.076 ; 17.076 ; Rise       ; clock_fs        ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -1103,39 +1147,43 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; yn[*]     ; clock_fs   ; 4.849 ; 4.849 ; Rise       ; clock_fs        ;
-;  yn[0]    ; clock_fs   ; 4.917 ; 4.917 ; Rise       ; clock_fs        ;
-;  yn[1]    ; clock_fs   ; 4.973 ; 4.973 ; Rise       ; clock_fs        ;
-;  yn[2]    ; clock_fs   ; 4.851 ; 4.851 ; Rise       ; clock_fs        ;
-;  yn[3]    ; clock_fs   ; 5.038 ; 5.038 ; Rise       ; clock_fs        ;
-;  yn[4]    ; clock_fs   ; 5.055 ; 5.055 ; Rise       ; clock_fs        ;
-;  yn[5]    ; clock_fs   ; 4.872 ; 4.872 ; Rise       ; clock_fs        ;
-;  yn[6]    ; clock_fs   ; 4.868 ; 4.868 ; Rise       ; clock_fs        ;
-;  yn[7]    ; clock_fs   ; 4.917 ; 4.917 ; Rise       ; clock_fs        ;
-;  yn[8]    ; clock_fs   ; 4.849 ; 4.849 ; Rise       ; clock_fs        ;
-;  yn[9]    ; clock_fs   ; 4.879 ; 4.879 ; Rise       ; clock_fs        ;
-;  yn[10]   ; clock_fs   ; 4.861 ; 4.861 ; Rise       ; clock_fs        ;
-;  yn[11]   ; clock_fs   ; 4.974 ; 4.974 ; Rise       ; clock_fs        ;
+; yn[*]     ; clock_fs   ; 5.147 ; 5.147 ; Rise       ; clock_fs        ;
+;  yn[0]    ; clock_fs   ; 5.305 ; 5.305 ; Rise       ; clock_fs        ;
+;  yn[1]    ; clock_fs   ; 5.429 ; 5.429 ; Rise       ; clock_fs        ;
+;  yn[2]    ; clock_fs   ; 5.337 ; 5.337 ; Rise       ; clock_fs        ;
+;  yn[3]    ; clock_fs   ; 5.265 ; 5.265 ; Rise       ; clock_fs        ;
+;  yn[4]    ; clock_fs   ; 5.284 ; 5.284 ; Rise       ; clock_fs        ;
+;  yn[5]    ; clock_fs   ; 5.147 ; 5.147 ; Rise       ; clock_fs        ;
+;  yn[6]    ; clock_fs   ; 5.270 ; 5.270 ; Rise       ; clock_fs        ;
+;  yn[7]    ; clock_fs   ; 5.289 ; 5.289 ; Rise       ; clock_fs        ;
+;  yn[8]    ; clock_fs   ; 5.395 ; 5.395 ; Rise       ; clock_fs        ;
+;  yn[9]    ; clock_fs   ; 5.238 ; 5.238 ; Rise       ; clock_fs        ;
+;  yn[10]   ; clock_fs   ; 5.300 ; 5.300 ; Rise       ; clock_fs        ;
+;  yn[11]   ; clock_fs   ; 5.431 ; 5.431 ; Rise       ; clock_fs        ;
+;  yn[12]   ; clock_fs   ; 5.244 ; 5.244 ; Rise       ; clock_fs        ;
+;  yn[13]   ; clock_fs   ; 5.159 ; 5.159 ; Rise       ; clock_fs        ;
+;  yn[14]   ; clock_fs   ; 5.326 ; 5.326 ; Rise       ; clock_fs        ;
+;  yn[15]   ; clock_fs   ; 5.366 ; 5.366 ; Rise       ; clock_fs        ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
-+---------------------------------------------------------------------+
-; Setup Transfers                                                     ;
-+------------+----------+------------+----------+----------+----------+
-; From Clock ; To Clock ; RR Paths   ; FR Paths ; RF Paths ; FF Paths ;
-+------------+----------+------------+----------+----------+----------+
-; clock_fs   ; clock_fs ; 2049821260 ; 0        ; 0        ; 0        ;
-+------------+----------+------------+----------+----------+----------+
++-----------------------------------------------------------------------+
+; Setup Transfers                                                       ;
++------------+----------+--------------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+--------------+----------+----------+----------+
+; clock_fs   ; clock_fs ; > 2147483647 ; 0        ; 0        ; 0        ;
++------------+----------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+---------------------------------------------------------------------+
-; Hold Transfers                                                      ;
-+------------+----------+------------+----------+----------+----------+
-; From Clock ; To Clock ; RR Paths   ; FR Paths ; RF Paths ; FF Paths ;
-+------------+----------+------------+----------+----------+----------+
-; clock_fs   ; clock_fs ; 2049821260 ; 0        ; 0        ; 0        ;
-+------------+----------+------------+----------+----------+----------+
++-----------------------------------------------------------------------+
+; Hold Transfers                                                        ;
++------------+----------+--------------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+--------------+----------+----------+----------+
+; clock_fs   ; clock_fs ; > 2147483647 ; 0        ; 0        ; 0        ;
++------------+----------+--------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -1158,10 +1206,10 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 15    ; 15   ;
-; Unconstrained Input Port Paths  ; 1980  ; 1980 ;
-; Unconstrained Output Ports      ; 12    ; 12   ;
-; Unconstrained Output Port Paths ; 1176  ; 1176 ;
+; Unconstrained Input Ports       ; 19    ; 19   ;
+; Unconstrained Input Port Paths  ; 2158  ; 2158 ;
+; Unconstrained Output Ports      ; 16    ; 16   ;
+; Unconstrained Output Port Paths ; 1056  ; 1056 ;
 +---------------------------------+-------+------+
 
 
@@ -1171,7 +1219,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jun 21 10:51:56 2023
+    Info: Processing started: Wed Jun 28 08:52:42 2023
 Info: Command: quartus_sta final_project -c final_project
 Info: qsta_default_script.tcl version: #1
 Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
@@ -1184,10 +1232,10 @@ Info (332105): Deriving Clocks
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -15.346
+Info (332146): Worst-case setup slack is -19.343
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):   -15.346     -1505.729 clock_fs 
+    Info (332119):   -19.343     -1479.614 clock_fs 
 Info (332146): Worst-case hold slack is 0.521
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
@@ -1197,14 +1245,14 @@ Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.380
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.380      -483.380 clock_fs 
+    Info (332119):    -1.380      -579.380 clock_fs 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -5.394
+Info (332146): Worst-case setup slack is -7.075
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -5.394      -395.790 clock_fs 
+    Info (332119):    -7.075      -389.361 clock_fs 
 Info (332146): Worst-case hold slack is 0.238
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
@@ -1214,13 +1262,13 @@ Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.380
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.380      -483.380 clock_fs 
+    Info (332119):    -1.380      -579.380 clock_fs 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4646 megabytes
-    Info: Processing ended: Wed Jun 21 10:51:59 2023
+    Info: Peak virtual memory: 4645 megabytes
+    Info: Processing ended: Wed Jun 28 08:52:45 2023
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 

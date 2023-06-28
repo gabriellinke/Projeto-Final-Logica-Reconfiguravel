@@ -33,9 +33,9 @@ ARCHITECTURE top_level_tb_arch OF top_level_tb IS
 	COMPONENT top_level IS
 		port(	clock, resetn : IN  STD_LOGIC;
 				chipselect    : IN  STD_LOGIC;
-				writedata     : IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
+				writedata     : IN  STD_LOGIC_VECTOR(15 DOWNTO 0);
 				write_en      : IN  STD_LOGIC;
-				readdata      : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+				readdata      : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 				add        	  : IN  STD_LOGIC;
 				read_en       : IN  STD_LOGIC);
 	END COMPONENT;
@@ -45,7 +45,7 @@ ARCHITECTURE top_level_tb_arch OF top_level_tb IS
 -- TESTCASE SETTINGS
 --.............................................................................
   CONSTANT freq_xn     : REAL        := 200.0;   -- input frequency
-  CONSTANT data_length : NATURAL     := 31;        -- input bit size       
+  CONSTANT data_length : NATURAL     := 16;        -- input bit size       
   CONSTANT fs_Hz       : REAL        := 44.1e3;     -- sampling frequency
 
 --..............................................................................
@@ -54,8 +54,8 @@ ARCHITECTURE top_level_tb_arch OF top_level_tb IS
   SIGNAL clock_fs      : STD_LOGIC := '1';
   SIGNAL xn_signed     : STD_LOGIC_VECTOR(data_length-1 DOWNTO 0);
   SIGNAL yn_signed     : STD_LOGIC_VECTOR(data_length-1 DOWNTO 0);
-  SIGNAL writedata_s   : STD_LOGIC_VECTOR(31 DOWNTO 0);
-  SIGNAL readdata_s    : STD_LOGIC_VECTOR(31 DOWNTO 0);
+  SIGNAL writedata_s   : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  SIGNAL readdata_s    : STD_LOGIC_VECTOR(15 DOWNTO 0);
 
                        
   SIGNAL radians       : REAL := 0.0;
@@ -118,10 +118,10 @@ BEGIN
       sinus_n := -amplitude;
     end if;
 	 
-	 yn_signed <= readdata_s(31 DOWNTO 1);
+	 yn_signed <= readdata_s;
     
     xn_signed   <= std_logic_vector(conv_signed(integer(round(sinus_n)),data_length));
-	 writedata_s <= xn_signed & '0';
+	 writedata_s <= xn_signed;
 	 
 	 write(file_line_input, integer(round(sinus_n)), left, 8);
     writeline(fptr_input, file_line_input);

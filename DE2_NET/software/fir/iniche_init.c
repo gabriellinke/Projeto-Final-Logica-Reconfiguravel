@@ -93,14 +93,14 @@ void SSSInitialTask(void *task_data)
   LCD_Line2();
   LCD_Show_Text("via DHCP -- PWM");
 
-  alt_iniche_init();
-  netmain();
+//  alt_iniche_init();
+//  netmain();
 
   /* Wait for the network stack to be ready before proceeding.
    * iniche_net_ready indicates that TCP/IP stack is ready, and IP address is obtained.
    */
-  while (!iniche_net_ready)
-    TK_SLEEP(1);
+//  while (!iniche_net_ready)
+//    TK_SLEEP(1);
 
   /* Now that the stack is running, perform the application initialization steps */
 
@@ -116,7 +116,7 @@ void SSSInitialTask(void *task_data)
   int SocketFD;
   char buf[2000];
   char p1[32];
-
+/*
   printf("Inicializacao\n");
 
   SocketFD = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
@@ -132,9 +132,9 @@ void SSSInitialTask(void *task_data)
 	close(SocketFD);
 	exit(EXIT_FAILURE);
   }
-
+*/
   while (1){
-
+/*
 	  if (recv(SocketFD, buf, sizeof(buf), 0) < 0)  {
 	  		perror("Error - Recv()");
 	  		exit(EXIT_FAILURE);
@@ -144,8 +144,34 @@ void SSSInitialTask(void *task_data)
 
 	  		printf("MSG BIN: %s\n", buf);
 	  }
+*/
+	/*  int vetor[] = {
+	      1638, 2488, 2350, 2251, 2209, 3544, 6114, 5132, 6436, 7221,
+	      9719, 8887, 12331, 10590, 12069, 12814, 15082, 16735, 14742, 18205,
+	      19186, 19818, 19029, 18573, 22093, 20068, 23453, 22344, 22302, 25341,
+	      23101, 24413, 27481, 27550, 25386, 26694, 28945, 27971, 28815, 29434,
+	      28659, 31704, 28898, 30550, 30259, 31593, 30979, 30928, 32295, 32767,
+	      31661, 31998, 31910, 32767, 32767, 32767, 31930, 32557, 32209, 32138,
+	      32468, 32405, 32767, 31831, 32727, 29945, 30914, 32490, 31195, 30064,
+	      29290, 31054, 29819, 28736, 27035, 28539, 26734, 28094, 25973, 24457,
+	      25426, 22972, 22955, 22156, 23077, 21033, 20375, 18728, 17867, 18648,
+	      18106, 17685, 15943, 16551, 13239, 13678, 12819, 11867, 11634, 10364
+	    };
 
-	  msleep(1000);
+	    int tamanho = sizeof(vetor) / sizeof(vetor[0]);
+
+	    int i, readIO;
+	    for (i = 0; i < tamanho; i++) {
+	    	//IOWR_16DIRECT(0, 0, vetor[i]);
+	     	//printf("Vetor: %d\n", vetor[i]);
+	     	readIO = IORD_16DIRECT(0, 0);
+	     	printf("Read: %d\n", readIO);
+	    }
+*/
+   	int readIO = IORD_16DIRECT(0, 0);
+   	printf("Read: %d\n", readIO);
+
+	  msleep(3000);
   }
 }
 

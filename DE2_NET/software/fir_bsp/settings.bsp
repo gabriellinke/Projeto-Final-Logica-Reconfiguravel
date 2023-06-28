@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>ucosii</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>25/06/2023 14:06:52</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1687712812342</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>28/06/2023 11:27:21</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1687962441796</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\projeto\DE2_NET\software\fir_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\projeto\DE2_NET\system_0.sopcinfo</SopcDesignFile>
@@ -1799,9 +1799,9 @@
                 <Group xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
         </Setting>
         <MemoryMap>
-                <slaveDescriptor>FIR_1</slaveDescriptor>
-                <addressRange>0x00000000 - 0x00000007</addressRange>
-                <addressSpan>8</addressSpan>
+                <slaveDescriptor>FIR_0</slaveDescriptor>
+                <addressRange>0x00000000 - 0x00000003</addressRange>
+                <addressSpan>4</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
@@ -1821,6 +1821,12 @@
                 <addressRange>0x01800000 - 0x019FFFFF</addressRange>
                 <addressSpan>2097152</addressSpan>
                 <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>sram_0</slaveDescriptor>
+                <addressRange>0x01A00000 - 0x01A7FFFF</addressRange>
+                <addressSpan>524288</addressSpan>
+                <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>epcs_controller</slaveDescriptor>

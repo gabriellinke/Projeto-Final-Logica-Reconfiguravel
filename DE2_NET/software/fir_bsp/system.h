@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu_0' in SOPC Builder design 'system_0'
  * SOPC Builder design path: C:/projeto/DE2_NET/system_0.sopcinfo
  *
- * Generated: Sun Jun 25 14:04:42 BRT 2023
+ * Generated: Wed Jun 28 11:27:22 BRT 2023
  */
 
 /*
@@ -169,20 +169,21 @@
 #define __FIR
 #define __ISP1362_IF
 #define __SEG7_LUT_8
+#define __SRAM_16BIT_512K
 
 
 /*
- * FIR_1 configuration
+ * FIR_0 configuration
  *
  */
 
-#define ALT_MODULE_CLASS_FIR_1 FIR
-#define FIR_1_BASE 0x0
-#define FIR_1_IRQ -1
-#define FIR_1_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define FIR_1_NAME "/dev/FIR_1"
-#define FIR_1_SPAN 8
-#define FIR_1_TYPE "FIR"
+#define ALT_MODULE_CLASS_FIR_0 FIR
+#define FIR_0_BASE 0x0
+#define FIR_0_IRQ -1
+#define FIR_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define FIR_0_NAME "/dev/FIR_0"
+#define FIR_0_SPAN 4
+#define FIR_0_TYPE "FIR"
 
 
 /*
@@ -566,6 +567,20 @@
 
 
 /*
+ * sram_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_sram_0 sram_16bit_512k
+#define SRAM_0_BASE 0x1a00000
+#define SRAM_0_IRQ -1
+#define SRAM_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define SRAM_0_NAME "/dev/sram_0"
+#define SRAM_0_SPAN 524288
+#define SRAM_0_TYPE "sram_16bit_512k"
+
+
+/*
  * switch_pio configuration
  *
  */
@@ -604,7 +619,7 @@
 #define SYSID_QSYS_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_QSYS_0_NAME "/dev/sysid_qsys_0"
 #define SYSID_QSYS_0_SPAN 8
-#define SYSID_QSYS_0_TIMESTAMP 1687712002
+#define SYSID_QSYS_0_TIMESTAMP 1687962169
 #define SYSID_QSYS_0_TYPE "altera_avalon_sysid_qsys"
 
 

@@ -68,10 +68,10 @@ USE ieee.math_real.all;
 
 ENTITY FIR_low_area IS
     GENERIC(        
-        data_length  : NATURAL     := 31;                   -- input/output length (number of bits)
+        data_length  : NATURAL     := 16;                   -- input/output length (number of bits)
         data_signed  : BOOLEAN     := true;               -- input/output type (signed or unsigned)
         improv_t     : BOOLEAN     := false;               -- minimal timing improvement by adding one extra output cycle delay (use only if needed)        
-        bits_resol   : NATURAL     := 31;                  -- number of bits for the internal operations with decimals in fixed point. Recommended: bits_resol > taps. THIS SETTING IS CRITICAL FOR P&R RESULTS (MAX FREQ)
+        bits_resol   : NATURAL     := 16;                  -- number of bits for the internal operations with decimals in fixed point. Recommended: bits_resol > taps. THIS SETTING IS CRITICAL FOR P&R RESULTS (MAX FREQ)
         taps         : NATURAL     := 33;                   -- =order+1, 2 coefficients as minimum (order=1)
         coefficients : COEFF_ARRAY := (-0.0014480712,
 													-0.0016547757,

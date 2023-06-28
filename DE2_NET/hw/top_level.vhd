@@ -12,9 +12,9 @@ USE work.fir_package.all;
 Entity top_level is
    port(	clock, resetn : IN  STD_LOGIC;
 			chipselect    : IN  STD_LOGIC;
-			writedata     : IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
+			writedata     : IN  STD_LOGIC_VECTOR(15 DOWNTO 0);
 			write_en      : IN  STD_LOGIC;
-			readdata      : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+			readdata      : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 			add        	  : IN  STD_LOGIC;
 			read_en       : IN  STD_LOGIC);
 end entity;
@@ -23,8 +23,8 @@ end entity;
 Architecture arq_top_level of top_level is
 
 --Sinais utilizados----------------------------------------------------------------
-signal data_out: STD_LOGIC_VECTOR(30 downto 0);
-signal data_in: STD_LOGIC_VECTOR(30 downto 0);
+signal data_out: STD_LOGIC_VECTOR(15 downto 0);
+signal data_in: STD_LOGIC_VECTOR(15 downto 0);
 signal not_resetn: std_logic := '1';
 
 --Componentes utilizados-----------------------------------------------------------
@@ -46,13 +46,13 @@ Begin
 		
 ------------------------------------------------------------------------------------
 		not_resetn <= not(resetn);
-		readdata <= (data_out(30 downto 0) & '0');
+		readdata <= "0000000000000001";
 
 --PROCESS----------------------------------------------------------------------	
 		process(not_resetn, clock)
 			begin			
 				if rising_edge(clock) then		--Se borda de subida e enable, habilita		
-					data_in <= writedata(31 downto 1);
+					data_in <= writedata;
 					
 				end if;
 			end process;
