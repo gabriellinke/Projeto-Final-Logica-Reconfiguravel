@@ -92,14 +92,6 @@
          type = "long";
       }
    }
-   element VGA_0.avalon_slave_0
-   {
-      datum baseAddress
-      {
-         value = "25165824";
-         type = "long";
-      }
-   }
    element Audio_0.avalon_slave_0
    {
       datum baseAddress
@@ -116,11 +108,11 @@
          type = "long";
       }
    }
-   element sram_0.avalon_slave_0
+   element VGA_0.avalon_slave_0
    {
       datum baseAddress
       {
-         value = "27262976";
+         value = "25165824";
          type = "long";
       }
    }
@@ -129,6 +121,14 @@
       datum baseAddress
       {
          value = "27795712";
+         type = "long";
+      }
+   }
+   element sram_0.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "27262976";
          type = "long";
       }
    }
@@ -268,19 +268,27 @@
          type = "int";
       }
    }
-   element SD_DAT.s1
+   element uart_0.s1
    {
       datum baseAddress
       {
-         value = "27795632";
+         value = "27795456";
          type = "long";
       }
    }
-   element timer_1.s1
+   element button_pio.s1
    {
       datum baseAddress
       {
-         value = "27795520";
+         value = "27795600";
+         type = "long";
+      }
+   }
+   element led_red.s1
+   {
+      datum baseAddress
+      {
+         value = "27795568";
          type = "long";
       }
    }
@@ -300,19 +308,11 @@
          type = "long";
       }
    }
-   element led_red.s1
+   element led_green.s1
    {
       datum baseAddress
       {
-         value = "27795568";
-         type = "long";
-      }
-   }
-   element button_pio.s1
-   {
-      datum baseAddress
-      {
-         value = "27795600";
+         value = "27795584";
          type = "long";
       }
    }
@@ -324,19 +324,11 @@
          type = "long";
       }
    }
-   element uart_0.s1
+   element SD_CLK.s1
    {
       datum baseAddress
       {
-         value = "27795456";
-         type = "long";
-      }
-   }
-   element led_green.s1
-   {
-      datum baseAddress
-      {
-         value = "27795584";
+         value = "27795664";
          type = "long";
       }
    }
@@ -348,11 +340,19 @@
          type = "long";
       }
    }
-   element SD_CLK.s1
+   element timer_1.s1
    {
       datum baseAddress
       {
-         value = "27795664";
+         value = "27795520";
+         type = "long";
+      }
+   }
+   element SD_DAT.s1
+   {
+      datum baseAddress
+      {
+         value = "27795632";
          type = "long";
       }
    }
@@ -451,7 +451,7 @@
  <parameter name="projectName" value="DE2_NET.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1687962126841" />
+ <parameter name="timeStamp" value="1687962849991" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk_50_clk_in" internal="clk_50.clk_in" type="clock" dir="end">
@@ -1087,9 +1087,7 @@
  <module kind="sram_16bit_512k" version="1.0.1" enabled="1" name="sram_0">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="50000000" />
  </module>
- <module kind="FIR" version="1.0" enabled="1" name="FIR_0">
-  <parameter name="AUTO_CLOCK_SINK_CLOCK_RATE" value="50000000" />
- </module>
+ <module kind="FIR" version="1.0" enabled="1" name="FIR_0" />
  <connection kind="clock" version="13.0" start="clk_50.clk" end="sdram_0.clk" />
  <connection
    kind="avalon"

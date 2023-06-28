@@ -22,6 +22,7 @@
  */
   
 #include <stdio.h>
+#include <stdint.h>
 #include <conio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -145,7 +146,7 @@ void SSSInitialTask(void *task_data)
 	  		printf("MSG BIN: %s\n", buf);
 	  }
 */
-	/*  int vetor[] = {
+	  int vetor[] = {
 	      1638, 2488, 2350, 2251, 2209, 3544, 6114, 5132, 6436, 7221,
 	      9719, 8887, 12331, 10590, 12069, 12814, 15082, 16735, 14742, 18205,
 	      19186, 19818, 19029, 18573, 22093, 20068, 23453, 22344, 22302, 25341,
@@ -160,18 +161,15 @@ void SSSInitialTask(void *task_data)
 
 	    int tamanho = sizeof(vetor) / sizeof(vetor[0]);
 
-	    int i, readIO;
+	    int16_t i, readIO;
 	    for (i = 0; i < tamanho; i++) {
-	    	//IOWR_16DIRECT(0, 0, vetor[i]);
-	     	//printf("Vetor: %d\n", vetor[i]);
+	    	IOWR_16DIRECT(0, 0, 0);
+	     	printf("Vetor: %d\n", vetor[i]);
 	     	readIO = IORD_16DIRECT(0, 0);
 	     	printf("Read: %d\n", readIO);
 	    }
-*/
-   	int readIO = IORD_16DIRECT(0, 0);
-   	printf("Read: %d\n", readIO);
 
-	  msleep(3000);
+	  msleep(300000);
   }
 }
 
