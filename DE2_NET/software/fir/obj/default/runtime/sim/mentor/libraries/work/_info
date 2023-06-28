@@ -1,0 +1,42 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\projeto\DE2_NET\software\fir\obj\default\runtime\sim\mentor
+Esystem_0_tb
+Z1 w1687655685
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\projeto\DE2_NET\software\fir\obj\default\runtime\sim\mentor
+Z6 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/system_0_tb.vhd
+Z7 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/system_0_tb.vhd
+l0
+L9
+V@O`^2EHNl0Xh0QgE:cGQP2
+!s100 A=_fU?4W:CX?oYU`k?lj>3
+Z8 OV;C;10.1d;51
+32
+!i10b 1
+Z9 !s108 1687921137.838000
+Z10 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/system_0_tb.vhd|
+Z11 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/system_0_tb.vhd|
+o-O0
+Z12 tExplicit 1
+Artl
+R2
+R3
+R4
+DEx4 work 11 system_0_tb 0 22 @O`^2EHNl0Xh0QgE:cGQP2
+l382
+L12
+VD9f]h^[nhJTN^>QS>U1f:3
+!s100 HWmVC^Z[:DBLKP]MNU;>82
+R8
+32
+!i10b 1
+R9
+R10
+R11
+o-O0
+R12

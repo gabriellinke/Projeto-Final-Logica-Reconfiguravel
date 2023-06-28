@@ -5,5 +5,5 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vcom -93 -work work {D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd}
+vcom -93 -work work {D:/altera/13.0sp1/projects/final_project/FIR_HW/FIR/FIR_low_area.vhd}
 

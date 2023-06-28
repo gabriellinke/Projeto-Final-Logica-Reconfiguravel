@@ -1,0 +1,318 @@
+/******************************************************************************
+* Copyright (c) 2006 Altera Corporation, San Jose, California, USA.           *
+* All rights reserved. All use of this software and documentation is          *
+* subject to the License Agreement located at the end of this file below.     *
+*******************************************************************************                                                                             *
+* Date - October 24, 2006                                                     *
+* Module - iniche_init.c                                                      *
+*                                                                             *                                                                             *
+******************************************************************************/
+
+/******************************************************************************
+ * NicheStack TCP/IP stack initialization and Operating System Start in main()
+ * for Simple Socket Server (SSS) example. 
+ * 
+ * This example demonstrates the use of MicroC/OS-II running on NIOS II.       
+ * In addition it is to serve as a good starting point for designs using       
+ * MicroC/OS-II and Altera NicheStack TCP/IP Stack - NIOS II Edition.                                                                                           
+ *      
+ * Please refer to the Altera NicheStack Tutorial documentation for details on 
+ * this software example, as well as details on how to configure the NicheStack
+ * TCP/IP networking stack and MicroC/OS-II Real-Time Operating System.  
+ */
+  
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <io.h>
+#include <fcntl.h>
+/* MicroC/OS-II definitions */
+#include "../fir_bsp/HAL/inc/includes.h"
+
+#include "../fir_bsp/system.h"
+
+#include "dm9000a.h"
+
+/* Simple Socket Server definitions */
+#include "simple_socket_server.h"
+#include "alt_error_handler.h"
+
+/* Nichestack definitions */
+#include "../fir_bsp/iniche/src/h/nios2/ipport.h"
+#include "../fir_bsp/iniche/src/h/tcpport.h"
+#include "../fir_bsp/iniche/src/h/libport.h"
+#include "../fir_bsp/iniche/src/nios2/osport.h"
+#include "basic_io.h"
+#include "LCD.h"
+#include "altera_avalon_pio_regs.h"
+/* Definition of task stack for the initial task which will initialize the NicheStack
+ * TCP/IP Stack and then initialize the rest of the Simple Socket Server example tasks. 
+ */
+OS_STK    SSSInitialTaskStk[TASK_STACKSIZE];
+
+/* Declarations for creating a task with TK_NEWTASK.  
+ * All tasks which use NicheStack (those that use sockets) must be created this way.
+ * TK_OBJECT macro creates the static task object used by NicheStack during operation.
+ * TK_ENTRY macro corresponds to the entry point, or defined function name, of the task.
+ * inet_taskinfo is the structure used by TK_NEWTASK to create the task.
+ */
+TK_OBJECT(to_ssstask);
+TK_ENTRY(SSSSimpleSocketServerTask);
+void disp_7seg(int _duty_cycle, int _prescaler, int _timer, int _enable);
+int binaryTodecimal (char num[]);
+char *decimal_to_binary(int n);
+int str_length( char str[]);
+
+struct inet_taskinfo ssstask = {
+      &to_ssstask,
+      "simple socket server",
+      SSSSimpleSocketServerTask,
+      4,
+      APP_STACK_SIZE,
+};
+
+/* SSSInitialTask will initialize the NicheStack
+ * TCP/IP Stack and then initialize the rest of the Simple Socket Server example 
+ * RTOS structures and tasks. 
+ */
+void SSSInitialTask(void *task_data)
+{
+  INT8U error_code;
+
+  /*
+   * Initialize Altera NicheStack TCP/IP Stack - Nios II Edition specific code.
+   * NicheStack is initialized from a task, so that RTOS will have started, and
+   * I/O drivers are available.  Two tasks are created:
+   *    "Inet main"  task with priority 2
+   *    "clock tick" task with priority 3
+   */
+  LCD_Line1();
+  LCD_Show_Text("Adquirindo IP");
+  LCD_Line2();
+  LCD_Show_Text("via DHCP");
+
+//  alt_iniche_init();
+//  netmain();
+
+  /* Wait for the network stack to be ready before proceeding.
+   * iniche_net_ready indicates that TCP/IP stack is ready, and IP address is obtained.
+   */
+//  while (!iniche_net_ready)
+//    TK_SLEEP(1);
+
+  /* Now that the stack is running, perform the application initialization steps */
+
+  /* Application Specific Task Launching Code Block Begin */
+
+  printf("\nSimple Socket Server starting up\n");
+
+
+  LCD_Init();
+
+  struct sockaddr_in sa;
+  int res;
+  int SocketFD;
+  char buf[2000];
+  char p1[32];
+/*
+  printf("Inicializacao\n");
+
+  SocketFD = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
+  printf("Socket criado\n");
+
+  memset(&sa, 0, sizeof sa);
+  sa.sin_family = AF_INET;
+  sa.sin_port = htons(5000); // ALTERAR PORTA
+  res = inet_pton(AF_INET, "192.168.0.210", &sa.sin_addr); //ALTERAR O IP
+
+  if (connect(SocketFD, (struct sockaddr *)&sa, sizeof sa) == -1) {
+	perror("connect failed");
+	close(SocketFD);
+	exit(EXIT_FAILURE);
+  }*/
+
+  while (1){
+
+	  int tamanho = 100;
+	  int vetor[100] = {
+	    53687056, 81543473, 76995759, 73755319, 72400803, 116141827, 200364307,
+	    168162390, 210889065, 236636889, 318479181, 291221350, 404076446, 347027625,
+	    395498749, 419914577, 494214817, 548383097, 483074966, 596546801, 628696680,
+	    649417936, 623575469, 608621004, 723964394, 657621051, 768532001, 732190900,
+	    730829109, 830391293, 757007751, 799985095, 900513507, 902772716, 831884404,
+	    874730951, 948484893, 916584723, 944227061, 964515266, 939127012, 1038893307,
+	    946970990, 1001079389, 991563340, 1035287021, 1015152819, 1013467747,
+	    1058269597, 1073741823, 1037496827, 1048537586, 1045642522, 1073741823,
+	    1073741823, 1073741823, 1046318024, 1066862994, 1055460026, 1053135652,
+	    1063958486, 1061877286, 1073741823, 1043073877, 1072428115, 981271069,
+	    1013017036, 1064648624, 1022222029, 985183497, 959793676, 1017616678,
+	    977141266, 941642653, 885911048, 935201494, 876053578, 920618018,
+	    851106314, 801442701, 833173960, 752784500, 752200408, 726041637,
+	    756199354, 689214491, 667670679, 613703003, 585469039, 611062659,
+	    593301233, 579523853, 522422342, 542362867, 433824264, 448230272,
+	    420058760, 388874183, 381230406, 339623558
+	  };
+
+	  // Imprime os valores do vetor
+	  int i;
+	  for (i = 0; i < tamanho; i++) {
+		IOWR(0, i*4, vetor[i]);
+	    printf("Vetor: %d\n", vetor[i]);
+	    msleep(1000);
+	    IORD(0, i*4);
+	  }
+
+	  /*
+	  if (recv(SocketFD, buf, sizeof(buf), 0) < 0)  {
+	  		perror("Error - Recv()");
+	  		exit(EXIT_FAILURE);
+	  } else {
+	  		printf("Msg recebida: %s\n", buf);
+	  		memcpy(p1, buf, 32 * sizeof(char));
+
+	  		printf("MSG BIN: %s\n", buf);
+	  }*/
+
+	  msleep(100000);
+  }
+}
+
+/* Main creates a single task, SSSInitialTask, and starts task scheduler.
+ */
+
+int main (int argc, char* argv[], char* envp[])
+{
+  
+  INT8U error_code;
+
+  DM9000A_INSTANCE( DM9000A_0, dm9000a_0 );
+  DM9000A_INIT( DM9000A_0, dm9000a_0 );
+
+  /* Clear the RTOS timer */
+  OSTimeSet(0);
+
+  /* SSSInitialTask will initialize the NicheStack
+   * TCP/IP Stack and then initialize the rest of the Simple Socket Server example
+   * RTOS structures and tasks.
+   */
+  error_code = OSTaskCreateExt(SSSInitialTask,
+                             NULL,
+                             (void *)&SSSInitialTaskStk[TASK_STACKSIZE],
+                             SSS_INITIAL_TASK_PRIORITY,
+                             SSS_INITIAL_TASK_PRIORITY,
+                             SSSInitialTaskStk,
+                             TASK_STACKSIZE,
+                             NULL,
+                             0);
+  alt_uCOSIIErrorHandler(error_code, 0);
+
+  /*
+   * As with all MicroC/OS-II designs, once the initial thread(s) and
+   * associated RTOS resources are declared, we start the RTOS. That's it!
+   */
+  OSStart();
+  
+  while(1); /* Correct Program Flow never gets here. */
+
+  return -1;
+}
+
+int str_length( char str[])
+{
+   int i = 0;
+   while (str[i] != '\0')
+       i++;
+   return i;
+}
+
+int binaryTodecimal (char num[])
+{
+    int i, deci_num, mul = 0;
+    for ( deci_num = 0, i = str_length(num) - 1; i >= 0; --i, ++mul)
+    {
+            deci_num = deci_num + (num[i] - 48) * (1 << mul);
+    }
+
+    return deci_num;
+ }
+
+char *decimal_to_binary(int n)
+{
+  int c, d, t;
+  char *p;
+
+  t = 0;
+  p = (char*)malloc(32+1);
+
+  if (p == NULL)
+    exit(EXIT_FAILURE);
+
+  for (c = 31 ; c >= 0 ; c--)
+  {
+    d = n >> c;
+
+    if (d & 1)
+      *(p+t) = 1 + '0';
+    else
+      *(p+t) = 0 + '0';
+
+    t++;
+  }
+  *(p+t) = '\0';
+
+  return  p;
+}
+
+
+void disp_7seg(int _duty_cycle, int _prescaler, int _timer, int _enable){
+
+	int disp1, disp2, disp3, disp4, disp5, disp6, disp7, disp8;
+
+    disp1 = 0;
+    disp2 = _duty_cycle;
+
+    disp3 = 0;
+    disp4 = _prescaler;
+
+    disp5 = 0;
+    disp6 = _timer;
+
+    disp7 = 0;
+    disp8 = _enable;
+
+	IOWR_ALTERA_AVALON_PIO_DATA(SEG7_DISPLAY_BASE, ((disp1 << 28) + (disp2 << 24) + (disp3 << 20) + (disp4 << 16) + (disp5 << 12) + (disp6 << 8) + (disp7 << 4) + (disp8 << 0)));
+
+}
+
+/******************************************************************************
+*                                                                             *
+* License Agreement                                                           *
+*                                                                             *
+* Copyright (c) 2006 Altera Corporation, San Jose, California, USA.           *
+* All rights reserved.                                                        *
+*                                                                             *
+* Permission is hereby granted, free of charge, to any person obtaining a     *
+* copy of this software and associated documentation files (the "Software"),  *
+* to deal in the Software without restriction, including without limitation   *
+* the rights to use, copy, modify, merge, publish, distribute, sublicense,    *
+* and/or sell copies of the Software, and to permit persons to whom the       *
+* Software is furnished to do so, subject to the following conditions:        *
+*                                                                             *
+* The above copyright notice and this permission notice shall be included in  *
+* all copies or substantial portions of the Software.                         *
+*                                                                             *
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR  *
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,    *
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE *
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER      *
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING     *
+* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER         *
+* DEALINGS IN THE SOFTWARE.                                                   *
+*                                                                             *
+* This agreement shall be governed in all respects by the laws of the State   *
+* of California and by the laws of the United States of America.              *
+* Altera does not recommend, suggest or require that this reference design    *
+* file be used in conjunction or combination with any other product.          *
+******************************************************************************/

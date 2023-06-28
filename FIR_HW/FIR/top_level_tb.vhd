@@ -123,7 +123,7 @@ BEGIN
     xn_signed   <= std_logic_vector(conv_signed(integer(round(sinus_n)),data_length));
 	 writedata_s <= xn_signed & '0';
 	 
-	 write(file_line_input, sinus_n, left, 8);
+	 write(file_line_input, integer(round(sinus_n)), left, 8);
     writeline(fptr_input, file_line_input);
     write(file_line_output, conv_integer(yn_signed), left, 8);
     writeline(fptr_output, file_line_output);

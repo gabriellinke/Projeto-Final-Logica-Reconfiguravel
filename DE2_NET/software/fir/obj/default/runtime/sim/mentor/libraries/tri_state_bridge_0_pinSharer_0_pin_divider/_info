@@ -1,0 +1,75 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\projeto\DE2_NET\software\fir\obj\default\runtime\sim\mentor
+Ealtera_conduit_pin_divider
+Z1 w1687655690
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\projeto\DE2_NET\software\fir\obj\default\runtime\sim\mentor
+Z5 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/altera_conduit_pin_divider.vhd
+Z6 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/altera_conduit_pin_divider.vhd
+l0
+L4
+V97ikTo0E6A9lX2dnbo2So0
+!s100 TDL0Ma0a:Bl=_YFR=Ecaf0
+Z7 OV;C;10.1d;51
+32
+!i10b 1
+Z8 !s108 1687921133.862000
+Z9 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/altera_conduit_pin_divider.vhd|-work|tri_state_bridge_0_pinSharer_0_pin_divider|
+Z10 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/altera_conduit_pin_divider.vhd|
+Z11 o-work tri_state_bridge_0_pinSharer_0_pin_divider -O0
+Z12 tExplicit 1
+Artl
+R2
+R3
+DEx4 work 26 altera_conduit_pin_divider 0 22 97ikTo0E6A9lX2dnbo2So0
+l43
+L29
+VU0CL4:M`k9i6m6X]16zgV2
+!s100 RmIf^8G2S`JR[9FZUEEaV3
+R7
+32
+!i10b 1
+R8
+R9
+R10
+R11
+R12
+Ealtera_inout
+R1
+R2
+R3
+R4
+Z13 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/altera_inout.vhd
+Z14 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/altera_inout.vhd
+l0
+L34
+V>01B6NcYQ<@;a`K?FWSQI3
+R7
+32
+Z15 !s108 1687921133.711000
+Z16 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/altera_inout.vhd|-work|tri_state_bridge_0_pinSharer_0_pin_divider|
+Z17 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/altera_inout.vhd|
+R11
+R12
+!s100 <V^^bfJ`^_DzU6JLgfZ;G2
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 12 altera_inout 0 22 >01B6NcYQ<@;a`K?FWSQI3
+l46
+L44
+Vd<5BzTbhe1X=oh6gHoX511
+R7
+32
+R15
+R16
+R17
+R11
+R12
+!s100 mTRIRj^GHjh@An`QonjBn3
+!i10b 1

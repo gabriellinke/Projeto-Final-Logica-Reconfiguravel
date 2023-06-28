@@ -1,0 +1,1115 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\projeto\DE2_NET\software\fir\obj\default\runtime\sim\mentor
+Esystem_0
+Z1 w1687655689
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\projeto\DE2_NET\software\fir\obj\default\runtime\sim\mentor
+Z6 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0.vhd
+Z7 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0.vhd
+l0
+L9
+V6_W8nG;f[Wm8jm@HlTn3V1
+Z8 OV;C;10.1d;51
+32
+Z9 !s108 1687921134.485000
+Z10 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0.vhd|-work|system_0_inst|
+Z11 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0.vhd|
+Z12 o-work system_0_inst -O0
+Z13 tExplicit 1
+!s100 ?4zcUH;INk;O5c?f8k3oO2
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 8 system_0 0 22 6_W8nG;f[Wm8jm@HlTn3V1
+l4767
+L82
+VG^XTg7bfbC_=e7>JT;Og41
+R8
+32
+R9
+R10
+R11
+R12
+R13
+!s100 55PGbUb[1;zf14O:ka2?h3
+!i10b 1
+Esystem_0_audio_0_avalon_slave_0_translator
+R1
+R2
+R3
+R4
+R5
+Z14 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_audio_0_avalon_slave_0_translator.vhd
+Z15 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_audio_0_avalon_slave_0_translator.vhd
+l0
+L9
+VL]EDJKkk1<BP=aaUie:^=2
+R8
+32
+Z16 !s108 1687921137.419000
+Z17 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_audio_0_avalon_slave_0_translator.vhd|-work|system_0_inst|
+Z18 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_audio_0_avalon_slave_0_translator.vhd|
+R12
+R13
+!s100 ?;8AhmSj3U49eKgbBY7mb2
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 42 system_0_audio_0_avalon_slave_0_translator 0 22 L]EDJKkk1<BP=aaUie:^=2
+l148
+L78
+Vd<==kZLnh]M2Wef^Vm9J02
+R8
+32
+R16
+R17
+R18
+R12
+R13
+!s100 EPEkea?VKe48Ro4FKId<>0
+!i10b 1
+Esystem_0_burst_adapter
+R1
+R2
+R3
+R4
+R5
+Z19 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_burst_adapter.vhd
+Z20 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_burst_adapter.vhd
+l0
+L9
+VHm=:gXVJ=6b0naKgV0bRT1
+R8
+32
+Z21 !s108 1687921135.144000
+Z22 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_burst_adapter.vhd|-work|system_0_inst|
+Z23 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_burst_adapter.vhd|
+R12
+R13
+!s100 J^Uf8@?IlM_FE718bbz3z3
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 22 system_0_burst_adapter 0 22 Hm=:gXVJ=6b0naKgV0bRT1
+l112
+L60
+Vc2a@D=MA`MnQFBN4SVR2M0
+R8
+32
+R21
+R22
+R23
+R12
+R13
+!s100 RdJ6b`?o`k0aB:kfg_3eT0
+!i10b 1
+Esystem_0_burst_adapter_001
+R1
+R2
+R3
+R4
+R5
+Z24 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_burst_adapter_001.vhd
+Z25 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_burst_adapter_001.vhd
+l0
+L9
+V9O3SmBa;L49X;^S3d=XN^1
+R8
+32
+Z26 !s108 1687921135.296000
+Z27 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_burst_adapter_001.vhd|-work|system_0_inst|
+Z28 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_burst_adapter_001.vhd|
+R12
+R13
+!s100 ejR:1zDBa]:3zkFQ51PS?2
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 26 system_0_burst_adapter_001 0 22 9O3SmBa;L49X;^S3d=XN^1
+l112
+L60
+Vg:igzin=NWzbNC[WiIDSg0
+R8
+32
+R26
+R27
+R28
+R12
+R13
+!s100 ^[3gIYOMzlgXNdAWI8`083
+!i10b 1
+Esystem_0_cfi_flash_0_uas_translator
+R1
+R2
+R3
+R4
+R5
+Z29 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_cfi_flash_0_uas_translator.vhd
+Z30 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_cfi_flash_0_uas_translator.vhd
+l0
+L9
+VghcJbnF1ee9<QIVWQ];fI3
+R8
+32
+Z31 !s108 1687921136.478000
+Z32 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_cfi_flash_0_uas_translator.vhd|-work|system_0_inst|
+Z33 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_cfi_flash_0_uas_translator.vhd|
+R12
+R13
+!s100 ;4`kD]IR2gkeT6igJ60`:0
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 35 system_0_cfi_flash_0_uas_translator 0 22 ghcJbnF1ee9<QIVWQ];fI3
+l148
+L78
+V3[1<`@;Y6lF6ak0TU>I0U2
+R8
+32
+R31
+R32
+R33
+R12
+R13
+!s100 4>^[AQizk[3CV^8@n1[Y[1
+!i10b 1
+Esystem_0_cfi_flash_0_uas_translator_avalon_universal_slave_0_agent
+R1
+R2
+R3
+R4
+R5
+Z34 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_cfi_flash_0_uas_translator_avalon_universal_slave_0_agent.vhd
+Z35 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_cfi_flash_0_uas_translator_avalon_universal_slave_0_agent.vhd
+l0
+L9
+V1IXnmbQ=fzjWCU;dfbP9I3
+R8
+32
+Z36 !s108 1687921135.841000
+Z37 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_cfi_flash_0_uas_translator_avalon_universal_slave_0_agent.vhd|-work|system_0_inst|
+Z38 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_cfi_flash_0_uas_translator_avalon_universal_slave_0_agent.vhd|
+R12
+R13
+!s100 a0<`Xg1Ji1LbaJLm;hCI@2
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 66 system_0_cfi_flash_0_uas_translator_avalon_universal_slave_0_agent 0 22 1IXnmbQ=fzjWCU;dfbP9I3
+l178
+L93
+VaTNX8YcQz]4;WTenQKW=62
+R8
+32
+R36
+R37
+R38
+R12
+R13
+!s100 [^FK=RI7XHQC2XeUcoEAZ2
+!i10b 1
+Esystem_0_cpu_0_data_master_translator
+R1
+R2
+R3
+R4
+R5
+Z39 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_cpu_0_data_master_translator.vhd
+Z40 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_cpu_0_data_master_translator.vhd
+l0
+L9
+V@FFGXOd5eheED]DG1igPL1
+R8
+32
+Z41 !s108 1687921136.054000
+Z42 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_cpu_0_data_master_translator.vhd|-work|system_0_inst|
+Z43 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_cpu_0_data_master_translator.vhd|
+R12
+R13
+!s100 U@XnR78g32Kn`KogM=>U93
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 37 system_0_cpu_0_data_master_translator 0 22 @FFGXOd5eheED]DG1igPL1
+l140
+L74
+VTJgTlh:eI5Z1fM@0Jd8gH3
+R8
+32
+R41
+R42
+R43
+R12
+R13
+!s100 [IchcDLT9Z0WDOgf<bbf_0
+!i10b 1
+Esystem_0_cpu_0_instruction_master_translator
+R1
+R2
+R3
+R4
+R5
+Z44 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_cpu_0_instruction_master_translator.vhd
+Z45 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_cpu_0_instruction_master_translator.vhd
+l0
+L9
+VoI>6mmCk6S89`T[D<GILo1
+R8
+32
+Z46 !s108 1687921135.947000
+Z47 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_cpu_0_instruction_master_translator.vhd|-work|system_0_inst|
+Z48 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_cpu_0_instruction_master_translator.vhd|
+R12
+R13
+!s100 K4`?CM8O_9dm7:`[J_7oi2
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 44 system_0_cpu_0_instruction_master_translator 0 22 oI>6mmCk6S89`T[D<GILo1
+l140
+L74
+V1WnKEB^c7FaH9E`=^lOUS1
+R8
+32
+R46
+R47
+R48
+R12
+R13
+!s100 AGi=;n_bO1@PFYJAil:?P1
+!i10b 1
+Esystem_0_cpu_0_jtag_debug_module_translator
+R1
+R2
+R3
+R4
+R5
+Z49 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_cpu_0_jtag_debug_module_translator.vhd
+Z50 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_cpu_0_jtag_debug_module_translator.vhd
+l0
+L9
+VCd^_FzgILTjiR]j`R?^443
+R8
+32
+Z51 !s108 1687921136.161000
+Z52 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_cpu_0_jtag_debug_module_translator.vhd|-work|system_0_inst|
+Z53 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_cpu_0_jtag_debug_module_translator.vhd|
+R12
+R13
+!s100 G8TLbo>Yk>>gbWZ_YL[Xj3
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 43 system_0_cpu_0_jtag_debug_module_translator 0 22 Cd^_FzgILTjiR]j`R?^443
+l148
+L78
+Vl;9PeY1Z[kZ;g5oA9I;2S1
+R8
+32
+R51
+R52
+R53
+R12
+R13
+!s100 EYPfUAoQ0dhRR:G?dnF@00
+!i10b 1
+Esystem_0_cpu_0_jtag_debug_module_translator_avalon_universal_slave_0_agent
+R1
+R2
+R3
+R4
+R5
+Z54 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_cpu_0_jtag_debug_module_translator_avalon_universal_slave_0_agent.vhd
+Z55 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_cpu_0_jtag_debug_module_translator_avalon_universal_slave_0_agent.vhd
+l0
+L9
+Vk=YFDal2fZ2_SEGFHD^kY0
+R8
+32
+Z56 !s108 1687921135.622000
+Z57 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_cpu_0_jtag_debug_module_translator_avalon_universal_slave_0_agent.vhd|-work|system_0_inst|
+Z58 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_cpu_0_jtag_debug_module_translator_avalon_universal_slave_0_agent.vhd|
+R12
+R13
+!s100 keGelAoYaBOXB@AP7b[`T0
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 74 system_0_cpu_0_jtag_debug_module_translator_avalon_universal_slave_0_agent 0 22 k=YFDal2fZ2_SEGFHD^kY0
+l178
+L93
+VO<i:IE1?O7FI]hcN=0?G>2
+R8
+32
+R56
+R57
+R58
+R12
+R13
+!s100 MPY_A8W[Y[8]FkCNeJaT22
+!i10b 1
+Esystem_0_epcs_controller_epcs_control_port_translator
+R1
+R2
+R3
+R4
+R5
+Z59 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_epcs_controller_epcs_control_port_translator.vhd
+Z60 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_epcs_controller_epcs_control_port_translator.vhd
+l0
+L9
+VL^EkM`4GBRXVW7:2oG^TH1
+R8
+32
+Z61 !s108 1687921136.371000
+Z62 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_epcs_controller_epcs_control_port_translator.vhd|-work|system_0_inst|
+Z63 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_epcs_controller_epcs_control_port_translator.vhd|
+R12
+R13
+!s100 TbZ2]k0KAP@2Wm9A_G7N10
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 53 system_0_epcs_controller_epcs_control_port_translator 0 22 L^EkM`4GBRXVW7:2oG^TH1
+l148
+L78
+V]lE;[DCKfE`YR0LY[K@=A0
+R8
+32
+R61
+R62
+R63
+R12
+R13
+!s100 0Ac;fTjR^gQBgbNF<2`ez0
+!i10b 1
+Esystem_0_isp1362_hc_translator
+R1
+R2
+R3
+R4
+R5
+Z64 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_isp1362_hc_translator.vhd
+Z65 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_isp1362_hc_translator.vhd
+l0
+L9
+VFU2UOk70fB8BzljT6^6f01
+R8
+32
+Z66 !s108 1687921137.315000
+Z67 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_isp1362_hc_translator.vhd|-work|system_0_inst|
+Z68 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_isp1362_hc_translator.vhd|
+R12
+R13
+!s100 ?mQNdflKCDKl1]aQGUZ^C2
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 30 system_0_isp1362_hc_translator 0 22 FU2UOk70fB8BzljT6^6f01
+l148
+L78
+VjhDR6GSa^LGWnSJf9[0WX2
+R8
+32
+R66
+R67
+R68
+R12
+R13
+!s100 W2]93hH8m]0OB2Z7zfjE?3
+!i10b 1
+Esystem_0_jtag_uart_0_avalon_jtag_slave_translator
+R1
+R2
+R3
+R4
+R5
+Z69 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_jtag_uart_0_avalon_jtag_slave_translator.vhd
+Z70 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_jtag_uart_0_avalon_jtag_slave_translator.vhd
+l0
+L9
+VQzch]5Z_lDj<U`<K@=_iN2
+R8
+32
+Z71 !s108 1687921136.687000
+Z72 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_jtag_uart_0_avalon_jtag_slave_translator.vhd|-work|system_0_inst|
+Z73 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_jtag_uart_0_avalon_jtag_slave_translator.vhd|
+R12
+R13
+!s100 I]kSjkQX;>`XWQE1ZYngG3
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 49 system_0_jtag_uart_0_avalon_jtag_slave_translator 0 22 Qzch]5Z_lDj<U`<K@=_iN2
+l148
+L78
+VCU[zS4Fk5g]Uo65VH>6e^0
+R8
+32
+R71
+R72
+R73
+R12
+R13
+!s100 g17W3Vma4@d95@e<X0F5M0
+!i10b 1
+Esystem_0_lcd_16207_0_control_slave_translator
+R1
+R2
+R3
+R4
+R5
+Z74 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_lcd_16207_0_control_slave_translator.vhd
+Z75 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_lcd_16207_0_control_slave_translator.vhd
+l0
+L9
+VJJ`bL1jIRgDA3@M@eRJTe2
+R8
+32
+Z76 !s108 1687921136.999000
+Z77 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_lcd_16207_0_control_slave_translator.vhd|-work|system_0_inst|
+Z78 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_lcd_16207_0_control_slave_translator.vhd|
+R12
+R13
+!s100 U4IB4mYA5Nl?8UhR]ShH@0
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 45 system_0_lcd_16207_0_control_slave_translator 0 22 JJ`bL1jIRgDA3@M@eRJTe2
+l148
+L78
+VB[hN[8F7_iJj:V?XMRZB[3
+R8
+32
+R76
+R77
+R78
+R12
+R13
+!s100 7QKXUdWh1iaT[kOCADgfW3
+!i10b 1
+Esystem_0_led_red_s1_translator
+R1
+R2
+R3
+R4
+R5
+Z79 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_led_red_s1_translator.vhd
+Z80 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_led_red_s1_translator.vhd
+l0
+L9
+VDoQ<C9Wj6^J`O=3E3H@Mn3
+R8
+32
+Z81 !s108 1687921137.103000
+Z82 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_led_red_s1_translator.vhd|-work|system_0_inst|
+Z83 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_led_red_s1_translator.vhd|
+R12
+R13
+!s100 e8AZ0O<]Rz`RXPMbJUSV<0
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 30 system_0_led_red_s1_translator 0 22 DoQ<C9Wj6^J`O=3E3H@Mn3
+l148
+L78
+VlGQz6z9Q1:]Q99[:KDP6@1
+R8
+32
+R81
+R82
+R83
+R12
+R13
+!s100 <UDeSUIkhc=UkGH3`;Kd60
+!i10b 1
+Esystem_0_pwm_0_avalon_slave_0_translator
+R1
+R2
+R3
+R4
+R5
+Z84 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_pwm_0_avalon_slave_0_translator.vhd
+Z85 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_pwm_0_avalon_slave_0_translator.vhd
+l0
+L9
+V[O]MV2V6UB@=L1<jh^X=n0
+!s100 lJMW0^o]ZmTk?M?jK1WQb2
+R8
+32
+!i10b 1
+Z86 !s108 1687921137.733000
+Z87 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_pwm_0_avalon_slave_0_translator.vhd|-work|system_0_inst|
+Z88 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_pwm_0_avalon_slave_0_translator.vhd|
+R12
+R13
+Artl
+R2
+R3
+R4
+DEx4 work 40 system_0_pwm_0_avalon_slave_0_translator 0 22 [O]MV2V6UB@=L1<jh^X=n0
+l148
+L78
+V]<5j3Fe9PgcF><jnmHiK13
+!s100 mF1EAzI;V3;@kF;0C[Fom1
+R8
+32
+!i10b 1
+R86
+R87
+R88
+R12
+R13
+Esystem_0_rst_controller
+R1
+R2
+R3
+R4
+R5
+Z89 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_rst_controller.vhd
+Z90 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_rst_controller.vhd
+l0
+L9
+VBjYZ5T[=HAWa]E^2Y4jg<0
+R8
+32
+Z91 !s108 1687921135.405000
+Z92 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_rst_controller.vhd|-work|system_0_inst|
+Z93 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_rst_controller.vhd|
+R12
+R13
+!s100 7NP>8KdZO3D^2LgWnniKa3
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 23 system_0_rst_controller 0 22 BjYZ5T[=HAWa]E^2Y4jg<0
+l70
+L39
+V=CZZl[2dnY43@=K:aNd8a0
+R8
+32
+R91
+R92
+R93
+R12
+R13
+!s100 _HL:=GK_cl0C>lCFOXVXB0
+!i10b 1
+Esystem_0_rst_controller_002
+R1
+R2
+R3
+R4
+R5
+Z94 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_rst_controller_002.vhd
+Z95 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_rst_controller_002.vhd
+l0
+L9
+V?IzLEeK^[jVZ8CkOgf`cf0
+R8
+32
+Z96 !s108 1687921135.508000
+Z97 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_rst_controller_002.vhd|-work|system_0_inst|
+Z98 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_rst_controller_002.vhd|
+R12
+R13
+!s100 gDFlFlmAPKPnl90kQ<o8U0
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 27 system_0_rst_controller_002 0 22 ?IzLEeK^[jVZ8CkOgf`cf0
+l70
+L39
+Vmo_blm3A?DhzDQzC9ei650
+R8
+32
+R96
+R97
+R98
+R12
+R13
+!s100 gFcN1VT?cMTo:KElFX@V;0
+!i10b 1
+Esystem_0_sdram_0_s1_translator
+R1
+R2
+R3
+R4
+R5
+Z99 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_sdram_0_s1_translator.vhd
+Z100 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_sdram_0_s1_translator.vhd
+l0
+L9
+V<URH[n>BnUO?QN?zBGDXA1
+R8
+32
+Z101 !s108 1687921136.266000
+Z102 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_sdram_0_s1_translator.vhd|-work|system_0_inst|
+Z103 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_sdram_0_s1_translator.vhd|
+R12
+R13
+!s100 ?TSKcdZmDU[BdUEI`0nVh2
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 30 system_0_sdram_0_s1_translator 0 22 <URH[n>BnUO?QN?zBGDXA1
+l148
+L78
+V8hmkK86l?>`G>k9SOl=nR3
+R8
+32
+R101
+R102
+R103
+R12
+R13
+!s100 @zfCn_68>AeF2AA`@S]B20
+!i10b 1
+Esystem_0_sdram_0_s1_translator_avalon_universal_slave_0_agent
+R1
+R2
+R3
+R4
+R5
+Z104 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_sdram_0_s1_translator_avalon_universal_slave_0_agent.vhd
+Z105 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_sdram_0_s1_translator_avalon_universal_slave_0_agent.vhd
+l0
+L9
+VilnT8C@K?Xeo1BehcGa]e3
+R8
+32
+Z106 !s108 1687921135.733000
+Z107 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_sdram_0_s1_translator_avalon_universal_slave_0_agent.vhd|-work|system_0_inst|
+Z108 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_sdram_0_s1_translator_avalon_universal_slave_0_agent.vhd|
+R12
+R13
+!s100 YUXN20O1AIo<E@:V<:Bg@0
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 61 system_0_sdram_0_s1_translator_avalon_universal_slave_0_agent 0 22 ilnT8C@K?Xeo1BehcGa]e3
+l178
+L93
+V0n_jD>:3[_:B?[m_U4W4;2
+R8
+32
+R106
+R107
+R108
+R12
+R13
+!s100 F:h_4AOSnEOVoGS[]ILz73
+!i10b 1
+Esystem_0_seg7_display_avalon_slave_0_translator
+R1
+R2
+R3
+R4
+R5
+Z109 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_seg7_display_avalon_slave_0_translator.vhd
+Z110 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_seg7_display_avalon_slave_0_translator.vhd
+l0
+L9
+VSQZ7E@L2F747[FDm=OO;U2
+R8
+32
+Z111 !s108 1687921137.627000
+Z112 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_seg7_display_avalon_slave_0_translator.vhd|-work|system_0_inst|
+Z113 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_seg7_display_avalon_slave_0_translator.vhd|
+R12
+R13
+!s100 Q62aWH3I[Im8YPTS5iDNb3
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 47 system_0_seg7_display_avalon_slave_0_translator 0 22 SQZ7E@L2F747[FDm=OO;U2
+l148
+L78
+V[AT7VRJe9YRSPaCZiknEI2
+R8
+32
+R111
+R112
+R113
+R12
+R13
+!s100 2SDo:n?[SBaG5>F[K^GBh1
+!i10b 1
+Esystem_0_switch_pio_s1_translator
+R1
+R2
+R3
+R4
+R5
+Z114 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_switch_pio_s1_translator.vhd
+Z115 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_switch_pio_s1_translator.vhd
+l0
+L9
+VdlO];`z0TX4AfaR921mUX2
+R8
+32
+Z116 !s108 1687921137.206000
+Z117 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_switch_pio_s1_translator.vhd|-work|system_0_inst|
+Z118 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_switch_pio_s1_translator.vhd|
+R12
+R13
+!s100 mOA>gko07dA_Ym5VSbAED2
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 33 system_0_switch_pio_s1_translator 0 22 dlO];`z0TX4AfaR921mUX2
+l148
+L78
+VN`]H8Y3dO0_;3aVZI<`FA0
+R8
+32
+R116
+R117
+R118
+R12
+R13
+!s100 ^`;=khKQB@Qc6Al2B2OTT2
+!i10b 1
+Esystem_0_sysid_qsys_0_control_slave_translator
+R1
+R2
+R3
+R4
+R5
+Z119 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_sysid_qsys_0_control_slave_translator.vhd
+Z120 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_sysid_qsys_0_control_slave_translator.vhd
+l0
+L9
+V0ok8:fJ3TW`N4VdHdLY650
+R8
+32
+Z121 !s108 1687921136.582000
+Z122 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_sysid_qsys_0_control_slave_translator.vhd|-work|system_0_inst|
+Z123 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_sysid_qsys_0_control_slave_translator.vhd|
+R12
+R13
+!s100 9;iIzYh9b`KOb5Ue5`<b30
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 46 system_0_sysid_qsys_0_control_slave_translator 0 22 0ok8:fJ3TW`N4VdHdLY650
+l148
+L78
+Vh1DllH`_igaMfK<:B?YH43
+R8
+32
+R121
+R122
+R123
+R12
+R13
+!s100 `3`_aF=0SX]VT6LobNBWX0
+!i10b 1
+Esystem_0_timer_0_s1_translator
+R1
+R2
+R3
+R4
+R5
+Z124 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_timer_0_s1_translator.vhd
+Z125 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_timer_0_s1_translator.vhd
+l0
+L9
+VU?RRfkJC`ghbM=c=@aF>k3
+R8
+32
+Z126 !s108 1687921136.893000
+Z127 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_timer_0_s1_translator.vhd|-work|system_0_inst|
+Z128 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_timer_0_s1_translator.vhd|
+R12
+R13
+!s100 YWUTYUE5B3XPS?cTR=;i>3
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 30 system_0_timer_0_s1_translator 0 22 U?RRfkJC`ghbM=c=@aF>k3
+l148
+L78
+V=C=;<SYbS92;VTm9NEL5^3
+R8
+32
+R126
+R127
+R128
+R12
+R13
+!s100 P;bUR?L49Zab:5zUnn94Y2
+!i10b 1
+Esystem_0_uart_0_s1_translator
+R1
+R2
+R3
+R4
+R5
+Z129 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_uart_0_s1_translator.vhd
+Z130 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_uart_0_s1_translator.vhd
+l0
+L9
+VdLHHHYB^hFdWo0]zidAWl1
+R8
+32
+Z131 !s108 1687921136.789000
+Z132 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_uart_0_s1_translator.vhd|-work|system_0_inst|
+Z133 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_uart_0_s1_translator.vhd|
+R12
+R13
+!s100 AjWK=JR>=`M6R?M`Ob=8[1
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 29 system_0_uart_0_s1_translator 0 22 dLHHHYB^hFdWo0]zidAWl1
+l148
+L78
+V=oFOah4O_?<Wz2meocbMl2
+R8
+32
+R131
+R132
+R133
+R12
+R13
+!s100 8oD9aF8YSBlbEdL6@9HoW1
+!i10b 1
+Esystem_0_vga_0_avalon_slave_0_translator
+R1
+R2
+R3
+R4
+R5
+Z134 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_vga_0_avalon_slave_0_translator.vhd
+Z135 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_vga_0_avalon_slave_0_translator.vhd
+l0
+L9
+VSB2L[Q?I>LPjmo5nj?M753
+R8
+32
+Z136 !s108 1687921137.522000
+Z137 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_vga_0_avalon_slave_0_translator.vhd|-work|system_0_inst|
+Z138 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_vga_0_avalon_slave_0_translator.vhd|
+R12
+R13
+!s100 0>gKad3>B?i7z51BlbG6k3
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 40 system_0_vga_0_avalon_slave_0_translator 0 22 SB2L[Q?I>LPjmo5nj?M753
+l148
+L78
+VNmc5`JB@JZLC2jjZ1o88L3
+R8
+32
+R136
+R137
+R138
+R12
+R13
+!s100 z1aP^jH13J`]aB5:RjK7X3
+!i10b 1
+Esystem_0_width_adapter
+R1
+R2
+R3
+R4
+R5
+Z139 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_width_adapter.vhd
+Z140 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_width_adapter.vhd
+l0
+L9
+V9:dK[hcRS=YY_bfKg4UM83
+R8
+32
+Z141 !s108 1687921134.727000
+Z142 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_width_adapter.vhd|-work|system_0_inst|
+Z143 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_width_adapter.vhd|
+R12
+R13
+!s100 Rb1kZGVb8f9mW0^NCN?am3
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 22 system_0_width_adapter 0 22 9:dK[hcRS=YY_bfKg4UM83
+l132
+L70
+V]Po]0?PBVP0d8]eiSDn=C1
+R8
+32
+R141
+R142
+R143
+R12
+R13
+!s100 6G=H=@Kco9T3CIm7a6i]T2
+!i10b 1
+Esystem_0_width_adapter_001
+R1
+R2
+R3
+R4
+R5
+Z144 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_width_adapter_001.vhd
+Z145 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_width_adapter_001.vhd
+l0
+L9
+VP;b_l7>Af_[<]T;R1`2913
+R8
+32
+Z146 !s108 1687921134.837000
+Z147 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_width_adapter_001.vhd|-work|system_0_inst|
+Z148 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_width_adapter_001.vhd|
+R12
+R13
+!s100 Dhd4EgK?DPE?MdNP@a>1W1
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 26 system_0_width_adapter_001 0 22 P;b_l7>Af_[<]T;R1`2913
+l132
+L70
+VSa02YNfha@oC=^fh_`_PT3
+R8
+32
+R146
+R147
+R148
+R12
+R13
+!s100 a0ej1SJ?Shn_`R?J[n;C02
+!i10b 1
+Esystem_0_width_adapter_002
+R1
+R2
+R3
+R4
+R5
+Z149 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_width_adapter_002.vhd
+Z150 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_width_adapter_002.vhd
+l0
+L9
+VnYgA?N?QKIa`AiW:ooPX@3
+R8
+32
+Z151 !s108 1687921134.939000
+Z152 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_width_adapter_002.vhd|-work|system_0_inst|
+Z153 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_width_adapter_002.vhd|
+R12
+R13
+!s100 ?jVRYne_md93SNGN3]In?2
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 26 system_0_width_adapter_002 0 22 nYgA?N?QKIa`AiW:ooPX@3
+l132
+L70
+VCJG6W1`9CDUO;1<I0S[oc0
+R8
+32
+R151
+R152
+R153
+R12
+R13
+!s100 61kXKNkZed_;PHnKM?Gc33
+!i10b 1
+Esystem_0_width_adapter_003
+R1
+R2
+R3
+R4
+R5
+Z154 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_width_adapter_003.vhd
+Z155 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_width_adapter_003.vhd
+l0
+L9
+VE0noziDdQ>VP>hJ8=@fQa3
+R8
+32
+Z156 !s108 1687921135.042000
+Z157 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_width_adapter_003.vhd|-work|system_0_inst|
+Z158 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/system_0_width_adapter_003.vhd|
+R12
+R13
+!s100 cS4@fZ8m;Y`FO0J=]iYCe2
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 26 system_0_width_adapter_003 0 22 E0noziDdQ>VP>hJ8=@fQa3
+l132
+L70
+V;@Bg6JM6Z_]Zi1]V^22Pz3
+R8
+32
+R156
+R157
+R158
+R12
+R13
+!s100 `2W:nO5]VnFGO:liB0Z<O2
+!i10b 1

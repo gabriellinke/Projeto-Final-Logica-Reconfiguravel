@@ -2,7 +2,7 @@ m255
 K3
 13
 cModel Technology
-Z0 dD:\altera\13.0sp1\projects\final_project\simulation\modelsim
+Z0 dD:\altera\13.0sp1\projects\final_project\FIR_HW\simulation\modelsim
 Efir_low_area
 Z1 w1687698632
 Z2 DPx4 ieee 9 math_real 0 22 :iME`dTX54_U49lJNF5JI3
@@ -11,17 +11,17 @@ Z4 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
 Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z7 DPx4 work 11 fir_package 0 22 fB:cCLMXXB[>m:jQil[j:2
-Z8 dD:\altera\13.0sp1\projects\final_project\simulation\modelsim
-Z9 8D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
-Z10 FD:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd
+Z8 dD:\altera\13.0sp1\projects\final_project\FIR_HW\simulation\modelsim
+Z9 8D:/altera/13.0sp1/projects/final_project/FIR_HW/FIR/FIR_low_area.vhd
+Z10 FD:/altera/13.0sp1/projects/final_project/FIR_HW/FIR/FIR_low_area.vhd
 l0
 L69
 VkPSmenKno7GTRS?35OZJP2
 Z11 OV;C;10.1d;51
 32
-Z12 !s108 1687703464.621000
-Z13 !s90 -reportprogress|300|-work|work|D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd|
-Z14 !s107 D:/altera/13.0sp1/projects/final_project/FIR/FIR_low_area.vhd|
+Z12 !s108 1687918071.129000
+Z13 !s90 -reportprogress|300|-work|work|D:/altera/13.0sp1/projects/final_project/FIR_HW/FIR/FIR_low_area.vhd|
+Z14 !s107 D:/altera/13.0sp1/projects/final_project/FIR_HW/FIR/FIR_low_area.vhd|
 Z15 o-work work -O0
 Z16 tExplicit 1
 !s100 EEA9oDFj2YPk?b;Bebnjh2
@@ -45,50 +45,6 @@ R14
 R15
 R16
 !s100 8bQ<L3iEcfM][B=PhQj542
-!i10b 1
-Efir_low_area_tb
-Z18 w1687698732
-R7
-R2
-R3
-R4
-R5
-R6
-R8
-Z19 8D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
-Z20 FD:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd
-l0
-L27
-V5:I>8@R^KL:INNTNU:nSO1
-R11
-32
-Z21 !s108 1687698797.663000
-Z22 !s90 -reportprogress|30|-work|work|D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd|
-Z23 !s107 D:/altera/13.0sp1/projects/final_project/FIR/testbench/FIR_low_area_tb.vhd|
-R15
-R16
-!s100 838U[0bN=40aaWe1NdC6P0
-!i10b 1
-Afir_low_area_tb_arch
-R17
-R7
-R2
-R3
-R4
-R5
-R6
-DEx4 work 15 fir_low_area_tb 0 22 5:I>8@R^KL:INNTNU:nSO1
-l62
-L31
-V=i@AKVJA>Uzg1QfKlAn`d2
-R11
-32
-R21
-R22
-R23
-R15
-R16
-!s100 Xlnn3[j^eHb7QkD_BKlSi3
 !i10b 1
 Pfir_package
 R2
@@ -134,7 +90,7 @@ nbody
 !s100 enc@?o8M0;:?b^`0C:dYi1
 !i10b 1
 Etop_level
-Z24 w1687703158
+Z18 w1687703158
 R7
 R2
 R3
@@ -142,16 +98,16 @@ R4
 R5
 R6
 R8
-Z25 8D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd
-Z26 FD:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd
+Z19 8D:/altera/13.0sp1/projects/final_project/FIR_HW/FIR/top_level.vhd
+Z20 FD:/altera/13.0sp1/projects/final_project/FIR_HW/FIR/top_level.vhd
 l0
 L12
 Ve`Jm6Hz42FO8z3C]YWzJ72
 R11
 32
-Z27 !s108 1687703466.129000
-Z28 !s90 -reportprogress|30|-work|work|D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd|
-Z29 !s107 D:/altera/13.0sp1/projects/final_project/FIR/top_level.vhd|
+Z21 !s108 1687918072.713000
+Z22 !s90 -reportprogress|30|-work|work|D:/altera/13.0sp1/projects/final_project/FIR_HW/FIR/top_level.vhd|
+Z23 !s107 D:/altera/13.0sp1/projects/final_project/FIR_HW/FIR/top_level.vhd|
 R15
 R16
 !s100 Y0fRenD5kBU19W<18_9df0
@@ -170,15 +126,15 @@ L23
 V28NH[1[BD6_VV6D0X@Kg31
 R11
 32
-R27
-R28
-R29
+R21
+R22
+R23
 R15
 R16
 !s100 FVZdFYRYL5WA6ca[hllQ_1
 !i10b 1
 Etop_level_tb
-Z30 w1687705209
+Z24 w1687918119
 R7
 R2
 R3
@@ -186,8 +142,8 @@ R4
 R5
 R6
 R8
-Z31 8D:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd
-Z32 FD:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd
+Z25 8D:/altera/13.0sp1/projects/final_project/FIR_HW/FIR/top_level_tb.vhd
+Z26 FD:/altera/13.0sp1/projects/final_project/FIR_HW/FIR/top_level_tb.vhd
 l0
 L27
 VBl96`jD5zOM;Lan`[5XFX3
@@ -195,9 +151,9 @@ VBl96`jD5zOM;Lan`[5XFX3
 R11
 32
 !i10b 1
-Z33 !s108 1687705219.674000
-Z34 !s90 -reportprogress|30|-work|work|D:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd|
-Z35 !s107 D:/altera/13.0sp1/projects/final_project/FIR/top_level_tb.vhd|
+Z27 !s108 1687918129.591000
+Z28 !s90 -reportprogress|300|-work|work|D:/altera/13.0sp1/projects/final_project/FIR_HW/FIR/top_level_tb.vhd|
+Z29 !s107 D:/altera/13.0sp1/projects/final_project/FIR_HW/FIR/top_level_tb.vhd|
 R15
 R16
 Atop_level_tb_arch
@@ -207,16 +163,16 @@ R3
 R4
 R5
 R6
-Z36 DEx4 work 12 top_level_tb 0 22 Bl96`jD5zOM;Lan`[5XFX3
+Z30 DEx4 work 12 top_level_tb 0 22 Bl96`jD5zOM;Lan`[5XFX3
 l75
 L31
-VjoFQ03R?MND_k0PNH`h@Y2
-!s100 Yg?FGQ1LH4QkSTTmhDLm^0
+V_aB<lhI35:<8M6?DgEZzf2
+!s100 HYoOKlnA`lI<P39gTH7lN2
 R11
 32
 !i10b 1
-R33
-R34
-R35
+R27
+R28
+R29
 R15
 R16

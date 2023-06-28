@@ -1,0 +1,152 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\projeto\DE2_NET\software\fir\obj\default\runtime\sim\mentor
+vrdoYUubf//DBlnosB5UwoEOigmO1AtAh0QWQs+IjC3k=
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+IEe]i5c<POP<lz?fhzSP0T2
+V3[7:>CjjTRCO?TU1TTeNF0
+xsip
+S1
+d.
+Z2 Fnofile
+L0 38
+Z3 OV;L;10.1d;51
+r1
+31
+Z4 o-sv -work cfi_flash_0_external_mem_bfm -O0
+nfcb2a7d
+!i10b 0
+!s100 cmHSV0FD]@R=eBZzoZ>9h0
+!i8a 1224111008
+!s105 altera_external_memory_bfm_sv_unit
+!s85 0
+!s108 1687921132.163000
+!s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/mentor/altera_external_memory_bfm.sv|
+!s90 -reportprogress|300|-sv|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/mentor/altera_external_memory_bfm.sv|-work|cfi_flash_0_external_mem_bfm|
+!s101 -O0
+Ealtera_external_memory_bfm_vhdl
+Z5 w1687655690
+Z6 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z7 DPx4 work 35 altera_external_memory_bfm_vhdl_pkg 0 22 LRFL3TZ<IFN?[5d0Un@Q62
+Z8 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z9 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z10 dC:\projeto\DE2_NET\software\fir\obj\default\runtime\sim\mentor
+Z11 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/altera_external_memory_bfm_vhdl.vhd
+Z12 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/altera_external_memory_bfm_vhdl.vhd
+l0
+L21
+V<m>@:__d@VL8NFSh0PRbB3
+!s100 fM6aS=e]oAmko<28;bTTe3
+Z13 OV;C;10.1d;51
+32
+!i10b 1
+Z14 !s108 1687921133.607000
+Z15 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/altera_external_memory_bfm_vhdl.vhd|-work|cfi_flash_0_external_mem_bfm|
+Z16 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/altera_external_memory_bfm_vhdl.vhd|
+Z17 o-work cfi_flash_0_external_mem_bfm -O0
+Z18 tExplicit 1
+Aext_memory_bfm_vhdl_a
+R6
+R7
+R8
+R9
+DEx4 work 31 altera_external_memory_bfm_vhdl 0 22 <m>@:__d@VL8NFSh0PRbB3
+l120
+L57
+V^Gh[PDXocIVJD1[]O873o2
+!s100 I1YN^oPnTVj1;2>h@K@he3
+R13
+32
+!i10b 1
+R14
+R15
+R16
+R17
+R18
+Paltera_external_memory_bfm_vhdl_pkg
+R6
+R8
+R9
+R5
+R10
+Z19 8C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/altera_external_memory_bfm_vhdl_pkg.vhd
+Z20 FC:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/altera_external_memory_bfm_vhdl_pkg.vhd
+l0
+L22
+VLRFL3TZ<IFN?[5d0Un@Q62
+R13
+32
+b1
+Z21 !s108 1687921133.456000
+Z22 !s90 -reportprogress|300|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/altera_external_memory_bfm_vhdl_pkg.vhd|-work|cfi_flash_0_external_mem_bfm|
+Z23 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/altera_external_memory_bfm_vhdl_pkg.vhd|
+R17
+R18
+!s100 2T:bJfL2]XR<k82TW77U@3
+!i10b 1
+Bbody
+R7
+R6
+R8
+R9
+l0
+L102
+VUPQ5G]ZIVg_XTKR9SzodU0
+R13
+32
+R21
+R22
+R23
+R17
+R18
+nbody
+!s100 dPaPC@l]ThGS:;Bnd5JVH1
+!i10b 1
+vaF1jSWYYTfu+qQzP897fx+HDUOCY6Y8C0y63y8GTlFTrtPiI8Tl0q59a4kL7+n0S
+R1
+DXx4 work 47 altera_external_memory_bfm_vhdl_wrapper_sv_unit 0 22 NRz?h`:e2AT]aHU@TI>I32
+V[TafJ^b^=3f6_f_HV`T8n2
+r1
+31
+I[>4@b846<bQiZCg`2L45M2
+xsip
+S1
+d.
+R2
+L0 38
+R3
+Z24 !s108 1687921132.920000
+Z25 !s107 C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/mentor/altera_external_memory_bfm_vhdl_wrapper.sv|
+Z26 !s90 -reportprogress|300|-sv|C:/projeto/DE2_NET/system_0/testbench/system_0_tb/simulation/submodules/mentor/altera_external_memory_bfm_vhdl_wrapper.sv|-work|cfi_flash_0_external_mem_bfm|
+R4
+n4f46c42
+!s85 0
+!i10b 0
+!s100 fZBBOdoFl?:Dl9o^ajmQA3
+!i8a 943994912
+!s105 altera_external_memory_bfm_vhdl_wrapper_sv_unit
+!s101 -O0
+XaF1jSWYYTfu+qQzP897fx+HDUOCY6Y8C0y63y8GTlFT36CDEZup72ENjv51LIyPS
+R1
+VNRz?h`:e2AT]aHU@TI>I32
+r1
+31
+INRz?h`:e2AT]aHU@TI>I32
+S1
+d.
+R2
+L0 38
+R3
+R24
+R25
+R26
+R4
+neeb0194
+!s85 0
+!i10b 0
+!s100 [1BaOJJN3ilHzVKdLdG8c2
+!i103 1
+!i8a 943994912
+!s101 -O0
