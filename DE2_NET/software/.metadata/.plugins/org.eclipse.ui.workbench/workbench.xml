@@ -8,16 +8,17 @@
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="157" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="153" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="183" y="22"/>
+<coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="167" y="22"/>
 <coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="86" y="22"/>
-<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="141" y="22"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="103" y="22"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="99" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="206" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.cdt.ui.editor.asm.AsmEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.cdt.make.editor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -37,7 +38,7 @@
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="iniche_init.c" partName="iniche_init.c" path="C:/projeto/DE2_NET/software/fir/iniche_init.c" title="iniche_init.c" tooltip="fir/iniche_init.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/fir/iniche_init.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6303" selectionTopPixel="2760"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="15995" selectionTopPixel="1987"/>
 </editor>
 </editors>
 <views>
@@ -89,7 +90,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="com.altera.sbtgui.ui.cPerspective">
+<perspectives activePart="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:USB-Blaster on localhost [USB-0].1.0" activePerspective="com.altera.sbtgui.ui.cPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
@@ -329,6 +330,7 @@
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.ui.views.TaskList"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
 <fastViewBars>&#x0A;<fastViewBar fastViewLocation="131072" id="org.eclipse.debug.internal.ui.ToolsFolderView" orientation="256" selectedTabId="org.eclipse.debug.ui.VariableView" style="0">&#x0A;<fastViews>&#x0A;<view id="org.eclipse.debug.ui.VariableView" ratio="0.3"/>
 <view id="org.eclipse.debug.ui.BreakpointView" ratio="0.3"/>
 <view id="org.eclipse.debug.ui.RegisterView" ratio="0.3"/>
@@ -336,9 +338,10 @@
 </fastViews>
 </fastViewBar>
 </fastViewBars>
-<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="LabelNotFound"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@42bf8b" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
@@ -347,9 +350,10 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.7494647" ratioLeft="700" ratioRight="234" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:USB-Blaster on localhost [USB-1].1.0" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.7494647" ratioLeft="700" ratioRight="234" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
-<page content="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:USB-Blaster on localhost [USB-1].1.0" label="Nios II Console"/>
+<page content="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:USB-Blaster on localhost [USB-0].1.0" label="Nios II Console"/>
+<page content="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:USB-Blaster on localhost [USB-1].1.0" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
 <page content="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:*" label="LabelNotFound"/>
@@ -381,7 +385,6 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/hello_world/hello_led.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/simple_socket/iniche_init.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/pwm/iniche_init.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/simple_socket/iniche_init.c"/>
@@ -392,156 +395,158 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/pwm/iniche_init.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/fir/iniche_init.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/fir_bsp/iniche/src/nios2/osportco.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" path="/fir_bsp/HAL/src/alt_exception_entry.S"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/fir_bsp/iniche/src/nios2/osportco.c"/>
 </editors>
-<item historyLabel="hello_led.c" index="0">
-<position info="not_deleted" x="1299" y="0"/>
-</item>
-<item historyLabel="iniche_init.c" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="iniche_init.c" index="1">
-<position info="not_deleted" x="2398" y="0"/>
-</item>
-<item historyLabel="iniche_init.c" index="1">
-<position info="not_deleted" x="5538" y="56"/>
-</item>
-<item historyLabel="iniche_init.c" index="1">
-<position info="not_deleted" x="4707" y="0"/>
-</item>
-<item historyLabel="iniche_init.c" index="1">
-<position info="not_deleted" x="7297" y="0"/>
-</item>
-<item historyLabel="iniche_init.c" index="1">
-<position info="not_deleted" x="9489" y="0"/>
-</item>
-<item historyLabel="iniche_init.c" index="1">
+<item historyLabel="iniche_init.c" index="0">
 <position info="not_deleted" x="9498" y="44"/>
 </item>
-<item historyLabel="iniche_init.c" index="1">
+<item historyLabel="iniche_init.c" index="0">
 <position info="not_deleted" x="9552" y="44"/>
 </item>
-<item historyLabel="iniche_init.c" index="1">
+<item historyLabel="iniche_init.c" index="0">
 <position info="not_deleted" x="9095" y="16"/>
 </item>
-<item historyLabel="iniche_init.c" index="1">
+<item historyLabel="iniche_init.c" index="0">
 <position info="not_deleted" x="5146" y="0"/>
 </item>
-<item historyLabel="iniche_init.c" index="1">
+<item historyLabel="iniche_init.c" index="0">
 <position info="not_deleted" x="5572" y="0"/>
 </item>
-<item historyLabel="iniche_init.c" index="2">
+<item historyLabel="iniche_init.c" index="1">
 <position/>
 </item>
-<item historyLabel="iniche_init.c" index="3">
+<item historyLabel="iniche_init.c" index="2">
 <position info="not_deleted" x="2400" y="10980"/>
 </item>
-<item historyLabel="iniche_init.c" index="2">
+<item historyLabel="iniche_init.c" index="1">
 <position info="not_deleted" x="5718" y="0"/>
 </item>
-<item historyLabel="osportco.c" index="4">
+<item historyLabel="osportco.c" index="3">
 <position info="not_deleted" x="6842" y="0"/>
 </item>
-<item historyLabel="iniche_init.c" index="2">
+<item historyLabel="iniche_init.c" index="1">
 <position info="not_deleted" x="6459" y="0"/>
 </item>
-<item historyLabel="io.h" index="5">
+<item historyLabel="io.h" index="4">
 <position info="not_deleted" x="3823" y="4"/>
 </item>
-<item historyLabel="iniche_init.c" index="2">
+<item historyLabel="iniche_init.c" index="1">
 <position/>
 </item>
-<item historyLabel="iniche_init.c" index="2">
+<item historyLabel="iniche_init.c" index="1">
 <position info="not_deleted" x="5356" y="0"/>
 </item>
-<item historyLabel="iniche_init.c" index="2">
+<item historyLabel="iniche_init.c" index="1">
 <position info="not_deleted" x="5325" y="0"/>
 </item>
-<item historyLabel="iniche_init.c" index="2">
+<item historyLabel="iniche_init.c" index="1">
 <position info="not_deleted" x="7022" y="0"/>
 </item>
-<item historyLabel="iniche_init.c" index="2">
+<item historyLabel="iniche_init.c" index="1">
 <position info="not_deleted" x="7574" y="0"/>
 </item>
-<item historyLabel="iniche_init.c" index="2">
+<item historyLabel="iniche_init.c" index="1">
 <position info="not_deleted" x="7243" y="0"/>
 </item>
-<item historyLabel="string.h" index="6">
+<item historyLabel="string.h" index="5">
 <position info="not_deleted" x="996" y="46"/>
 </item>
-<item historyLabel="iniche_init.c" index="2">
+<item historyLabel="iniche_init.c" index="1">
 <position info="not_deleted" x="7243" y="0"/>
 </item>
-<item historyLabel="iniche_init.c" index="2">
+<item historyLabel="iniche_init.c" index="1">
 <position info="not_deleted" x="7270" y="0"/>
 </item>
-<item historyLabel="iniche_init.c" index="2">
+<item historyLabel="iniche_init.c" index="1">
 <position info="not_deleted" x="7335" y="0"/>
 </item>
-<item historyLabel="iniche_init.c" index="2">
+<item historyLabel="iniche_init.c" index="1">
 <position info="not_deleted" x="7631" y="0"/>
 </item>
-<item historyLabel="iniche_init.c" index="2">
+<item historyLabel="iniche_init.c" index="1">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="iniche_init.c" index="7">
+<item historyLabel="iniche_init.c" index="6">
 <position info="not_deleted" x="1717" y="0"/>
 </item>
-<item historyLabel="iniche_init.c" index="7">
+<item historyLabel="iniche_init.c" index="6">
 <position/>
 </item>
-<item historyLabel="iniche_init.c" index="8">
+<item historyLabel="iniche_init.c" index="7">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="iniche_init.c" index="7">
+<item historyLabel="iniche_init.c" index="6">
 <position info="not_deleted" x="4486" y="844"/>
 </item>
-<item historyLabel="iniche_init.c" index="8">
+<item historyLabel="iniche_init.c" index="7">
 <position/>
 </item>
-<item historyLabel="iniche_init.c" index="7">
+<item historyLabel="iniche_init.c" index="6">
 <position info="not_deleted" x="4486" y="844"/>
 </item>
-<item historyLabel="iniche_init.c" index="8">
+<item historyLabel="iniche_init.c" index="7">
 <position info="not_deleted" x="0" y="13160"/>
 </item>
-<item historyLabel="iniche_init.c" index="7">
-<position/>
-</item>
-<item historyLabel="iniche_init.c" index="8">
+<item historyLabel="iniche_init.c" index="6">
 <position/>
 </item>
 <item historyLabel="iniche_init.c" index="7">
 <position/>
 </item>
-<item historyLabel="iniche_init.c" index="8">
+<item historyLabel="iniche_init.c" index="6">
+<position/>
+</item>
+<item historyLabel="iniche_init.c" index="7">
 <position info="not_deleted" x="0" y="10229"/>
 </item>
-<item historyLabel="iniche_init.c" index="7">
+<item historyLabel="iniche_init.c" index="6">
 <position info="not_deleted" x="4634" y="0"/>
 </item>
-<item historyLabel="iniche_init.c" index="8">
+<item historyLabel="iniche_init.c" index="7">
 <position info="not_deleted" x="8543" y="0"/>
 </item>
-<item historyLabel="iniche_init.c" index="7">
+<item historyLabel="iniche_init.c" index="6">
 <position info="not_deleted" x="5310" y="0"/>
 </item>
-<item historyLabel="iniche_init.c" index="8">
+<item historyLabel="iniche_init.c" index="7">
 <position info="not_deleted" x="4765" y="0"/>
 </item>
-<item historyLabel="iniche_init.c" index="9">
+<item historyLabel="iniche_init.c" index="8">
 <position info="not_deleted" x="5324" y="0"/>
 </item>
-<item historyLabel="osportco.c" index="10">
+<item historyLabel="osportco.c" index="9">
 <position/>
 </item>
-<item historyLabel="iniche_init.c" index="9">
+<item historyLabel="iniche_init.c" index="8">
 <position info="not_deleted" x="6118" y="5"/>
 </item>
-<item historyLabel="osportco.c" index="10">
+<item historyLabel="osportco.c" index="9">
 <position info="not_deleted" x="7807" y="0"/>
 </item>
-<item active="true" historyLabel="iniche_init.c" index="9">
+<item historyLabel="iniche_init.c" index="8">
 <position info="not_deleted" x="6118" y="5"/>
+</item>
+<item historyLabel="alt_exception_entry.S" index="10">
+<position info="not_deleted" x="12174" y="0"/>
+</item>
+<item historyLabel="alt_exception_entry.S" index="10">
+<position info="not_deleted" x="12773" y="0"/>
+</item>
+<item historyLabel="alt_exception_entry.S" index="10">
+<position info="not_deleted" x="12800" y="0"/>
+</item>
+<item historyLabel="alt_exception_entry.S" index="10">
+<position info="not_deleted" x="12876" y="0"/>
+</item>
+<item historyLabel="iniche_init.c" index="8">
+<position info="not_deleted" x="6308" y="0"/>
+</item>
+<item historyLabel="osportco.c" index="11">
+<position info="not_deleted" x="7483" y="50"/>
+</item>
+<item active="true" historyLabel="iniche_init.c" index="8">
+<position info="not_deleted" x="6308" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -563,6 +568,9 @@
 <mruList>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="osportco.c" tooltip="fir_bsp/iniche/src/nios2/osportco.c">
 <persistable path="/fir_bsp/iniche/src/nios2/osportco.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" name="alt_exception_entry.S" tooltip="fir_bsp/HAL/src/alt_exception_entry.S">
+<persistable path="/fir_bsp/HAL/src/alt_exception_entry.S"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="iniche_init.c" tooltip="fir/iniche_init.c">
 <persistable path="/fir/iniche_init.c"/>
@@ -599,12 +607,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="network_utilities.c" tooltip="web_server/network_utilities.c">
 <persistable path="/web_server/network_utilities.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="system.h" tooltip="hello_world_bsp/system.h">
-<persistable path="/hello_world_bsp/system.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="alt_sys_init.c" tooltip="hello_world_bsp/alt_sys_init.c">
-<persistable path="/hello_world_bsp/alt_sys_init.c"/>
 </file>
 </mruList>
 </workbench>

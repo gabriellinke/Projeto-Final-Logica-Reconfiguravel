@@ -5,6 +5,7 @@ clf;
 % Nome dos arquivos .dat
 arquivoInput = '../simulation/modelsim/input.dat';
 arquivoOutput = '../simulation/modelsim/output.dat';
+arquivoOutput2 = '../../out.dat';
 
 % Lê os pontos do arquivo input.dat
 dadosInput = load(arquivoInput);
@@ -18,8 +19,15 @@ xOutput = 1:length(dadosOutput); % Índices dos pontos
 plot(xInput, dadosInput, 'b-', 'LineWidth', 2);
 hold on;
 
+% Lê os pontos do arquivo out.dat
+dadosOutput2 = load(arquivoOutput2);
+xOutput2 = 1:length(dadosOutput2); % Índices dos pontos
+
 % Plota os pontos de output.dat
 plot(xOutput, dadosOutput, 'r-', 'LineWidth', 2);
+
+% Plota os pontos de output.dat
+plot(xOutput2, dadosOutput2, 'g-', 'LineWidth', 2);
 
 % Configurações do gráfico
 title('Dados de Entrada e Saída');

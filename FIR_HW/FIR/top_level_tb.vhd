@@ -44,7 +44,7 @@ ARCHITECTURE top_level_tb_arch OF top_level_tb IS
  
 -- TESTCASE SETTINGS
 --.............................................................................
-  CONSTANT freq_xn     : REAL        := 200.0;   -- input frequency
+  CONSTANT freq_xn     : REAL        := 2000.0;   -- input frequency
   CONSTANT data_length : NATURAL     := 16;        -- input bit size       
   CONSTANT fs_Hz       : REAL        := 44.1e3;     -- sampling frequency
 
@@ -56,6 +56,8 @@ ARCHITECTURE top_level_tb_arch OF top_level_tb IS
   SIGNAL yn_signed     : STD_LOGIC_VECTOR(data_length-1 DOWNTO 0);
   SIGNAL writedata_s   : STD_LOGIC_VECTOR(15 DOWNTO 0);
   SIGNAL readdata_s    : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  SIGNAL wr_en		     : STD_LOGIC := '0';
+  SIGNAL rd_en		     : STD_LOGIC := '0';
 
                        
   SIGNAL radians       : REAL := 0.0;
@@ -79,19 +81,19 @@ BEGIN
 		resetn     => areset,
 		chipselect => '1',
 		writedata  => writedata_s,
-		write_en   => '1',
+		write_en   => wr_en,
 		readdata   => readdata_s,
 		add        => '1',
-		read_en    => '1'
+		read_en    => rd_en
 	);
 
   sampling_clock: process 
   --.............................................
   begin
     clock_fs <= '1';
-    wait for fs_period/2;
+    wait for 40 ns;
     clock_fs <= '0';
-    wait for fs_period/2;
+    wait for 40 ns;
   end process;      
   
   xn_sinus: process 
@@ -105,6 +107,7 @@ BEGIN
     variable fstatus_output  :file_open_status;
     variable file_line_output :line;
   begin 
+  	 rd_en <= '0';
     UNIFORM(seed1, seed2, rand);     -- uniform  0.0 to 1.0
     noise_n := 2.0*(rand-0.5) * (amplitude/20.0);     
     sinus_n := amplitude * sin(2.0*PI*radians) + noise_n;
@@ -132,7 +135,11 @@ BEGIN
     else
       radians <= radians + radian_step;
     end if;
+	 wr_en <= '1';
     wait until rising_edge(clock_fs);
+	 rd_en <= '1';
+	 wr_en <= '0';
+	 wait until rising_edge(clock_fs);
   end process;  
  
   reset: process 

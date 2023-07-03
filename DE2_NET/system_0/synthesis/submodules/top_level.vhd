@@ -25,9 +25,19 @@ Architecture arq_top_level of top_level is
 --Sinais utilizados----------------------------------------------------------------
 signal data_out: STD_LOGIC_VECTOR(15 downto 0);
 signal data_in: STD_LOGIC_VECTOR(15 downto 0);
+signal r32_out: STD_LOGIC_VECTOR(15 downto 0);
 signal not_resetn: std_logic := '1';
 
 --Componentes utilizados-----------------------------------------------------------
+COMPONENT reg16
+	PORT(
+		clock  : IN STD_LOGIC;
+		resetn : IN STD_LOGIC;
+		WE 	 : IN STD_LOGIC;
+		D 		 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+		Q 		 : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+	);
+END COMPONENT;
 
 ---------------------------------------------------------------------------------
 Begin
@@ -44,14 +54,22 @@ Begin
 		 yn       => data_out
 	  );
 		
+	r16 : reg16
+		port map (
+			clock 	=> clock,
+			resetn 	=> resetn,
+			WE       => write_en,
+			D 		   => data_out,
+			Q 		   => r32_out
+		);
 ------------------------------------------------------------------------------------
 		not_resetn <= not(resetn);
-		readdata <= data_out;
+		readdata <= r32_out when read_en='1';
 
 --PROCESS----------------------------------------------------------------------	
 		process(not_resetn, clock)
 			begin			
-				if rising_edge(clock) then		--Se borda de subida e enable, habilita		
+				if rising_edge(clock) and write_en='1' then		--Se borda de subida e enable, habilita		
 					data_in <= writedata;
 					
 				end if;
