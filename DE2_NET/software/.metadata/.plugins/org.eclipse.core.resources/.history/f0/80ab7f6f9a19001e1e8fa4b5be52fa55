@@ -117,7 +117,7 @@ void SSSInitialTask(void *task_data)
   int SocketFD;
   int16_t readIO;
   char buf[5000];
-  char p1[10];
+  char p1[32];
 
   printf("Inicializacao\n");
 
@@ -139,49 +139,16 @@ void SSSInitialTask(void *task_data)
 	  if (recv(SocketFD, buf, sizeof(buf), 0) < 0)  {
 	  		perror("Error - Recv()");
 	  } else {
-		  int i=0, j=0;
-		  while(i < sizeof(buf)) {
-			  if(buf[i] != '\n') {
-				  p1[j] = buf[i];
-				  j++;
-			  } else {
-				  int16_t value;
-				  char* endptr;
-				  value = (int16_t)strtol(p1, &endptr, 10);
+	  		printf("Msg recebida: %s\n", buf);
+	  		memcpy(p1, buf, 32 * sizeof(char));
+	  		printf("Ponteiro: %s\n", p1);
 
-				  if (endptr == p1) {
-					  printf("Invalid input. Conversion failed.\n");
-				  } else {
-					  printf("Input: %d\t", value);
-					  IOWR_16DIRECT(0, 0, value);
-					  readIO = IORD_16DIRECT(0, 0);
-					  printf("Ouput: %d\n", readIO);
-
-					  char msg[12];
-					  sprintf(msg, "%d", readIO);
-					  int len = strlen(msg);
-					  if (len < sizeof(msg) - 1) {
-					      msg[len] = '\n';
-					      msg[len + 1] = '\0';
-					  }
-
-					  if (send(SocketFD, msg, sizeof(msg), 0) < 0){
-						  perror("Send()");
-						  exit(EXIT_FAILURE);
-					  } else{
-						  printf("Msg enviada: %s\n", msg);
-					  }
-				  }
-
-				  j=0;
-				  memset(p1, 0, sizeof(p1));
-			  }
-			  i++;
-		  }
-		  memset(buf, 0, sizeof(buf)); // Clear the buffer
+	    	IOWR_16DIRECT(0, 0, 0);
+	     	readIO = IORD_16DIRECT(0, 0);
+	     	printf("Read: %d\n", readIO);
 	  }
 
-	  msleep(100);
+	  msleep(10000);
   }
 }
 

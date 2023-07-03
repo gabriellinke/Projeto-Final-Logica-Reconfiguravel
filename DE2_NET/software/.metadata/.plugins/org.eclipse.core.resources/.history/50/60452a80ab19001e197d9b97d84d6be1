@@ -158,7 +158,7 @@ void SSSInitialTask(void *task_data)
 					  printf("Ouput: %d\n", readIO);
 
 					  char msg[12];
-					  sprintf(msg, "%d", readIO);
+					  sprintf(msg, "%d", value);
 					  int len = strlen(msg);
 					  if (len < sizeof(msg) - 1) {
 					      msg[len] = '\n';

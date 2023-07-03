@@ -152,25 +152,7 @@ void SSSInitialTask(void *task_data)
 				  if (endptr == p1) {
 					  printf("Invalid input. Conversion failed.\n");
 				  } else {
-					  printf("Input: %d\t", value);
-					  IOWR_16DIRECT(0, 0, value);
-					  readIO = IORD_16DIRECT(0, 0);
-					  printf("Ouput: %d\n", readIO);
-
-					  char msg[12];
-					  sprintf(msg, "%d", readIO);
-					  int len = strlen(msg);
-					  if (len < sizeof(msg) - 1) {
-					      msg[len] = '\n';
-					      msg[len + 1] = '\0';
-					  }
-
-					  if (send(SocketFD, msg, sizeof(msg), 0) < 0){
-						  perror("Send()");
-						  exit(EXIT_FAILURE);
-					  } else{
-						  printf("Msg enviada: %s\n", msg);
-					  }
+					  printf("Converted value: %d\n", value);
 				  }
 
 				  j=0;

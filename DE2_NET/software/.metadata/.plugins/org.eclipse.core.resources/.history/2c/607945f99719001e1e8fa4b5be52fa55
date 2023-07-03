@@ -1,0 +1,301 @@
+/******************************************************************************
+* Copyright (c) 2006 Altera Corporation, San Jose, California, USA.           *
+* All rights reserved. All use of this software and documentation is          *
+* subject to the License Agreement located at the end of this file below.     *
+*******************************************************************************                                                                             *
+* Date - October 24, 2006                                                     *
+* Module - iniche_init.c                                                      *
+*                                                                             *                                                                             *
+******************************************************************************/
+
+/******************************************************************************
+ * NicheStack TCP/IP stack initialization and Operating System Start in main()
+ * for Simple Socket Server (SSS) example. 
+ * 
+ * This example demonstrates the use of MicroC/OS-II running on NIOS II.       
+ * In addition it is to serve as a good starting point for designs using       
+ * MicroC/OS-II and Altera NicheStack TCP/IP Stack - NIOS II Edition.                                                                                           
+ *      
+ * Please refer to the Altera NicheStack Tutorial documentation for details on 
+ * this software example, as well as details on how to configure the NicheStack
+ * TCP/IP networking stack and MicroC/OS-II Real-Time Operating System.  
+ */
+  
+#include <stdio.h>
+#include <stdint.h>
+#include <conio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <io.h>
+#include <fcntl.h>
+/* MicroC/OS-II definitions */
+#include "../fir_bsp/HAL/inc/includes.h"
+
+#include "../fir_bsp/system.h"
+
+#include "dm9000a.h"
+
+/* Simple Socket Server definitions */
+#include "simple_socket_server.h"
+#include "alt_error_handler.h"
+
+/* Nichestack definitions */
+#include "../fir_bsp/iniche/src/h/nios2/ipport.h"
+#include "../fir_bsp/iniche/src/h/tcpport.h"
+#include "../fir_bsp/iniche/src/h/libport.h"
+#include "../fir_bsp/iniche/src/nios2/osport.h"
+#include "basic_io.h"
+#include "LCD.h"
+#include "altera_avalon_pio_regs.h"
+/* Definition of task stack for the initial task which will initialize the NicheStack
+ * TCP/IP Stack and then initialize the rest of the Simple Socket Server example tasks. 
+ */
+OS_STK    SSSInitialTaskStk[TASK_STACKSIZE];
+
+/* Declarations for creating a task with TK_NEWTASK.  
+ * All tasks which use NicheStack (those that use sockets) must be created this way.
+ * TK_OBJECT macro creates the static task object used by NicheStack during operation.
+ * TK_ENTRY macro corresponds to the entry point, or defined function name, of the task.
+ * inet_taskinfo is the structure used by TK_NEWTASK to create the task.
+ */
+TK_OBJECT(to_ssstask);
+TK_ENTRY(SSSSimpleSocketServerTask);
+void disp_7seg(int _duty_cycle, int _prescaler, int _timer, int _enable);
+int binaryTodecimal (char num[]);
+char *decimal_to_binary(int n);
+int str_length( char str[]);
+
+struct inet_taskinfo ssstask = {
+      &to_ssstask,
+      "simple socket server",
+      SSSSimpleSocketServerTask,
+      4,
+      APP_STACK_SIZE,
+};
+
+/* SSSInitialTask will initialize the NicheStack
+ * TCP/IP Stack and then initialize the rest of the Simple Socket Server example 
+ * RTOS structures and tasks. 
+ */
+void SSSInitialTask(void *task_data)
+{
+  INT8U error_code;
+
+  /*
+   * Initialize Altera NicheStack TCP/IP Stack - Nios II Edition specific code.
+   * NicheStack is initialized from a task, so that RTOS will have started, and
+   * I/O drivers are available.  Two tasks are created:
+   *    "Inet main"  task with priority 2
+   *    "clock tick" task with priority 3
+   */
+  LCD_Line1();
+  LCD_Show_Text("Adquirindo IP");
+  LCD_Line2();
+  LCD_Show_Text("via DHCP -- PWM");
+
+//  alt_iniche_init();
+//  netmain();
+
+  /* Wait for the network stack to be ready before proceeding.
+   * iniche_net_ready indicates that TCP/IP stack is ready, and IP address is obtained.
+   */
+//  while (!iniche_net_ready)
+//    TK_SLEEP(1);
+
+  /* Now that the stack is running, perform the application initialization steps */
+
+  /* Application Specific Task Launching Code Block Begin */
+
+  printf("\nSimple Socket Server starting up\n");
+
+
+  LCD_Init();
+
+  struct sockaddr_in sa;
+  int res;
+  int SocketFD;
+  char buf[2000];
+  char p1[32];
+/*
+  printf("Inicializacao\n");
+
+  SocketFD = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
+  printf("Socket criado\n");
+
+  memset(&sa, 0, sizeof sa);
+  sa.sin_family = AF_INET;
+  sa.sin_port = htons(5000); // ALTERAR PORTA
+  res = inet_pton(AF_INET, "192.168.0.210", &sa.sin_addr); //ALTERAR O IP
+
+  if (connect(SocketFD, (struct sockaddr *)&sa, sizeof sa) == -1) {
+	perror("connect failed");
+	close(SocketFD);
+	exit(EXIT_FAILURE);
+  }
+*/
+  while (1){
+/*
+	  if (recv(SocketFD, buf, sizeof(buf), 0) < 0)  {
+	  		perror("Error - Recv()");
+	  		exit(EXIT_FAILURE);
+	  } else {
+	  		printf("Msg recebida: %s\n", buf);
+	  		memcpy(p1, buf, 32 * sizeof(char));
+
+	  		printf("MSG BIN: %s\n", buf);
+	  }
+*/
+	  //int16_t vetor[] = {1638, 2488, 2350, 2251, 2209, 3544, 6114, 5132, 6436, 7221, 9719, 8887, 12331, 10590, 12069, 12814, 15082, 16735, 14742, 18205, 19186, 19818, 19029, 18573, 22093, 20068, 23453, 22344, 22302, 25341, 23101, 24413, 27481, 27550, 25386, 26694, 28945, 27971, 28815, 29434, 28659, 31704, 28898, 30550, 30259, 31593, 30979, 30928, 32295, 32767, 31661, 31998, 31910, 32767, 32767, 32767, 31930, 32557, 32209, 32138, 32468, 32405, 32767, 31831, 32727, 29945, 30914, 32490, 31195, 30064, 29290, 31054, 29819, 28736, 27035, 28539, 26734, 28094, 25973, 24457, 25426, 22972, 22955, 22156, 23077, 21033, 20375, 18728, 17867, 18648, 18106, 17685, 15943, 16551, 13239, 13678, 12819, 11867, 11634, 10364, 10442, 8200, 7177, 6794, 4997, 4357, 2403, 1755, 1169, -399, -239, -69 , -774, -1856, -4934, -3504, -5923, -6421, -6380, -7011, -10114, -11083, -10623, -11998, -12939, -12355, -12875, -15730, -15078, -16013, -17086, -17134, -20240, -21300, -19502, -21805, -20965, -24135, -23626, -24716, -25955, -24694, -27329, -27226, -27102, -26356, -28333, -29391, -27701, -29588, -30192, -29653, -31456, -30898, -32641, -32751, -32627, -30377, -31067, -32658, -31089, -31411, -32676, -31739, -31980, -31354, -31190, -32767, -32767, -32767, -32767, -32480, -32767, -30499, -30968, -31919, -30810, -30074, -32016, -29357, -31454, -30771, -29792};
+	    int16_t vetor[] = {1638 , 10766, 18163, 24175, 28253, 31310, 32767, 28506, 23905, 16785, 9943 , -983 , -7643, -18755, -25227, -30441, -31729, -31007, -31300, -23707, -16564, -8298, -660 , 7365 , 1390 , 7862 , 19017, 24270, 28616, 32767, 30831, 28956, 26448, 18957, 7814 , -598 , -8063, -18004, -24696, -29607, -32767, -30928, -31566, -25307, -18946, -9477, -1153, 7797 , 201  , 10165, 16922, 24179, 29043, 32767, 32767, 30644, 24048, 17712, 8987 , -196 , -8970, -17386, -23331, -29787, -31381, -32767, -30255, -23445, -17462, -9833, -1044, 10345, 768  , 9339 , 16574, 25610, 29366, 32767, 32375, 28853, 25426, 16591, 8770 , -573 , -8197, -18044, -25076, -31099, -32767, -32486, -29733, -24427, -18410, -8573, -1864, 8646 , -124 , 8999 , 18106, 24761, 30778, 32081, 31996, 29940, 24066, 17349, 7879 , -1042, -9917, -19048, -25040, -29041, -31524, -31773, -31402, -24109, -18649, -9816, 331  , 9836 , -1127, 8009 , 17824, 24368, 29344, 32767, 32767, 29190, 25672, 18548, 9832 , 1365 , -10194, -18998, -23549, -30236, -31405, -32767, -30296, -25801, -19458, -9177, -2033, 7866 , -227 , 10253, 17245, 23708, 30902, 32094, 31931, 30271, 23834, 17729, 7855 , -1172, -10010, -16021, -23589, -30103, -31089, -31381, -30023, -24073, -17308, -8247, 1105 , 7762 , -136 , 7766 , 16961, 24589, 28869, 32767, 32767, 29491, 25341, 18787, 8088 , 1205 , -10479, -18681, -25202, -28816, -31986, -32767, -29600, -25167, -18811, -10978, 89   , 9897 , -1082, 8824 , 16714, 26194, 28987, 32085, 30989, 30824, 23597, 17946, 9962 , -1014, -9462, -17495, -24948, -29868, -31778, -32767, -29011, -23820, -17282, -10271, 383  , 7619 , -574 , 10330, 18177, 24348, 30043, 31451, 32767, 29721, 25391, 16998, 10409, -623 , -9103, -17333, -23582, -30500, -31705, -31508, -30402, -24468, -18938, -9419, 933  , 8160 , -1542, 8189 , 18796, 25704, 29959, 31133, 31493, 28446, 26377, 18756, 9556 , 886  , -8696, -17710, -25813, -30941, -32767, -31818, -30013, -25255, -17953, -10100, -759 , 8291 , 491  , 9025 , 16803, 24183, 31396, 32657, 30922, 31285, 24103, 18407, 10855, -845 , -8706, -16023, -25889, -29027, -31135, -32157, -31432, -24725, -18392, -10441, -2033, 9649 , 445  , 9841 , 16157, 24808, 30062, 32767, 31156, 31305, 23746, 18454, 9929 , 987  , -10540, -18937, -25793, -29587, -32046, -32767, -30061, -25242, -16800, -8348, -325 , 8218 , -420 , 10594, 16487, 23954, 28810, 32767, 31156, 31229, 23984, 19372, 9569 , 660  , -10262, -16830, -23673, -28176, -32767, -32767, -30280, -26414, -16644, -10454, 681  , 8610 , 1147 , 10738, 18224, 25990, 30482, 32604, 32767, 30170, 26030, 19304, 10389, -964 , -7569, -17440, -26116, -29349, -31413, -32767, -31246, -25227, -17783, -10449, 833  , 7219 , 1103 , 9516 , 17715, 25140, 28708, 32767, 30983, 29828, 24107, 17420, 10969, 1411 , -10431, -16508, -25738, -28775, -32687, -32767, -30146, -25664, -17272, -10131, -1732, 7346 , 1311 , 8154 , 16514, 24740, 29140, 32228, 31474, 29304, 24937, 16866, 8410 , 1108 , -7681, -18165, -24752, -29178, -31908, -31548, -29175, -26224, -17156, -8631, 425  , 9219 , -767 , 9786 , 17029, 25039, 29964, 32767, 31377, 29008, 24335, 16635, 8306 , -1364, -9495, -18630, -25890, -30807, -31422, -32767, -28773, -24019, -19600, -9202, 643  , 10345, 8    , 7666 , 17233, 23464, 28635, 32004, 32767, 30431, 25524, 19108, 8103 , 1043 , -7890, -16753, -26163, -29923, -32556, -32767, -30833, -26173, -18508, -9905, 708  , 7486 , 1343 , 7694 , 18073, 23199, 30781, 31987, 32609, 30006, 23523, 17559, 10925, 1576 , -8972, -17827, -23180, -29585, -32767, -31235, -28482, -25680, -19397, -9054, 979  , 10076, -1515, 10587, 18097, 23703, 28452, 32571, 31379, 30454, 25601, 18374, 10473, 869  , -7870, -18644, -25770, -29909, -31964, -31303, -31535, -25081, -18180, -8477, -368 , 9421 , -1266, 8478 , 16800, 25517, 30316, 31768, 32767, 30415, 24353, 17747, 9676 , -848 , -10366, -19013, -24700, -30443, -32767, -32632, -29009, -25632, -18301, -10424, 769  , 9265 , -941 , 9228 , 16606, 26064, 28600, 32767, 32767, 30206, 25251, 18017, 8520 , -595 , -10461, -17028, -22983, -30998, -32767, -32767, -28572, -23918, -18374, -9286, -701 , 8696 , -236 , 7646 , 16805, 23572, 30659, 30906, 32767, 30642, 24734, 18760, 8721 , -1291, -9342, -17722, -25036, -30613, -31459, -32689, -28709, -26460, -19081, -8931, -596 , 8016 , -237 , 9221 , 16397, 23797, 31060, 32228, 31730, 31171, 26319, 17468, 9386 , -177 , -9770, -16549, -23841, -29303, -30762, -32767, -31080, -23727, -19121, -9366, -786 , 8278 , 1399 , 9766 , 16186, 24530, 29296, 32654, 30931, 31119, 23962, 16758, 8994 , 193  , -9702, -16333, -22977, -29270, -31926, -32767, -28831, -25016, -19621, -10565, -83  , 7507 , -1357, 7619 , 17853, 23906, 30768, 31693, 32767, 29923, 25372, 17621, 8802 , -120 , -9081, -18010, -24629, -29993, -31540, -32691, -31551, -25605, -19038, -11209, -410 , 8588 , -1144, 9683 , 17644, 24597, 30385, 31320, 32767, 30333, 25408, 17223, 8342 , -530 , -9765, -18954, -23083, -29194, -32767, -32767, -30310, -24156, -16830, -8683, 245  , 7486 , -950 , 9581 , 16232, 24878, 28154, 32132, 31890, 31049, 23406, 18310, 8238 , -915 , -8531, -16042, -23163, -31050, -31492, -30937, -28502, -23490, -16680, -9501, -510 , 8520 , 1346 , 8811 , 17540, 23929, 31263, 32148, 32767, 28804, 25249, 17649, 9806 , -522 , -8287, -15894, -25243, -28490, -30956, -30918, -31582, -25480, -18944, -8173, 877  , 7438 , 560  , 7982 , 17711, 24072, 28670, 32767, 32758, 29431, 25331, 17590, 10043, -213 , -9664, -17948, -23063, -28449, -32698, -32336, -31172, -24219, -19009, -11283, 620  , 8288 , -883 , 9815 , 17341, 25382, 30733, 30917, 32163, 31320, 25070, 16796, 9487 , -1120, -10516, -18181, -23760, -28388, -31743, -32767, -29596, -25895, -16772, -8057, -2065, 8165 , 1619 , 7701 , 18262, 25347, 29798, 32767, 30922, 30934, 25797, 17737, 9362 , 99   , -9034, -17814, -23602, -31155, -31691, -31131, -29093, -25675, -19013, -8667, 237  , 7157 , -525 , 9215 , 17638, 24102, 29431, 32767, 32762, 31392, 23654, 18552, 9214 , -781 , -10448, -16411, -25639, -29800, -30813, -31973, -29442, -26036, -17309, -10249, -1894, 7302 , -1340, 8166 , 18910, 25028, 30834, 30988, 32767, 28819, 24051, 16555, 9895 , 524  , -9828, -18371, -23365, -29574, -32767, -32338, -31494, -23602, -17534, -8829, -1302, 9485 , -1558, 9003 , 16155, 24170, 29602, 32767, 32542, 30993, 24247, 18971, 9595 , -1373, -8907, -17122, -26156, -30727, -32767, -31249, -29631, -26012, -18090, -10581, 725  , 10165, 418  , 9671 , 16209, 25993, 30791, 30963, 32767, 30884, 25638, 16445, 9267 , 556  , -10503, -18031, -24549, -30294, -31801, -32502, -30460, -24877, -16985, -10689, 1074 , 8614 , 1212 , 9945 , 18797, 23566, 28463, 32767, 32767, 30597, 25491, 16632, 11050, -232 , -10534, -18807, -25845, -29114, -32767, -31002, -28550, -23572, -18320, -8216, -1312, 9283 , -948 , 9893 , 18453, 23463, 30562, 31326, 32767, 28888, 23755, 17845, 8214 , -738 , -9395, -18476, -24677, -29283, -30790, -32532, -29050, -23646, -18468, -8672, -1543, 9476 , 572  , 9703 , 18601, 24702, 31038, 32080, 31178, 31319, 24301, 16765, 7962 , 1130 , -9946, -18251, -24892, -28197, -30755, -32693, -29529, -23926, -17733, -10535, -1757, 8227 , 226  , 10652, 17229, 24309, 30953, 32767, 32767, 31412, 25230, 17257, 9344 , -362 , -8488, -17556, -25603, -28135, -32767, -31065, -29131, -24684, -19214, -8647, -1995, 7361 , -516 , 8880 , 16796, 24185, 30575, 32165, 30898, 30525, 23414, 18104, 8135 , -438 , -7717, -18275, -25126, -29001, -32767, -31735, -30524, -25236, -18794, -10096, 846  , 9102 , 549  , 10848, 16886, 26288, 31188, 32449, 31568, 30672, 24870, 18158, 8660 , 1240 , -10534, -15953, -25481, -28316, -32767, -32330, -30983, -25582, -17094, -10767, -1473, 8505 , 334  , 8507 , 16974, 26065, 28299, 31604, 32767, 31201, 24081, 18122, 8115 , 230  , -9141, -18709, -25586, -29933, -32767, -32657, -30533, -24450, -17324, -10770, -1681, 10081, -955 , 8730 , 18010, 25734, 29457, 30939, 31360, 29796, 23663, 18303, 8748 , -159 , -9657, -18915, -23290, -29212, -32767, -32767, -30823, -24332, -19462, -11070, -1203, 9838 , 42   , 8904 , 16096, 23461, 29474, 32767, 31268, 30508, 23604, 16322, 10568, -144 , -10290, -16377, -25077, -29645, -32715, -32293, -31164, -25941, -17372, -11107, 1118 , 9789 , 1348 , 9714 , 19030, 24810, 29465, 31615, 32767, 29120, 23758, 18212, 8488 , 929  , -8940, -18954, -23400, -31293, -31128, -32767, -29861, -24648, -16814, -9006, 503  , 9626 , 298  , 9987 , 18779, 25210, 28986, 32767, 32458, 29186, 23308, 19151, 10637, 390  , -10571, -17306, -24889, -30682, -31548, -32767, -30016, -23725, -17253, -10480, 1155 , 8896 , 291  , 7903 , 17631, 26178, 28643, 30883, 32767, 30300, 26038, 17700, 9901 , 1867 , -9387, -18240, -23979, -30822, -31095, -31213, -29868, -25793, -18794, -9649, -957 , 10093, 226  , 10620, 16094, 23276, 29606, 30967, 31321, 28409, 25707, 16238, 8182 , -445 , -9902, -17645, -23454, -31224, -32438, -31616, -29624, -26028, -16836, -9991, -359 , 10321, -371 , 9962 , 18343, 26217, 30366, 32767, 31653, 28733, 23691, 17411, 8635 , -780 , -9734, -18988, -23471, -29960, -31797, -32767, -30373, -26166, -16575, -10782, 754  , 7949 , 63   , 9366 , 16826, 25227, 31266, 31803, 32767, 29894, 25141, 17847, 10633, 431  , -10111, -17164, -23380, -29818, -31255, -32455, -30050, -24285, -19455, -10732, 272  , 10158, 1273 , 9665 , 19173};
+	    int tamanho = sizeof(vetor) / sizeof(vetor[0]);
+
+	    int16_t readIO;
+	    int i;
+	    for (i = 0; i < tamanho; i++) {
+	    	IOWR_16DIRECT(0, 0, vetor[i]);
+	     	readIO = IORD_16DIRECT(0, 0);
+	     	printf("%d\n", readIO);
+	    }
+
+	  msleep(300000);
+  }
+}
+
+/* Main creates a single task, SSSInitialTask, and starts task scheduler.
+ */
+
+int main (int argc, char* argv[], char* envp[])
+{
+  
+  INT8U error_code;
+
+  DM9000A_INSTANCE( DM9000A_0, dm9000a_0 );
+  DM9000A_INIT( DM9000A_0, dm9000a_0 );
+
+  /* Clear the RTOS timer */
+  OSTimeSet(0);
+
+  /* SSSInitialTask will initialize the NicheStack
+   * TCP/IP Stack and then initialize the rest of the Simple Socket Server example
+   * RTOS structures and tasks.
+   */
+  error_code = OSTaskCreateExt(SSSInitialTask,
+                             NULL,
+                             (void *)&SSSInitialTaskStk[TASK_STACKSIZE],
+                             SSS_INITIAL_TASK_PRIORITY,
+                             SSS_INITIAL_TASK_PRIORITY,
+                             SSSInitialTaskStk,
+                             TASK_STACKSIZE,
+                             NULL,
+                             0);
+  alt_uCOSIIErrorHandler(error_code, 0);
+
+  /*
+   * As with all MicroC/OS-II designs, once the initial thread(s) and
+   * associated RTOS resources are declared, we start the RTOS. That's it!
+   */
+  OSStart();
+  
+  while(1); /* Correct Program Flow never gets here. */
+
+  return -1;
+}
+
+int str_length( char str[])
+{
+   int i = 0;
+   while (str[i] != '\0')
+       i++;
+   return i;
+}
+
+int binaryTodecimal (char num[])
+{
+    int i, deci_num, mul = 0;
+    for ( deci_num = 0, i = str_length(num) - 1; i >= 0; --i, ++mul)
+    {
+            deci_num = deci_num + (num[i] - 48) * (1 << mul);
+    }
+
+    return deci_num;
+ }
+
+char *decimal_to_binary(int n)
+{
+  int c, d, t;
+  char *p;
+
+  t = 0;
+  p = (char*)malloc(32+1);
+
+  if (p == NULL)
+    exit(EXIT_FAILURE);
+
+  for (c = 31 ; c >= 0 ; c--)
+  {
+    d = n >> c;
+
+    if (d & 1)
+      *(p+t) = 1 + '0';
+    else
+      *(p+t) = 0 + '0';
+
+    t++;
+  }
+  *(p+t) = '\0';
+
+  return  p;
+}
+
+
+void disp_7seg(int _duty_cycle, int _prescaler, int _timer, int _enable){
+
+	int disp1, disp2, disp3, disp4, disp5, disp6, disp7, disp8;
+
+    disp1 = 0;
+    disp2 = _duty_cycle;
+
+    disp3 = 0;
+    disp4 = _prescaler;
+
+    disp5 = 0;
+    disp6 = _timer;
+
+    disp7 = 0;
+    disp8 = _enable;
+
+	IOWR_ALTERA_AVALON_PIO_DATA(SEG7_DISPLAY_BASE, ((disp1 << 28) + (disp2 << 24) + (disp3 << 20) + (disp4 << 16) + (disp5 << 12) + (disp6 << 8) + (disp7 << 4) + (disp8 << 0)));
+
+}
+
+/******************************************************************************
+*                                                                             *
+* License Agreement                                                           *
+*                                                                             *
+* Copyright (c) 2006 Altera Corporation, San Jose, California, USA.           *
+* All rights reserved.                                                        *
+*                                                                             *
+* Permission is hereby granted, free of charge, to any person obtaining a     *
+* copy of this software and associated documentation files (the "Software"),  *
+* to deal in the Software without restriction, including without limitation   *
+* the rights to use, copy, modify, merge, publish, distribute, sublicense,    *
+* and/or sell copies of the Software, and to permit persons to whom the       *
+* Software is furnished to do so, subject to the following conditions:        *
+*                                                                             *
+* The above copyright notice and this permission notice shall be included in  *
+* all copies or substantial portions of the Software.                         *
+*                                                                             *
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR  *
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,    *
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE *
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER      *
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING     *
+* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER         *
+* DEALINGS IN THE SOFTWARE.                                                   *
+*                                                                             *
+* This agreement shall be governed in all respects by the laws of the State   *
+* of California and by the laws of the United States of America.              *
+* Altera does not recommend, suggest or require that this reference design    *
+* file be used in conjunction or combination with any other product.          *
+******************************************************************************/

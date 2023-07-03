@@ -13,9 +13,11 @@ const server = net.createServer(socket => {
     });
   });
 
+  const outputFileStream = fs.createWriteStream('out.dat');
+
   fileStream.on('end', () => {
     console.log('File transmission complete');
-    socket.end(); // Close the connection once file is sent
+    //socket.end(); // Close the connection once file is sent
   });
 
   socket.on("end", () => {
@@ -27,7 +29,9 @@ const server = net.createServer(socket => {
   });
   
   socket.on("data", data => {
-	console.log("[DATA]", data.toString());
+	const receivedData = data.toString();
+	outputFileStream.write(receivedData);
+	console.log("[DATA]", receivedData);
   });
 });
 
