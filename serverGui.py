@@ -4,7 +4,7 @@ from PySide6.QtCore import Qt, Signal, QProcess
 from PySide6.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout, QPlainTextEdit
 
 class ServerUI(QWidget):
-    update = Signal(int)
+    update = Signal(list)
 
     def __init__(self):
         super(ServerUI, self).__init__()
@@ -50,12 +50,16 @@ class ServerUI(QWidget):
         stdout = bytes(data).decode().replace("\x00", "")
         self.message(stdout)
         lines = stdout.split("\n")
+        points = []
         for val in lines:
             print("value: " + val)
             if val and (val[0].isdigit() or val[0] == '-'):
                 point = int(val)
                 print(f"captured point: {point}")
-                self.update.emit(point)
+                points.append(point)
+
+        if points:
+            self.update.emit(points)
 
     def process_finished(self):
         self.message("Process finished.")

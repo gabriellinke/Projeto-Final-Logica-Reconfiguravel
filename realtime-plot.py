@@ -65,9 +65,9 @@ class MainWindow(QMainWindow):
         # self.timer.start()
         self.server.update.connect(self.update_plot)
 
-    def update_plot(self, point=0):
-        self.output_ydata.append(point)
-        self.output_xdata.append(len(self.output_xdata)+1)
+    def update_plot(self, points=[]):
+        self.output_ydata += points
+        self.output_xdata = list(range(len(self.output_ydata)))
         # fillY = self.output_ydata + ([-50000]*(len(self.output_xdata) - len(self.output_ydata)))
         # print(len(fillY))
 
