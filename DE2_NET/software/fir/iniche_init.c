@@ -116,7 +116,7 @@ void SSSInitialTask(void *task_data)
   int res;
   int SocketFD;
   int16_t readIO;
-  char buf[5000];
+  char buf[10];
   char p1[10];
 
   printf("Inicializacao\n");
@@ -127,7 +127,7 @@ void SSSInitialTask(void *task_data)
   memset(&sa, 0, sizeof sa);
   sa.sin_family = AF_INET;
   sa.sin_port = htons(5000); // ALTERAR PORTA
-  res = inet_pton(AF_INET, "192.168.0.210", &sa.sin_addr); //ALTERAR O IP
+  res = inet_pton(AF_INET, "192.168.15.15", &sa.sin_addr); //ALTERAR O IP
 
   if (connect(SocketFD, (struct sockaddr *)&sa, sizeof sa) == -1) {
 	perror("connect failed");
@@ -139,6 +139,7 @@ void SSSInitialTask(void *task_data)
 	  if (recv(SocketFD, buf, sizeof(buf), 0) < 0)  {
 	  		perror("Error - Recv()");
 	  } else {
+		  printf("received buffer\n");
 		  int i=0, j=0;
 		  while(i < sizeof(buf)) {
 			  if(buf[i] != '\n') {
@@ -164,7 +165,6 @@ void SSSInitialTask(void *task_data)
 					      msg[len] = '\n';
 					      msg[len + 1] = '\0';
 					  }
-
 					  if (send(SocketFD, msg, sizeof(msg), 0) < 0){
 						  perror("Send()");
 						  exit(EXIT_FAILURE);

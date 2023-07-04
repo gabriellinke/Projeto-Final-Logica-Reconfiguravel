@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 import asyncio
+import sys
 import signal
 from time import sleep
 signal.signal(signal.SIGINT, signal.SIG_DFL)
 host = "192.168.15.15"
 port = 5000
-f = open("input.dat", "r")
 
 async def read_data(reader):
     data = await reader.readline()
@@ -13,34 +13,37 @@ async def read_data(reader):
     output = int(messageRec)
     return output
 
-async def write_data(writer):
-    line = next(f, None)
+async def write_data(writer, message_file):
+    line = next(message_file, None)
     if line == None:
         print("end of file reached")
         return False
     message = (line.strip() + "\n").encode()
-    print(f"Send: {message!r}")
+    print(f"Send: {message}")
     writer.write(message)
     await writer.drain()
     return True
 
 async def handle_data(reader, writer):
+    f = open("input.dat", "r")
+    fw = open("out.dat", "w")
     addr = writer.get_extra_info('peername')
     print(f"Connected to {addr!r}")
     eof = False
 
     while True:
         if eof == False:
-            eof = not (await write_data(writer))
+            eof = not (await write_data(writer, f))
         output = await read_data(reader)
-        print(f"Received {output} from {addr!r}")
+        print(f"Received: {output}")
+        fw.write(str(output) + "\n")
 
 
     # print("Close the connection")
     # writer.close()
     # await writer.wait_closed()
 
-async def main():
+async def run_server():
     server = await asyncio.start_server(
         handle_data, host, port)
 
@@ -80,6 +83,7 @@ async def main():
 #         print("from connected user: " + str(data))
 
 #     conn.close()  # close the connection
-
+def main():
+    asyncio.run(run_server())
 if __name__ == '__main__':
-    asyncio.run(main())
+    main()

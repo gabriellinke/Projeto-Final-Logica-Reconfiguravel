@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+from serverGui import ServerUI
+
 import sys
 import random
 import matplotlib
@@ -6,7 +8,7 @@ import numpy as np
 from numpy.fft import fft, ifft
 matplotlib.use('Qt5Agg')
 
-from PySide6.QtWidgets import QMainWindow, QApplication, QPushButton, QVBoxLayout, QWidget
+from PySide6.QtWidgets import QMainWindow, QApplication, QPushButton, QGridLayout, QWidget
 from PySide6.QtCore import QTimer
 
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
@@ -32,21 +34,23 @@ class MainWindow(QMainWindow):
         # self.setCentralWidget(self.canvas)
 
         self.button = QPushButton('FFT')
+        self.server = ServerUI()
         self.show_fft = False
         self.button.clicked.connect(self.handleButton)
-        layout = QVBoxLayout()
-        layout.addWidget(self.button)
-        layout.addWidget(self.canvas)
+        layout = QGridLayout()
+        layout.addWidget(self.server, 0, 0, 4, 2)
+        layout.addWidget(self.button, 0, 5, 1, 1)
+        layout.addWidget(self.canvas, 1, 2, 3, 6)
         widget = QWidget()
         widget.setLayout(layout)
         self.setCentralWidget(widget)
 
         n_data = 50
         self.max_data = 500
-        self.output_xdata = list(range(n_data))
         self.input_ydata = [int(e.strip()) for e in open("input.dat", "r").readlines()]
         self.input_xdata = list(range(len(self.input_ydata)))
-        self.output_ydata = [random.randint(0, 10) for i in range(n_data)]
+        self.output_ydata = []
+        self.output_xdata = list(range(len(self.output_ydata)))
 
         self._plot_input_ref = None
         self._plot_output_ref = None
@@ -55,38 +59,50 @@ class MainWindow(QMainWindow):
         self.show()
 
         # Setup a timer to trigger the redraw by calling update_plot.
-        self.timer = QTimer()
-        self.timer.setInterval(100)
-        self.timer.timeout.connect(self.update_plot)
-        self.timer.start()
+        # self.timer = QTimer()
+        # self.timer.setInterval(100)
+        # self.timer.timeout.connect(self.update_plot)
+        # self.timer.start()
+        self.server.update.connect(self.update_plot)
 
-    def update_plot(self):
-        # if(len(self.input_ydata) < self.max_data):
-            # Drop off the first y element, append a new one.
-            # self.input_xdata = self.input_xdata + [len(self.input_xdata)+1]
-            # self.input_ydata = self.input_ydata + [random.randint(0, 10)]
+    def update_plot(self, point=0):
+        self.output_ydata.append(point)
+        self.output_xdata.append(len(self.output_xdata)+1)
+        # fillY = self.output_ydata + ([-50000]*(len(self.output_xdata) - len(self.output_ydata)))
+        # print(len(fillY))
 
-        self.output_ydata = self.output_ydata[1:] + [random.randint(0, 10)]
-
-        self.canvas.input_axes.cla()  # Clear the canvas.
-        self.canvas.output_axes.cla()  # Clear the canvas.
-        if(self.show_fft):
-            sr = 100
-            X_in = fft(self.input_ydata)
-            N = len(X_in)
-            n = np.arange(N)
-            T = N/sr
-            freq = n/T
-            self.canvas.input_axes.stem(freq, np.abs(X_in), 'r')
-            X_out = fft(self.output_ydata)
-            N = len(X_out)
-            n = np.arange(N)
-            T = N/sr
-            freq = n/T
-            self.canvas.output_axes.stem(freq, np.abs(X_out), 'b')
+        if self._plot_input_ref is None:
+            plot_refs = self.canvas.input_axes.plot(self.input_xdata, self.input_ydata, 'r')
+            self._plot_input_ref = plot_refs[0]
         else:
-            self.canvas.input_axes.plot(self.input_xdata, self.input_ydata, 'r')
-            self.canvas.output_axes.plot(self.output_xdata, self.output_ydata, 'b')
+            self._plot_input_ref.set_ydata(self.input_ydata)
+
+        if self._plot_output_ref is None:
+            plot_refs = self.canvas.output_axes.plot(self.output_xdata, self.output_ydata, 'b')
+            self.canvas.output_axes.set_xlim(self.canvas.input_axes.get_xlim())
+            self.canvas.output_axes.set_ylim(self.canvas.input_axes.get_ylim())
+            self._plot_output_ref = plot_refs[0]
+        else:
+            self._plot_output_ref.set_ydata(self.output_ydata)
+            self._plot_output_ref.set_xdata(self.output_xdata)
+
+        # if(self.show_fft):
+        #     sr = 44100
+        #     X_in = fft(self.input_ydata)
+        #     N = len(X_in)
+        #     n = np.arange(N)
+        #     T = N/sr
+        #     freq = n/T
+        #     self.canvas.input_axes.stem(freq, np.abs(X_in), 'r')
+        #     X_out = fft(self.output_ydata)
+        #     N = len(X_out)
+        #     n = np.arange(N)
+        #     T = N/sr
+        #     freq = n/T
+        #     self.canvas.output_axes.stem(freq, np.abs(X_out), 'b')
+        # else:
+        #     self.canvas.input_axes.plot(self.input_xdata, self.input_ydata, 'r')
+        #     self.canvas.output_axes.plot(self.output_xdata, self.output_ydata, 'b')
         # Trigger the canvas to update and redraw.
 
         self.canvas.draw()
