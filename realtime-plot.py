@@ -85,7 +85,7 @@ class MainWindow(QMainWindow):
             freq = n/T
             self.canvas.output_axes.stem(freq, np.abs(X_out), 'b')
         else:
-            self.canvas.input_axes.plot(self.input_xdata[-50:], self.input_ydata[-50:], 'r')
+            self.canvas.input_axes.plot(self.input_xdata, self.input_ydata, 'r')
             self.canvas.output_axes.plot(self.output_xdata, self.output_ydata, 'b')
         # Trigger the canvas to update and redraw.
 
