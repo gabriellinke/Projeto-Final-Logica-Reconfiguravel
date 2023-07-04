@@ -31,7 +31,7 @@ const server = net.createServer(socket => {
   socket.on("data", data => {
 	const receivedData = data.toString();
 	outputFileStream.write(receivedData);
-	console.log("[DATA]", receivedData);
+	console.log(receivedData);
   });
 });
 

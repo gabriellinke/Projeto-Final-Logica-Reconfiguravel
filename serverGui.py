@@ -32,7 +32,7 @@ class ServerUI(QWidget):
             self.p.readyReadStandardOutput.connect(self.handle_stdout)
             self.p.readyReadStandardError.connect(self.handle_stderr)
             self.p.finished.connect(self.process_finished)  # Clean up once complete.
-            self.p.start("python", ['-u', 'server.py'])
+            self.p.start("node", ['test.js'])
             self.btn.setText("Stop Server")
         else:
             self.btn.setText("Start Server")
@@ -47,14 +47,15 @@ class ServerUI(QWidget):
 
     def handle_stdout(self):
         data = self.p.readAllStandardOutput()
-        stdout = bytes(data).decode("utf8")
-        if(stdout[:8] == "Received"):
-            val = stdout.partition("\n")[0][10:]
-            print("value: " + val)
-            point = int(val)
-            print(f"captured point: {point}")
-            self.update.emit(point)
+        stdout = bytes(data).decode().replace("\x00", "")
         self.message(stdout)
+        lines = stdout.split("\n")
+        for val in lines:
+            print("value: " + val)
+            if val and (val[0].isdigit() or val[0] == '-'):
+                point = int(val)
+                print(f"captured point: {point}")
+                self.update.emit(point)
 
     def process_finished(self):
         self.message("Process finished.")

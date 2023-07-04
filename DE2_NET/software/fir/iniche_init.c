@@ -116,7 +116,7 @@ void SSSInitialTask(void *task_data)
   int res;
   int SocketFD;
   int16_t readIO;
-  char buf[10];
+  char buf[5000];
   char p1[10];
 
   printf("Inicializacao\n");
