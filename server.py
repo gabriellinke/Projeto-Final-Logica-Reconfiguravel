@@ -7,25 +7,32 @@ host = "192.168.15.15"
 port = 5000
 f = open("input.dat", "r")
 
+async def read_data(reader):
+    data = await reader.readline()
+    messageRec = data.decode().replace("\x00","")
+    output = int(messageRec)
+    return output
+
+async def write_data(writer):
+    line = next(f, None)
+    if line == None:
+        print("end of file reached")
+        return False
+    message = (line.strip() + "\n").encode()
+    print(f"Send: {message!r}")
+    writer.write(message)
+    await writer.drain()
+    return True
+
 async def handle_data(reader, writer):
     addr = writer.get_extra_info('peername')
     print(f"Connected to {addr!r}")
-
-    for line in f:
-        message = (line.strip() + "\n").encode()
-        # message = next(f).strip() + "\n"
-        print(f"Send: {message!r}")
-        writer.write(message)
-        await writer.drain()
-        data = await reader.readline()
-        messageRec = data.decode()
-        output = int(messageRec)
-        print(f"Received {output} from {addr!r}")
+    eof = False
 
     while True:
-        data = await reader.readline()
-        messageRec = data.decode()
-        output = int(messageRec)
+        if eof == False:
+            eof = not (await write_data(writer))
+        output = await read_data(reader)
         print(f"Received {output} from {addr!r}")
 
 
