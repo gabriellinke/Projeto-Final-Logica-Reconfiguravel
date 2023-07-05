@@ -3519,3 +3519,179 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.
 
 !ENTRY com.altera.sbtgui.launch 1 0 2023-07-04 23:04:22.490
 !MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 --reset-target /cygdrive/c/projeto/DE2_NET/software/fir/fir.elf]
+!SESSION 2023-07-05 08:35:24.411 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 08:40:29.796
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 08:40:32.372
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 --reset-target /cygdrive/c/projeto/DE2_NET/software/fir/fir.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 08:41:35.974
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 08:41:36.764
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 08:41:39.063
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 --reset-target /cygdrive/c/projeto/DE2_NET/software/fir/fir.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 08:44:39.441
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 08:44:41.602
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 --reset-target /cygdrive/c/projeto/DE2_NET/software/fir/fir.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 08:49:12.761
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 08:49:13.620
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 08:49:15.848
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 --reset-target /cygdrive/c/projeto/DE2_NET/software/fir/fir.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:01:40.190
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:01:41.028
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:01:43.241
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 --reset-target /cygdrive/c/projeto/DE2_NET/software/fir/fir.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:03:17.967
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:03:18.810
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:03:21.020
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 --reset-target /cygdrive/c/projeto/DE2_NET/software/fir/fir.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:05:26.919
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:05:27.778
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:05:30.076
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 --reset-target /cygdrive/c/projeto/DE2_NET/software/fir/fir.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:06:22.393
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:06:23.237
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:06:25.563
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 --reset-target /cygdrive/c/projeto/DE2_NET/software/fir/fir.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:10:47.699
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:10:48.537
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:10:50.779
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 --reset-target /cygdrive/c/projeto/DE2_NET/software/fir/fir.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:11:39.417
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:11:40.229
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:11:42.431
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 --reset-target /cygdrive/c/projeto/DE2_NET/software/fir/fir.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:16:34.170
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:16:35.013
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:16:37.360
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 --reset-target /cygdrive/c/projeto/DE2_NET/software/fir/fir.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:42:25.870
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:42:26.724
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:42:28.917
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 --reset-target /cygdrive/c/projeto/DE2_NET/software/fir/fir.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:46:56.376
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:46:57.230
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:46:59.479
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 --reset-target /cygdrive/c/projeto/DE2_NET/software/fir/fir.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:49:10.561
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:49:11.345
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:49:13.626
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 --reset-target /cygdrive/c/projeto/DE2_NET/software/fir/fir.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:50:42.873
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:50:43.671
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:50:45.939
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 --reset-target /cygdrive/c/projeto/DE2_NET/software/fir/fir.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:51:16.254
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:51:17.065
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:51:19.413
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 --reset-target /cygdrive/c/projeto/DE2_NET/software/fir/fir.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:56:00.651
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:56:01.557
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:56:03.778
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 --reset-target /cygdrive/c/projeto/DE2_NET/software/fir/fir.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:57:39.280
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:57:40.108
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 09:57:42.372
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 --reset-target /cygdrive/c/projeto/DE2_NET/software/fir/fir.elf]
+!SESSION 2023-07-05 10:09:44.724 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 10:10:02.654
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x1a82108]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2023-07-05 10:10:04.926
+!MESSAGE Executing: [D:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x1a82108 --reset-target /cygdrive/c/projeto/DE2_NET/software/fir/fir.elf]

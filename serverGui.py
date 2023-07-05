@@ -32,7 +32,7 @@ class ServerUI(QWidget):
             self.p.readyReadStandardOutput.connect(self.handle_stdout)
             self.p.readyReadStandardError.connect(self.handle_stderr)
             self.p.finished.connect(self.process_finished)  # Clean up once complete.
-            self.p.start("node", ['test.js'])
+            self.p.start("node", ['server.js'])
             self.btn.setText("Stop Server")
         else:
             self.btn.setText("Start Server")
