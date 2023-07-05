@@ -127,7 +127,7 @@ void SSSInitialTask(void *task_data)
   memset(&sa, 0, sizeof sa);
   sa.sin_family = AF_INET;
   sa.sin_port = htons(5000); // ALTERAR PORTA
-  res = inet_pton(AF_INET, "192.168.15.15", &sa.sin_addr); //ALTERAR O IP
+  res = inet_pton(AF_INET, "192.168.0.210", &sa.sin_addr); //ALTERAR O IP
 
   if (connect(SocketFD, (struct sockaddr *)&sa, sizeof sa) == -1) {
 	perror("connect failed");

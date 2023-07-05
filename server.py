@@ -4,7 +4,7 @@ import sys
 import signal
 from time import sleep
 signal.signal(signal.SIGINT, signal.SIG_DFL)
-host = "192.168.15.15"
+host = "192.168.0.210"
 port = 5000
 
 async def read_data(reader):

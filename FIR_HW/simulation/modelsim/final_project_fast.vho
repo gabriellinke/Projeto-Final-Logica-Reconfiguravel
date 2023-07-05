@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "06/28/2023 08:52:48"
+-- DATE "07/04/2023 22:14:54"
 
 -- 
 -- Device: Altera EP2C35F672C6 Package FBGA672
@@ -4651,8 +4651,8 @@ SIGNAL \Add65~29\ : std_logic;
 SIGNAL \Add65~30_combout\ : std_logic;
 SIGNAL \yn_signed~21_combout\ : std_logic;
 SIGNAL \xn~combout\ : std_logic_vector(15 DOWNTO 0);
-SIGNAL yn_1 : std_logic_vector(65 DOWNTO 0);
 SIGNAL yn_2 : std_logic_vector(65 DOWNTO 0);
+SIGNAL yn_1 : std_logic_vector(65 DOWNTO 0);
 
 BEGIN
 

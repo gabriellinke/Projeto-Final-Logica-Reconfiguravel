@@ -58,7 +58,7 @@ vcom -reportprogress 30 -work work C:/projeto/FIR_HW/FIR/top_level.vhd
 # -- Compiling entity top_level
 # -- Compiling architecture arq_top_level of top_level
 # -- Loading entity FIR_low_area
-vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+vcom -reportprogress 30 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -86,7 +86,7 @@ add wave -position insertpoint  \
 sim:/top_level_tb/clock_fs \
 sim:/top_level_tb/xn_signed \
 sim:/top_level_tb/yn_signed
-run 500 us
+run 10 us
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
@@ -125,6 +125,827 @@ run 500 us
 #    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 #    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+run 1 ms
+restart
+vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+run 300 us
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+restart
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+run 100 us
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+run 200 us
+run 50 us
+run 10 us
+restart
+run 10 us
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+restart
+run 100 us
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+restart
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+run 100 us
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+restart
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+run 100 us
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+restart
+vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+run 100 us
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+restart
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+run 100 us
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+restart
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+run 100 us
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/testbench/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area_tb
+# -- Compiling architecture FIR_low_area_tb_arch of FIR_low_area_tb
+# -- Loading entity FIR_low_area
+vsim rtl_work.fir_low_area_tb
+# vsim rtl_work.fir_low_area_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading ieee.math_real(body)
+# Loading rtl_work.fir_package(body)
+# Loading rtl_work.fir_low_area_tb(fir_low_area_tb_arch)
+# Loading rtl_work.fir_low_area(fir_low_area_arch)
+add wave -position insertpoint  \
+sim:/fir_low_area_tb/clock_fs \
+sim:/fir_low_area_tb/xn_signed \
+sim:/fir_low_area_tb/yn_signed
+run 100 us
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+run -all
+# ** Failure: SIMULATION END
+#    Time: 80181406032 ps  Iteration: 0  Process: /fir_low_area_tb/sim_time File: C:/projeto/FIR_HW/FIR/testbench/FIR_low_area_tb.vhd
+# Break in Process sim_time at C:/projeto/FIR_HW/FIR/testbench/FIR_low_area_tb.vhd line 135
+vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/testbench/FIR_low_area_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity FIR_low_area_tb
+# -- Compiling architecture FIR_low_area_tb_arch of FIR_low_area_tb
+# -- Loading entity FIR_low_area
+restart
+# Loading rtl_work.fir_low_area_tb(fir_low_area_tb_arch)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 7981859424 ps  Iteration: 0  Process: /fir_low_area_tb/sim_time File: C:/projeto/FIR_HW/FIR/testbench/FIR_low_area_tb.vhd
+# Break in Process sim_time at C:/projeto/FIR_HW/FIR/testbench/FIR_low_area_tb.vhd line 135
+vsim rtl_work.top_level_tb
+# vsim rtl_work.top_level_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading ieee.math_real(body)
+# Loading rtl_work.fir_package(body)
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+# Loading rtl_work.top_level(arq_top_level)
+# Loading rtl_work.fir_low_area(fir_low_area_arch)
+# Loading rtl_work.reg16(behavior)
+vsim rtl_work.fir_low_area_tb
+# vsim rtl_work.fir_low_area_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading ieee.math_real(body)
+# Loading rtl_work.fir_package(body)
+# Loading rtl_work.fir_low_area_tb(fir_low_area_tb_arch)
+# Loading rtl_work.fir_low_area(fir_low_area_arch)
+add wave -position insertpoint  \
+sim:/fir_low_area_tb/duv_fir_signed/clock_fs \
+sim:/fir_low_area_tb/duv_fir_signed/xn \
+sim:/fir_low_area_tb/duv_fir_signed/yn
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 7981859424 ps  Iteration: 0  Process: /fir_low_area_tb/sim_time File: C:/projeto/FIR_HW/FIR/testbench/FIR_low_area_tb.vhd
+# Break in Process sim_time at C:/projeto/FIR_HW/FIR/testbench/FIR_low_area_tb.vhd line 135
+vsim rtl_work.top_level_tb
+# vsim rtl_work.top_level_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading ieee.math_real(body)
+# Loading rtl_work.fir_package(body)
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+# Loading rtl_work.top_level(arq_top_level)
+# Loading rtl_work.fir_low_area(fir_low_area_arch)
+# Loading rtl_work.reg16(behavior)
+add wave -position insertpoint  \
+sim:/top_level_tb/fir/duv_fir_signed/clock_fs \
+sim:/top_level_tb/fir/duv_fir_signed/xn \
+sim:/top_level_tb/fir/duv_fir_signed/yn
+run 1 ms
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+restart
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+run 1 ms
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 40 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 40 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 40 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 40 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 120 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 120 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 120 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+restart
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+run 1 ms
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45351474 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45351474 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45351474 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45351474 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 90702948 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 90702948 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 90702948 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 90702948 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 90702948 ps  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 90702948 ps  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 136054422 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 136054422 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 136054422 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 136054422 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+run 100 ms
+# ** Failure: SIMULATION END
+#    Time: 7981859424 ps  Iteration: 0  Process: /top_level_tb/sim_time File: C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Break in Process sim_time at C:/projeto/FIR_HW/FIR/top_level_tb.vhd line 159
+vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+restart
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 7981859424 ps  Iteration: 0  Process: /top_level_tb/sim_time File: C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Break in Process sim_time at C:/projeto/FIR_HW/FIR/top_level_tb.vhd line 159
+vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+restart
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 7981859424 ps  Iteration: 0  Process: /top_level_tb/sim_time File: C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Break in Process sim_time at C:/projeto/FIR_HW/FIR/top_level_tb.vhd line 159
 vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/reg16.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -146,6 +967,138 @@ vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/FIR_low_area.vhd
 # -- Loading package fir_package
 # -- Compiling entity FIR_low_area
 # -- Compiling architecture FIR_low_area_arch of FIR_low_area
+vcom -reportprogress 30 -work work C:/projeto/FIR_HW/FIR/top_level.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level
+# -- Compiling architecture arq_top_level of top_level
+# -- Loading entity FIR_low_area
+vcom -reportprogress 30 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+restart
+# Loading rtl_work.fir_package(body)
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+# Loading rtl_work.top_level(arq_top_level)
+# Loading rtl_work.fir_low_area(fir_low_area_arch)
+# Loading rtl_work.reg16(behavior)
+vsim rtl_work.fir_low_area_tb
+# vsim rtl_work.fir_low_area_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading ieee.math_real(body)
+# Loading rtl_work.fir_package(body)
+# Loading rtl_work.fir_low_area_tb(fir_low_area_tb_arch)
+# Loading rtl_work.fir_low_area(fir_low_area_arch)
+add wave -position insertpoint  \
+sim:/fir_low_area_tb/duv_fir_signed/clock_fs \
+sim:/fir_low_area_tb/duv_fir_signed/xn \
+sim:/fir_low_area_tb/duv_fir_signed/yn
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 7981859424 ps  Iteration: 0  Process: /fir_low_area_tb/sim_time File: C:/projeto/FIR_HW/FIR/testbench/FIR_low_area_tb.vhd
+# Break in Process sim_time at C:/projeto/FIR_HW/FIR/testbench/FIR_low_area_tb.vhd line 135
+restart
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /fir_low_area_tb/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 7981859424 ps  Iteration: 0  Process: /fir_low_area_tb/sim_time File: C:/projeto/FIR_HW/FIR/testbench/FIR_low_area_tb.vhd
+# Break in Process sim_time at C:/projeto/FIR_HW/FIR/testbench/FIR_low_area_tb.vhd line 135
+vsim rtl_work.top_level_tb
+# vsim rtl_work.top_level_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading ieee.math_real(body)
+# Loading rtl_work.fir_package(body)
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+# Loading rtl_work.top_level(arq_top_level)
+# Loading rtl_work.fir_low_area(fir_low_area_arch)
+# Loading rtl_work.reg16(behavior)
+add wave -position insertpoint  \
+sim:/top_level_tb/fir/duv_fir_signed/clock_fs \
+sim:/top_level_tb/fir/duv_fir_signed/xn \
+sim:/top_level_tb/fir/duv_fir_signed/yn
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 7981859424 ps  Iteration: 0  Process: /top_level_tb/sim_time File: C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Break in Process sim_time at C:/projeto/FIR_HW/FIR/top_level_tb.vhd line 159
 vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level.vhd
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -170,12 +1123,237 @@ vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
 # -- Compiling entity top_level_tb
 # -- Compiling architecture top_level_tb_arch of top_level_tb
 restart
-# Loading rtl_work.fir_package(body)
 # Loading rtl_work.top_level_tb(top_level_tb_arch)
 # Loading rtl_work.top_level(arq_top_level)
-# Loading rtl_work.fir_low_area(fir_low_area_arch)
-# Loading rtl_work.reg16(behavior)
-run 500 us
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 7981859424 ps  Iteration: 0  Process: /top_level_tb/sim_time File: C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Break in Process sim_time at C:/projeto/FIR_HW/FIR/top_level_tb.vhd line 159
+add wave -position insertpoint  \
+sim:/top_level_tb/xn_signed \
+sim:/top_level_tb/yn_signed
+restart
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 7981859424 ps  Iteration: 0  Process: /top_level_tb/sim_time File: C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Break in Process sim_time at C:/projeto/FIR_HW/FIR/top_level_tb.vhd line 159
+vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+restart
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 80181406032 ps  Iteration: 0  Process: /top_level_tb/sim_time File: C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Break in Process sim_time at C:/projeto/FIR_HW/FIR/top_level_tb.vhd line 159
+vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+restart
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 15963718848 ps  Iteration: 0  Process: /top_level_tb/sim_time File: C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Break in Process sim_time at C:/projeto/FIR_HW/FIR/top_level_tb.vhd line 159
+vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+
+restart
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 22675736 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 45351472 ps  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 68027208 ps  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 3990929712 ps  Iteration: 0  Process: /top_level_tb/sim_time File: C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Break in Process sim_time at C:/projeto/FIR_HW/FIR/top_level_tb.vhd line 159
+restart
+vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+restart
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+run -all
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
@@ -195,13 +1373,316 @@ run 500 us
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 #    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Failure: SIMULATION END
+#    Time: 3990929712 ps  Iteration: 0  Process: /top_level_tb/sim_time File: C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Break in Process sim_time at C:/projeto/FIR_HW/FIR/top_level_tb.vhd line 159
+vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+restart
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+run 100 us
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+restart
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+run 100 us
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+restart
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+run 100 us
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+
+restart
+vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+run 100 us
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+restart
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+run 100 us
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+restart
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+run 100 us
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+restart
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+run 100 us
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
@@ -215,7 +1696,20 @@ run 500 us
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 #    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
 restart
-run 200 us
+vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+restart
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+run 100 us
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
@@ -235,13 +1729,49 @@ run 200 us
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 #    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
-#    Time: 160 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 240 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+vcom -reportprogress 300 -work work C:/projeto/FIR_HW/FIR/top_level_tb.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package MATH_REAL
+# -- Loading package fir_package
+# -- Compiling entity top_level_tb
+# -- Compiling architecture top_level_tb_arch of top_level_tb
+restart
+# Loading rtl_work.top_level_tb(top_level_tb_arch)
+run 100 us
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: COEFFICIENTS ARE NOT NORMALIZED
+#    Time: 0 ps  Iteration: 0  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 80 ns  Iteration: 1  Instance: /top_level_tb/fir/duv_fir_signed
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 160 ns  Iteration: 1  Instance: /top_level_tb
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.

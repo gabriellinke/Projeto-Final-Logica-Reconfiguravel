@@ -53,7 +53,6 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VHDL_FILE FIR/reg16.vhd
 set_global_assignment -name VHDL_FILE FIR/top_level.vhd
 set_global_assignment -name VHDL_FILE FIR/testbench/FIR_low_area_tb.vhd
@@ -62,3 +61,4 @@ set_global_assignment -name QIP_FILE fir.qip
 set_global_assignment -name QIP_FILE fir2.qip
 set_global_assignment -name QIP_FILE fir3.qip
 set_global_assignment -name VHDL_FILE FIR/top_level_tb.vhd
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

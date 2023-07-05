@@ -49,7 +49,7 @@ Begin
 		 areset   => not_resetn,
 		 sreset   => '0',
 		 clock_fs => clock,
-		 enable   => '1',
+		 enable   => write_en,
 		 xn       => data_in,
 		 yn       => data_out
 	  );

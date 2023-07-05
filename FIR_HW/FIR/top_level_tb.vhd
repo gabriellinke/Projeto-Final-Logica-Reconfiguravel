@@ -69,6 +69,7 @@ ARCHITECTURE top_level_tb_arch OF top_level_tb IS
   CONSTANT num_samples : NATURAL := num_cycles*integer(round(fs_Hz/freq_xn));
   CONSTANT amplitude   : REAL    := 2.0**real(data_length-1)-1.0;
  
+ 
   file fptr_input: text;
   CONSTANT FILE_NAME_INPUT :string := "input.dat";
   file fptr_output: text;

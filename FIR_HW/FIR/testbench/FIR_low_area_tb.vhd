@@ -32,7 +32,7 @@ ARCHITECTURE FIR_low_area_tb_arch OF FIR_low_area_tb IS
  
 -- TESTCASE SETTINGS
 --.............................................................................
-  CONSTANT freq_xn     : REAL        := 200.0;   -- input frequency
+  CONSTANT freq_xn     : REAL        := 2000.0;   -- input frequency
   CONSTANT data_length : NATURAL     := 16;        -- input bit size       
   CONSTANT fs_Hz       : REAL        := 44.1e3;     -- sampling frequency
 
